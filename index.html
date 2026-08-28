@@ -7,7 +7,7 @@
 .receiptBtn{background:#0a84ff;color:#fff;border-color:#0a84ff;white-space:nowrap}.receiptFab{display:none;position:fixed;right:16px;bottom:82px;z-index:20;border:0;border-radius:999px;background:#0a84ff;color:white;box-shadow:0 4px 18px #0003;padding:12px 16px;font-weight:800;font-size:17px;gap:6px;align-items:center}.receiptFab span{font-size:14px}
 @media(max-width:720px){.top{position:sticky;align-items:stretch;flex-direction:column;gap:10px;padding:10px 12px}.topTitle{width:100%}.actions{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:8px}.actions .receiptBtn{grid-column:1/-1;font-size:16px;padding:12px}.actions .btn{white-space:normal;line-height:1.2}.receiptFab{display:flex}.grid{grid-template-columns:1fr;padding:10px}.modal .dialog{max-height:88vh;overflow:auto}.ocrtable{font-size:11px;display:block;overflow-x:auto}.ocrtable th,.ocrtable td{min-width:90px}.ocrtable th:first-child,.ocrtable td:first-child{min-width:180px}}
 </style><script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script></head><body>
-<div class="top"><div class="topTitle"><h1>🛒 แผนการสั่งซื้อวัตถุดิบ</h1><small>รวมทุก Supplier ในหน้าเดียว · <b>V6.6 OCR Quantity Update</b></small></div><div class="actions"><button id="receiptOcrTopBtn" class="btn receiptBtn" onclick="openReceiptOCR()">📷 ถ่าย / อ่านใบเสร็จ</button><button class="btn" onclick="resetWeek()">ปิดสัปดาห์ / เริ่มสัปดาห์ใหม่</button><button class="btn" onclick="combinedPDF()">📊 PDF สรุปเดือน</button></div></div><button class="receiptFab" onclick="openReceiptOCR()" aria-label="ถ่ายหรืออ่านใบเสร็จ">📷<span>ใบเสร็จ</span></button><main class="grid" id="app"></main><section id="report"></section><div class="modal" id="editModal"><div class="dialog"><h2 id="modalTitle">สินค้า</h2><div class="form"><label class="full">ชื่อสินค้า<input id="fName"></label><label>หมวด<select id="fCat"></select></label><label>หน่วย<input id="fUnit" placeholder="kg / pack / case"></label><label>ราคา £<input id="fPrice" type="number" min="0" step="0.01"></label><label>ปริมาณต่อแพ็ก (ถ้าทราบ)<input id="fSize" type="number" min="0" step="0.001"></label><label>หน่วยปริมาณ<select id="fSizeUnit"><option value="">—</option><option>kg</option><option>g</option><option>L</option><option>ml</option><option>piece</option></select></label><label class="full">รายละเอียด / ยี่ห้อ<input id="fHint"></label></div><div class="dialogActions"><button class="btn" onclick="closeModal()">ยกเลิก</button><button class="btn" onclick="saveItem()">บันทึก</button></div></div></div>
+<div class="top"><div class="topTitle"><h1>🛒 แผนการสั่งซื้อวัตถุดิบ</h1><small>รวมทุก Supplier ในหน้าเดียว · <b>V6.7 Multi-Supplier Receipt Parser</b></small></div><div class="actions"><button id="receiptOcrTopBtn" class="btn receiptBtn" onclick="openReceiptOCR()">📷 ถ่าย / อ่านใบเสร็จ</button><button class="btn" onclick="resetWeek()">ปิดสัปดาห์ / เริ่มสัปดาห์ใหม่</button><button class="btn" onclick="combinedPDF()">📊 PDF สรุปเดือน</button></div></div><button class="receiptFab" onclick="openReceiptOCR()" aria-label="ถ่ายหรืออ่านใบเสร็จ">📷<span>ใบเสร็จ</span></button><main class="grid" id="app"></main><section id="report"></section><div class="modal" id="editModal"><div class="dialog"><h2 id="modalTitle">สินค้า</h2><div class="form"><label class="full">ชื่อสินค้า<input id="fName"></label><label>หมวด<select id="fCat"></select></label><label>หน่วย<input id="fUnit" placeholder="kg / pack / case"></label><label>ราคา £<input id="fPrice" type="number" min="0" step="0.01"></label><label>ปริมาณต่อแพ็ก (ถ้าทราบ)<input id="fSize" type="number" min="0" step="0.001"></label><label>หน่วยปริมาณ<select id="fSizeUnit"><option value="">—</option><option>kg</option><option>g</option><option>L</option><option>ml</option><option>piece</option></select></label><label class="full">รายละเอียด / ยี่ห้อ<input id="fHint"></label></div><div class="dialogActions"><button class="btn" onclick="closeModal()">ยกเลิก</button><button class="btn" onclick="saveItem()">บันทึก</button></div></div></div>
 <div class="modal" id="ocrModal"><div class="dialog" style="width:min(760px,100%)"><h2>📷 อ่านใบเสร็จ</h2><div class="ocrbox"><label><b>Supplier</b><select id="ocrSupplier" style="margin-left:8px;padding:7px;border-radius:7px"><option value="thch">TH/CH SUP</option><option value="booker">BOOKER SUP</option><option value="sains">SUPERMARKET</option></select></label><div class="ocrActions" style="margin-top:10px"><button class="btn" type="button" onclick="receiptCamera.click()">📷 ถ่ายใบเสร็จ</button><button class="btn" type="button" onclick="receiptLibrary.click()">🖼 เลือกรูปใบเสร็จ</button></div><input id="receiptCamera" type="file" accept="image/*" capture="environment" style="display:none"><input id="receiptLibrary" type="file" accept="image/*" style="display:none"><div id="receiptFileName" class="muted" style="margin-top:8px">ยังไม่ได้เลือกรูป</div><img id="receiptPreview" class="ocrpreview" style="display:none"><div class="progress"><div id="ocrProgress"></div></div><div id="ocrStatus" class="statusline">ถ่ายรูปหรือเลือกภาพใบเสร็จ แล้วกด “อ่านใบเสร็จ”</div><div class="ocrActions"><button class="btn" onclick="runReceiptOCR()">อ่านใบเสร็จ</button><button class="btn" onclick="closeReceiptOCR()">ปิด</button></div></div><div id="ocrResults"></div></div></div>
 <script>
 const CAT={frozen:'1. แช่แข็ง / ซีฟู้ด',produce:'2. ผักสด / ไข่',rice:'3. ข้าว / เส้น / แป้ง / น้ำตาล',sauce:'4. ซอส / กะทิ / เครื่องแกง',seasoning:'5. เครื่องปรุง / สมุนไพร',meat:'1. เนื้อสัตว์ / ไก่',fish:'2. อาหารทะเล / แช่แข็ง',other:'3. อื่น ๆ'};
@@ -24,50 +24,76 @@ function openReceiptOCRFor(s){ocrSupplier.value=s;openReceiptOCR()}
 function closeReceiptOCR(){ocrModal.classList.remove('show')}
 let selectedReceiptFile=null;function selectReceiptFile(f){if(!f)return;selectedReceiptFile=f;receiptPreview.src=URL.createObjectURL(f);receiptPreview.style.display='block';receiptFileName.textContent=f.name||'receipt image';ocrResults.innerHTML='';ocrStatus.textContent='เลือกรูปแล้ว กด “อ่านใบเสร็จ”'}receiptCamera?.addEventListener('change',e=>selectReceiptFile(e.target.files?.[0]));receiptLibrary?.addEventListener('change',e=>selectReceiptFile(e.target.files?.[0]));
 function cleanReceiptLine(x){return (x||'').replace(/[£$€]/g,' £').replace(/[|]/g,' ').replace(/\s+/g,' ').trim()}
-function parseReceiptText(text){
+function receiptAliasName(name){
+  return (name||'')
+    .replace(/\bLTTL\b/gi,'LITTLE')
+    .replace(/\bLTTCE\b/gi,'LETTUCE')
+    .replace(/\bLETTUC\b/gi,'LETTUCE')
+    .replace(/\bSWT\b/gi,'SWEET')
+    .replace(/\bGEM\s+LETT(?:UC|CE)\b/gi,'GEM LETTUCE')
+    .replace(/\bJS\b/gi,'')
+    .replace(/\bASDA\b/gi,'')
+    .replace(/\s{2,}/g,' ').trim();
+}
+function parseHooHingReceipt(text){
   const lines=text.split(/\n+/).map(cleanReceiptLine).filter(x=>x.length>1),out=[];
   const stop=/^(?:\*{2,}|goods total|carriage|v\.?a\.?t|grand total|amount tendered|home delivery|you would|please keep|total savings|tax summary)/i;
   const header=/^(?:mitcham branch|bond rd|www\.|awrs|telephone|vat registration|sale by|invoice|date|product description|quantity|price per|total\b)/i;
   const stripMarks=x=>x.replace(/^(?:[#>*+@]{1,6}\s*)+/,'').replace(/\s{2,}/g,' ').trim();
   let cur=null,pendingDesc='';
-  const pushCur=()=>{if(cur&&cur.name&&cur.price>0){out.push(cur)}cur=null};
+  const pushCur=()=>{if(cur&&cur.name&&cur.price>0){cur.name=receiptAliasName(cur.name);out.push(cur)}cur=null};
   for(let raw of lines){
     let line=raw.replace(/,/g,'.').trim();
     if(stop.test(line)){pushCur();break}
     if(header.test(line))continue;
     let sm=line.match(/stock\s*code\s*[=:]?\s*([0-9OIl]{3,8})/i);
-    if(sm){
-      pushCur();
-      let code=sm[1].replace(/[O]/g,'0').replace(/[Il]/g,'1');
-      cur={raw:'',stockCode:code,name:'',qty:1,price:0,total:0,pack:''};
-      continue;
-    }
-    // Quantity line: 2.00 X 45.50 6x2900ml 91.00. OCR can lose Stock Code, so allow a pending description fallback.
+    if(sm){pushCur();let code=sm[1].replace(/[O]/g,'0').replace(/[Il]/g,'1');cur={raw:'',stockCode:code,name:'',qty:1,price:0,total:0,pack:''};continue}
     let q=line.match(/^\s*(\d+(?:\.\d+)?)\s*[xX×%]\s*(?:£\s*)?(\d+(?:\.\d{1,2}))(?:\s+(.*?))?(?:\s+(\d+(?:\.\d{2})))?\s*$/);
     if(q&&!cur&&pendingDesc){cur={raw:'',stockCode:'',name:pendingDesc,qty:1,price:0,total:0,pack:''}}
     if(!cur){let pd=stripMarks(line);if(pd&&/[A-Za-z]{3}/.test(pd)&&!/^(?:stock|code|invoice|registration|number|points|cash|card|change)/i.test(pd))pendingDesc=pd;continue}
-    if(q){
-      let qty=parseFloat(q[1]), price=parseFloat(q[2]);
-      if(Number.isFinite(qty)&&qty>0)cur.qty=qty;
-      if(Number.isFinite(price)&&price>0)cur.price=price;
-      let tail=(q[3]||'').trim();
-      // If greedy tail swallowed total, peel a trailing decimal total.
-      let tm=tail.match(/^(.*?)(?:\s+)(\d+(?:\.\d{2}))$/);
-      if(tm){tail=tm[1].trim();cur.total=parseFloat(tm[2])||0}
-      else if(q[4])cur.total=parseFloat(q[4])||0;
-      cur.pack=tail;
-      cur.raw=(cur.name+' | '+raw).trim();
-      pushCur();pendingDesc='';
-      continue;
-    }
-    // Description line between Stock Code and quantity.
-    let desc=stripMarks(line);
-    if(desc && /[A-Za-z]{2}/.test(desc) && !/^(?:stock|code|invoice|registration|number|points|cash|card|change)/i.test(desc)){
-      cur.name=cur.name?cur.name+' '+desc:desc;pendingDesc=cur.name;
-    }
+    if(q){let qty=parseFloat(q[1]),price=parseFloat(q[2]);if(qty>0)cur.qty=qty;if(price>0)cur.price=price;let tail=(q[3]||'').trim();let tm=tail.match(/^(.*?)(?:\s+)(\d+(?:\.\d{2}))$/);if(tm){tail=tm[1].trim();cur.total=parseFloat(tm[2])||0}else if(q[4])cur.total=parseFloat(q[4])||0;cur.pack=tail;cur.raw=(cur.name+' | '+raw).trim();pushCur();pendingDesc='';continue}
+    let desc=stripMarks(line);if(desc&&/[A-Za-z]{2}/.test(desc)&&!/^(?:stock|code|invoice|registration|number|points|cash|card|change)/i.test(desc)){cur.name=cur.name?cur.name+' '+desc:desc;pendingDesc=cur.name}
   }
-  pushCur();
-  return out.filter(r=>r.name&&r.price>0).filter((r,i,a)=>!a.slice(0,i).some(x=>x.stockCode===r.stockCode&&x.name===r.name&&x.price===r.price&&x.qty===r.qty));
+  pushCur();return out.filter(r=>r.name&&r.price>0);
+}
+function parseSupermarketReceipt(text){
+  const lines=text.split(/\n+/).map(cleanReceiptLine).map(x=>x.replace(/,/g,'.').trim()).filter(Boolean), rows=[];
+  const ignore=/^(?:@|sainsbury|asda|charterhouse|wandsworth|www\b|vat\b|balance|mastercard|contactless|merchant|auth|aid|pan|tid|change|points|total\b|total savings|tax summary|no items|card\b|date\b|time\b|sale\b|please|for a chance|good food)/i;
+  for(let line of lines){
+    if(ignore.test(line))continue;
+    let m=line.match(/^(.*?)[\s:]+£?\s*(\d+\.\d{2})\s*$/i);
+    if(!m) m=line.match(/^(.*?)[\s:]+(\d+\.\d{2})\s*$/i);
+    if(!m)continue;
+    let name=receiptAliasName(m[1].replace(/^[^A-Za-z]+/,'').replace(/\s{2,}/g,' ').trim());
+    let price=parseFloat(m[2]);
+    if(!name||name.length<3||!/[A-Za-z]/.test(name)||!(price>0))continue;
+    if(/^(?:balance|mastercard|card|subtotal|delivery|saving|cash)/i.test(name))continue;
+    rows.push({stockCode:'',name,qty:1,price,total:price,pack:'',raw:line});
+  }
+  // Aggregate exact normalized repeats at the same unit price; preserves differently priced/worded variants.
+  const map=new Map();
+  for(const r of rows){let k=normName(r.name)+'|'+r.price.toFixed(2);if(map.has(k))map.get(k).qty+=1;else map.set(k,{...r})}
+  return [...map.values()];
+}
+function parseBookerReceipt(text){
+  const lines=text.split(/\n+/).map(cleanReceiptLine).map(x=>x.replace(/,/g,'.').trim()).filter(Boolean),out=[];
+  const ignore=/^(?:booker|branch|customer|invoice|date|till|operator|code\s+description|payment|amount|total|goods|vat|grand|please)/i;
+  for(let line of lines){
+    if(ignore.test(line))continue;
+    // Typical OCR row: 147179 CE Chicken Breast Fillet 2 5kg 4 55.99 223.96 A
+    let m=line.match(/^([0-9]{5,7})\s+(?:[A-Z]{1,4}\s+)?(.+?)\s+(\d+(?:\.\d+)?)\s+(£?\d+\.\d{2})\s+(?:£?\d+\.\d{2})(?:\s+[A-Z])?$/i);
+    if(m){let code=m[1],name=receiptAliasName(m[2].trim()),qty=parseFloat(m[3]),price=parseFloat(m[4].replace('£',''));if(name&&qty>0&&price>0)out.push({stockCode:code,name,qty,price,total:qty*price,pack:'',raw:line});continue}
+    // Fallback for simple item line ending in a price.
+    let f=line.match(/^(.*?[A-Za-z].*?)\s+£?(\d+\.\d{2})\s*$/);if(f){let name=receiptAliasName(f[1].replace(/^\d{5,7}\s+/,'').trim()),price=parseFloat(f[2]);if(name.length>3&&price>0)out.push({stockCode:'',name,qty:1,price,total:price,pack:'',raw:line})}
+  }
+  return out;
+}
+function parseReceiptText(text,supplier){
+  supplier=supplier||ocrSupplier?.value||'thch';
+  if(supplier==='thch')return parseHooHingReceipt(text);
+  if(supplier==='booker')return parseBookerReceipt(text);
+  if(supplier==='sains')return parseSupermarketReceipt(text);
+  return parseHooHingReceipt(text);
 }
 function similarityItem(name,item){let A=tokens(name),B=tokens(item.name+' '+(item.hint||''));if(!A.size||!B.size)return 0;let inter=[...A].filter(x=>B.has(x)).length;return inter/Math.max(1,Math.min(A.size,B.size))}
 function bestMatch(s,name){let best=null,score=0;for(const i of DATA[s]||[]){let z=similarityItem(name,i);if(z>score){score=z;best=i}}return score>=0.45?{item:best,score}:null}
@@ -106,13 +132,13 @@ async function runReceiptOCR(){
   try{
     const processed=await preprocessReceipt(f);ocrProgress.style.width='10%';ocrStatus.textContent='ปรับภาพสำเร็จ กำลังอ่านข้อความ…';
     receiptPreview.src=processed.toDataURL('image/jpeg',.92);receiptPreview.style.display='block';
-    let r=await ocrOne(processed,6,.10,.78),parsed=parseReceiptText(r.data.text),raw=r.data.text;
+    let r=await ocrOne(processed,6,.10,.78),parsed=parseReceiptText(r.data.text,ocrSupplier.value),raw=r.data.text;
     // If block OCR still finds very few products, retry with sparse-column layout and choose the better parse.
-    if(parsed.length<3){ocrStatus.textContent='กำลังลองอ่านแบบที่ 2 เพื่อเพิ่มความแม่นยำ…';let r2=await ocrOne(processed,4,.88,.12),p2=parseReceiptText(r2.data.text);if(p2.length>parsed.length){parsed=p2;raw=r2.data.text}}
+    if(parsed.length<3){ocrStatus.textContent='กำลังลองอ่านแบบที่ 2 เพื่อเพิ่มความแม่นยำ…';let r2=await ocrOne(processed,4,.88,.12),p2=parseReceiptText(r2.data.text,ocrSupplier.value);if(p2.length>parsed.length){parsed=p2;raw=r2.data.text}}
     ocrProgress.style.width='100%';showOCRReview(parsed,raw)
   }catch(e){ocrStatus.textContent='อ่านไม่สำเร็จ: '+e.message}
 }
-function showOCRReview(rows,raw){let s=ocrSupplier.value;if(!rows.length){ocrResults.innerHTML='<p><b>ยังจับรายการสินค้า/ราคาไม่ได้</b> แต่ OCR อาจอ่านข้อความได้ กรุณาเปิด “ดูข้อความที่อ่านได้” ด้านล่าง</p><details open><summary>ดูข้อความที่อ่านได้</summary><pre style="white-space:pre-wrap">'+raw.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))+'</pre></details>';return}ocrStatus.textContent='พบ '+rows.length+' รายการ กรุณาตรวจสอบก่อนบันทึก';window.__ocrRows=rows;let body=rows.map((r,idx)=>{let bm=bestMatch(s,r.name),opts='<option value="">เพิ่มเป็นสินค้าใหม่</option>'+DATA[s].map(i=>`<option value="${i.id}" ${bm?.item?.id===i.id?'selected':''}>${i.name}</option>`).join('');return `<tr><td><input value="${(r.stockCode||'').replace(/"/g,'&quot;')}" data-rcode="${idx}" style="width:85px"></td><td><input value="${r.name.replace(/"/g,'&quot;')}" data-rname="${idx}"><div class="muted">${r.pack||''}</div></td><td><input type="number" min="0.01" step="0.01" value="${r.qty}" data-rqty="${idx}"></td><td><input type="number" step="0.01" min="0" value="${r.price.toFixed(2)}" data-rprice="${idx}"></td><td><select data-rmatch="${idx}">${opts}</select>${bm?`<div class="muted">จับคู่ ${(bm.score*100).toFixed(0)}%</div>`:''}</td><td><input type="checkbox" data-ruse="${idx}" checked></td></tr>`}).join('');ocrResults.innerHTML=`<table class="ocrtable"><tr><th>Stock</th><th>ชื่อสินค้า / Pack</th><th>จำนวน</th><th>ราคา/หน่วย £</th><th>จับคู่กับสินค้า</th><th>ใช้</th></tr>${body}</table><div class="ocrActions"><button class="btn" onclick="confirmOCR(${rows.length})">✓ ยืนยันและอัปเดต</button></div><details><summary>ดูข้อความ OCR ต้นฉบับ</summary><pre style="white-space:pre-wrap">${raw.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}</pre></details><p class="muted">V6.6 หลังยืนยัน OCR จะอัปเดตราคา และนำ Qty จากใบเสร็จไปบวกใน “ผลรวมสั่ง 1 สัปดาห์” ของสินค้านั้นอัตโนมัติ</p>`}
+function showOCRReview(rows,raw){let s=ocrSupplier.value;if(!rows.length){ocrResults.innerHTML='<p><b>ยังจับรายการสินค้า/ราคาไม่ได้</b> แต่ OCR อาจอ่านข้อความได้ กรุณาเปิด “ดูข้อความที่อ่านได้” ด้านล่าง</p><details open><summary>ดูข้อความที่อ่านได้</summary><pre style="white-space:pre-wrap">'+raw.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))+'</pre></details>';return}ocrStatus.textContent='พบ '+rows.length+' รายการ กรุณาตรวจสอบก่อนบันทึก';window.__ocrRows=rows;let body=rows.map((r,idx)=>{let bm=bestMatch(s,r.name),opts='<option value="">เพิ่มเป็นสินค้าใหม่</option>'+DATA[s].map(i=>`<option value="${i.id}" ${bm?.item?.id===i.id?'selected':''}>${i.name}</option>`).join('');return `<tr><td><input value="${(r.stockCode||'').replace(/"/g,'&quot;')}" data-rcode="${idx}" style="width:85px"></td><td><input value="${r.name.replace(/"/g,'&quot;')}" data-rname="${idx}"><div class="muted">${r.pack||''}</div></td><td><input type="number" min="0.01" step="0.01" value="${r.qty}" data-rqty="${idx}"></td><td><input type="number" step="0.01" min="0" value="${r.price.toFixed(2)}" data-rprice="${idx}"></td><td><select data-rmatch="${idx}">${opts}</select>${bm?`<div class="muted">จับคู่ ${(bm.score*100).toFixed(0)}%</div>`:''}</td><td><input type="checkbox" data-ruse="${idx}" checked></td></tr>`}).join('');ocrResults.innerHTML=`<table class="ocrtable"><tr><th>Stock</th><th>ชื่อสินค้า / Pack</th><th>จำนวน</th><th>ราคา/หน่วย £</th><th>จับคู่กับสินค้า</th><th>ใช้</th></tr>${body}</table><div class="ocrActions"><button class="btn" onclick="confirmOCR(${rows.length})">✓ ยืนยันและอัปเดต</button></div><details><summary>ดูข้อความ OCR ต้นฉบับ</summary><pre style="white-space:pre-wrap">${raw.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}</pre></details><p class="muted">V6.7 หลังยืนยัน OCR จะอัปเดตราคา และนำ Qty จากใบเสร็จไปบวกใน “ผลรวมสั่ง 1 สัปดาห์” ของสินค้านั้นอัตโนมัติ</p>`}
 function confirmOCR(n){let s=ocrSupplier.value,changed=0,added=0,qtyAdded=0;for(let idx=0;idx<n;idx++){let use=document.querySelector(`[data-ruse="${idx}"]`);if(!use?.checked)continue;let row=(window.__ocrRows||[])[idx]||{},code=document.querySelector(`[data-rcode="${idx}"]`)?.value.trim()||row.stockCode||'',name=document.querySelector(`[data-rname="${idx}"]`).value.trim(),qty=+document.querySelector(`[data-rqty="${idx}"]`).value||1,price=+document.querySelector(`[data-rprice="${idx}"]`).value||0,id=+document.querySelector(`[data-rmatch="${idx}"]`).value||0;if(!name||price<=0||qty<=0)continue;let receiptHint=[code?`Stock ${code}`:'',row.pack||'',`OCR receipt ${new Date().toLocaleDateString('en-GB')}`].filter(Boolean).join(' · ');let targetId=0;if(id){let i=DATA[s].find(x=>x.id===id);if(i){priceHistory.push({at:new Date().toISOString(),supplier:s,id:i.id,name:i.name,oldPrice:i.price||0,newPrice:price,source:'receipt-ocr',stockCode:code,qty});i.price=price;if(code&&!String(i.hint||'').includes(code))i.hint=(i.hint?i.hint+' · ':'')+receiptHint;else if(!i.hint)i.hint=receiptHint;targetId=i.id;changed++;}}else{let nid=Math.max(0,...DATA[s].map(x=>+x.id||0))+1;DATA[s].push({id:nid,name,cat:DATA[s][0]?.cat||'other',unit:'item',price,weekly:0,hint:receiptHint});targetId=nid;added++;}if(targetId){let k=key(s,targetId);state[k]=state[k]||{want:0,total:0};state[k].total=(+state[k].total||0)+qty;qtyAdded+=qty;}}localStorage.setItem(PRICEHISTKEY,JSON.stringify(priceHistory));persistMaster();save();render();ocrStatus.innerHTML=`<span class="ok">บันทึกแล้ว: อัปเดตราคา ${changed} รายการ · เพิ่มใหม่ ${added} รายการ · เพิ่มยอดสั่งสัปดาห์นี้ ${qtyAdded} หน่วย</span>`;ocrResults.innerHTML=''}
 
 function persistMaster(){localStorage.setItem(MASTERKEY,JSON.stringify(DATA))}
