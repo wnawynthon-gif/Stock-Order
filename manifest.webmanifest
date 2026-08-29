@@ -1,0 +1,17 @@
+{
+  "name": "Kaosarn Order — สั่งของ",
+  "short_name": "Kaosarn Order",
+  "description": "แอปสั่งวัตถุดิบ รวมทุก Supplier · ส่งออเดอร์ · เช็ครับของ · สต็อกอัตโนมัติ",
+  "lang": "th",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f7f5f1",
+  "theme_color": "#71349a",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

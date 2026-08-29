@@ -1,4 +1,4 @@
-<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Restaurant Supplier Order</title>
+<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kaosarn Order — สั่งของ</title><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#71349a"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="Kaosarn Order"><link rel="apple-touch-icon" href="icon-192.png"><link rel="icon" href="icon-192.png">
 <style>*{box-sizing:border-box}body{margin:0;background:#f7f5f1;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#27231f}.top{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid #ddd;padding:12px 16px;display:flex;gap:12px;align-items:center;justify-content:space-between}.top h1{font-size:20px;margin:0}.actions{display:flex;gap:8px}.btn{border:1px solid #ddd;background:#fff;border-radius:10px;padding:10px 12px;font-weight:700}.grid{display:grid;grid-template-columns:repeat(3,minmax(300px,1fr));gap:14px;padding:14px;align-items:start}.supplier{background:#fff;border:1px solid #ddd;border-radius:16px;overflow:hidden;box-shadow:0 2px 8px #0000000d}.head{padding:14px;color:#fff;font-size:20px;font-weight:800;display:flex;justify-content:space-between;align-items:center}.pdfbtn{border:0;background:#ffffffee;color:inherit;border-radius:8px;padding:7px 10px;font-weight:800}.th .head{background:#71349a}.bk .head{background:#ee650e}.sa .head{background:#239c3b}.sub{padding:10px 12px;border-bottom:1px solid #eee;display:grid;grid-template-columns:1fr 78px 78px;gap:7px;font-size:12px;font-weight:700}.sub .want{color:#268b35}.sub .week{color:#1464c5}.cat{padding:8px 12px;font-weight:800}.th .cat{background:#f3eafb;color:#71349a}.bk .cat{background:#fff0e4;color:#dc5807}.sa .cat{background:#eaf8ed;color:#188331}.row{padding:10px 12px;border-bottom:1px solid #eee;display:grid;grid-template-columns:1fr 68px 68px;gap:8px;align-items:center}.name{font-size:13px;font-weight:650}.hint{font-size:10px;color:#777;margin-top:3px}.price{font-size:12px;margin-top:5px}.qty,.weekly{width:100%;height:40px;border-radius:8px;text-align:center;font-size:17px;font-weight:750}.qty{border:1.5px solid #91d39b;color:#227f31}.weekly{border:1.5px solid #8bbcf1;background:#f5faff;color:#1261b9}.unit{font-size:9px;text-align:center;color:#666}.sum{padding:12px;font-weight:800;display:flex;justify-content:space-between}.th .sum{color:#71349a}.bk .sum{color:#dc5807}.sa .sum{color:#188331}#report{display:none}.report{font-size:11px}.report h1{font-size:20px;margin:0 0 4px}.report h2{font-size:14px;margin:14px 0 6px}.report .period{color:#666;margin-bottom:12px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.card{border:1px solid #ddd;border-radius:8px;padding:10px}.card b{display:block;font-size:17px;margin-top:3px}.rtable{width:100%;border-collapse:collapse;margin-top:6px}.rtable th,.rtable td{border:1px solid #ddd;padding:5px;text-align:right}.rtable th:first-child,.rtable td:first-child{text-align:left}.grand{font-weight:800;background:#f4f4f4}.note{font-size:9px;color:#666;margin-top:10px}@media(max-width:900px){.grid{grid-template-columns:1fr}.top h1{font-size:17px}}@media print{body[data-print-usage] #app,body[data-print-usage] .top{display:none!important}body[data-print-usage] #report{display:block!important}body[data-print-usage] .usageSupplier{break-before:page}body[data-print-usage] .usageSupplier:first-of-type{break-before:auto}body[data-print-usage] .usageTable{font-size:8px}body[data-print-usage] .usageTable th,body[data-print-usage] .usageTable td{padding:3px}body[data-print-combined] #app,body[data-print-combined] .top{display:none!important}body[data-print-combined] #report{display:block!important}@page{size:A4 portrait;margin:8mm} body[data-print-supplier] .supplier{display:none} body[data-print-supplier="thch"] .supplier.th,body[data-print-supplier="booker"] .supplier.bk,body[data-print-supplier="sains"] .supplier.sa{display:block} body[data-print-supplier] .weekly,body[data-print-supplier] .sub .week{display:none} body[data-print-supplier] .sub,body[data-print-supplier] .row{grid-template-columns:1fr 90px} body[data-print-supplier] .row:has(.qty[value=""]),body[data-print-supplier] .row:has(.qty[value="0"]){display:none} body[data-print-combined] .qty,body[data-print-combined] .sub .want{display:none} body[data-print-combined] .sub,body[data-print-combined] .row{grid-template-columns:1fr 90px}.top{position:static}.actions{display:none}.grid{display:block;padding:0}.supplier{break-inside:avoid;margin-bottom:8mm;box-shadow:none}.row{padding:5px 8px}.qty,.weekly{height:30px}.head{padding:8px}.hint{display:none}}
 .manage{display:flex;gap:6px;align-items:center}.mini{border:1px solid #ddd;background:#fff;border-radius:7px;padding:5px 7px;font-size:11px;font-weight:700}.danger{color:#b00020}.warn{display:inline-flex;margin-left:5px;width:18px;height:18px;border-radius:50%;align-items:center;justify-content:center;background:#d71920;color:#fff;font-weight:900;font-size:13px;vertical-align:middle}.addbar{padding:9px 12px;border-bottom:1px solid #eee}.addbtn{width:100%;border:1px dashed currentColor;background:#fff;border-radius:9px;padding:8px;font-weight:800}.modal{position:fixed;inset:0;background:#0008;z-index:20;display:none;align-items:center;justify-content:center;padding:18px}.modal.show{display:flex}.dialog{background:#fff;border-radius:14px;padding:16px;width:min(520px,100%);max-height:90vh;overflow:auto}.dialog h2{margin:0 0 12px}.form{display:grid;grid-template-columns:1fr 1fr;gap:10px}.form label{font-size:12px;font-weight:700}.form input,.form select{width:100%;padding:9px;border:1px solid #ccc;border-radius:8px;margin-top:4px}.full{grid-column:1/-1}.dialogActions{display:flex;justify-content:flex-end;gap:8px;margin-top:14px}@media print{.manage,.addbar,.modal,.warn{display:none!important}}
 
@@ -7,7 +7,7 @@
 .receiptBtn{background:#0a84ff;color:#fff;border-color:#0a84ff;white-space:nowrap}.receiptFab{display:none;position:fixed;right:16px;bottom:82px;z-index:20;border:0;border-radius:999px;background:#0a84ff;color:white;box-shadow:0 4px 18px #0003;padding:12px 16px;font-weight:800;font-size:17px;gap:6px;align-items:center}.receiptFab span{font-size:14px}
 @media(max-width:720px){.top{position:sticky;align-items:stretch;flex-direction:column;gap:10px;padding:10px 12px}.topTitle{width:100%}.actions{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:8px}.actions .receiptBtn{grid-column:1/-1;font-size:16px;padding:12px}.actions .btn{white-space:normal;line-height:1.2}.receiptFab{display:flex}.grid{grid-template-columns:1fr;padding:10px}.modal .dialog{max-height:88vh;overflow:auto}.ocrtable{font-size:11px;display:block;overflow-x:auto}.ocrtable th,.ocrtable td{min-width:90px}.ocrtable th:first-child,.ocrtable td:first-child{min-width:180px}}
 </style><script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script></head><body>
-<div class="top"><div class="topTitle"><h1>🛒 แผนการสั่งซื้อวัตถุดิบ</h1><small>รวมทุก Supplier ในหน้าเดียว · <b>V7.2 Supplier Weekly Usage + Cost PDF</b></small></div><div class="actions"><button id="receiptOcrTopBtn" class="btn receiptBtn" onclick="openReceiptOCR()">📷 ถ่าย / อ่านใบเสร็จ</button><button class="btn" onclick="resetWeek()">ปิดสัปดาห์ / เริ่มสัปดาห์ใหม่</button><button class="btn" onclick="combinedPDF()">📊 PDF สรุปเดือน</button><button class="btn" onclick="usageCostPDF()">🧾 PDF ใช้สินค้า / ค่าใช้จ่าย</button></div></div><button class="receiptFab" onclick="openReceiptOCR()" aria-label="ถ่ายหรืออ่านใบเสร็จ">📷<span>ใบเสร็จ</span></button><main class="grid" id="app"></main><section id="report"></section><div class="modal" id="editModal"><div class="dialog"><h2 id="modalTitle">สินค้า</h2><div class="form"><label class="full">ชื่อสินค้า<input id="fName"></label><label>หมวด<select id="fCat"></select></label><label>หน่วย<input id="fUnit" placeholder="kg / pack / case"></label><label>ราคา £<input id="fPrice" type="number" min="0" step="0.01"></label><label>ปริมาณต่อแพ็ก (ถ้าทราบ)<input id="fSize" type="number" min="0" step="0.001"></label><label>หน่วยปริมาณ<select id="fSizeUnit"><option value="">—</option><option>kg</option><option>g</option><option>L</option><option>ml</option><option>piece</option></select></label><label class="full">รายละเอียด / ยี่ห้อ<input id="fHint"></label></div><div class="dialogActions"><button class="btn" onclick="closeModal()">ยกเลิก</button><button class="btn" onclick="saveItem()">บันทึก</button></div></div></div>
+<div class="top"><div class="topTitle"><h1>🛒 แผนการสั่งซื้อวัตถุดิบ</h1><small>รวมทุก Supplier ในหน้าเดียว · <b>V8.0 · ส่งออเดอร์ · เช็ครับของ · สต็อกอัตโนมัติ · PWA</b></small></div><div class="actions"><button id="receiptOcrTopBtn" class="btn receiptBtn" onclick="openReceiptOCR()">📷 ถ่าย / อ่านใบเสร็จ</button><button class="btn" onclick="resetWeek()">ปิดสัปดาห์ / เริ่มสัปดาห์ใหม่</button><button class="btn" onclick="combinedPDF()">📊 PDF สรุปเดือน</button><button class="btn" onclick="usageCostPDF()">🧾 PDF ใช้สินค้า / ค่าใช้จ่าย</button><button class="btn" style="background:#0a5bd1;color:#fff;border-color:#0a5bd1" onclick="openOrders()">📦 ออเดอร์</button><button class="btn" onclick="openConfig()">⚙️ ตั้งค่า</button><button class="btn" id="installBtn" onclick="installApp()">⬇️ ติดตั้งแอป</button></div></div><button class="receiptFab" onclick="openReceiptOCR()" aria-label="ถ่ายหรืออ่านใบเสร็จ">📷<span>ใบเสร็จ</span></button><main class="grid" id="app"></main><section id="report"></section><div class="modal" id="editModal"><div class="dialog"><h2 id="modalTitle">สินค้า</h2><div class="form"><label class="full">ชื่อสินค้า<input id="fName"></label><label>หมวด<select id="fCat"></select></label><label>หน่วย<input id="fUnit" placeholder="kg / pack / case"></label><label>ราคา £<input id="fPrice" type="number" min="0" step="0.01"></label><label>ปริมาณต่อแพ็ก (ถ้าทราบ)<input id="fSize" type="number" min="0" step="0.001"></label><label>หน่วยปริมาณ<select id="fSizeUnit"><option value="">—</option><option>kg</option><option>g</option><option>L</option><option>ml</option><option>piece</option></select></label><label class="full">รายละเอียด / ยี่ห้อ<input id="fHint"></label></div><div class="dialogActions"><button class="btn" onclick="closeModal()">ยกเลิก</button><button class="btn" onclick="saveItem()">บันทึก</button></div></div></div>
 <div class="modal" id="ocrModal"><div class="dialog" style="width:min(760px,100%)"><h2>📷 อ่านใบเสร็จ</h2><div class="ocrbox"><label><b>Supplier</b><select id="ocrSupplier" style="margin-left:8px;padding:7px;border-radius:7px"><option value="thch">TH/CH SUP</option><option value="booker">BOOKER SUP</option><option value="sains">SUPERMARKET</option></select></label><div class="ocrActions" style="margin-top:10px"><button class="btn" type="button" onclick="receiptCamera.click()">📷 ถ่ายใบเสร็จ</button><button class="btn" type="button" onclick="receiptLibrary.click()">🖼 เลือกรูปใบเสร็จ</button></div><input id="receiptCamera" type="file" accept="image/*" capture="environment" style="display:none"><input id="receiptLibrary" type="file" accept="image/*" style="display:none"><div id="receiptFileName" class="muted" style="margin-top:8px">ยังไม่ได้เลือกรูป</div><img id="receiptPreview" class="ocrpreview" style="display:none"><div class="progress"><div id="ocrProgress"></div></div><div id="ocrStatus" class="statusline">ถ่ายรูปหรือเลือกภาพใบเสร็จ แล้วกด “อ่านใบเสร็จ”</div><div class="ocrActions"><button class="btn" onclick="runReceiptOCR()">อ่านใบเสร็จ</button><button class="btn" onclick="closeReceiptOCR()">ปิด</button></div></div><div id="ocrResults"></div></div></div>
 <script>
 const CAT={frozen:'1. แช่แข็ง / ซีฟู้ด',produce:'2. ผักสด / ไข่',rice:'3. ข้าว / เส้น / แป้ง / น้ำตาล',sauce:'4. ซอส / กะทิ / เครื่องแกง',seasoning:'5. เครื่องปรุง / สมุนไพร',meat:'1. เนื้อสัตว์ / ไก่',fish:'2. อาหารทะเล / แช่แข็ง',other:'3. อื่น ๆ'};
@@ -351,4 +351,1471 @@ function cleanupBadOCRItems(){
   persistMaster();save();
 }
 fetch('data.json').then(r=>r.json()).then(d=>{let saved=localStorage.getItem(MASTERKEY);DATA=saved?JSON.parse(saved):d;if(!saved)persistMaster();applyReceiptUpdate20260828();applyBookerUpdate20260829();cleanupBadOCRItems();render()});function render(){document.getElementById('app').innerHTML=panel('thch','🏪 TH/CH SUP','th')+panel('booker','BOOKER SUP','bk')+panel('sains','🛒 SUPERMARKET','sa');save();renderTotals()}
-</script></body></html>
+</script>
+
+<script type="application/json" id="fallbackData">{
+  "thch": [
+    {
+      "id": 1,
+      "name": "GOLD PLUM Vannamei Prawn PD 21/25",
+      "hint": "Stock 89621 • 10×800g net • Hoo Hing 27/08/26",
+      "cat": "frozen",
+      "unit": "case",
+      "price": 73.99,
+      "weekly": 1
+    },
+    {
+      "id": 2,
+      "name": "GOLD PLUM Vannamei Prawn HLSO 21/25",
+      "hint": "Stock 97901 • 6×800g net • Hoo Hing 25/08/26",
+      "cat": "frozen",
+      "unit": "case",
+      "price": 46.99,
+      "weekly": 1
+    },
+    {
+      "id": 3,
+      "name": "Squid Tubes U5",
+      "hint": "",
+      "cat": "frozen",
+      "unit": "case",
+      "price": null,
+      "weekly": 1
+    },
+    {
+      "id": 4,
+      "name": "Roasted Duck",
+      "hint": "",
+      "cat": "frozen",
+      "unit": "case",
+      "price": null,
+      "weekly": 1
+    },
+    {
+      "id": 5,
+      "name": "BDMP Frozen Lime Leaves 100g",
+      "hint": "Stock 66312 • 100g pkt • Hoo Hing 25/08/26",
+      "cat": "frozen",
+      "unit": "pack",
+      "price": 1.99,
+      "weekly": 3
+    },
+    {
+      "id": 6,
+      "name": "HAPPY BOY Wonton Pastry",
+      "hint": "Stock 11422 • 200g pkt • Hoo Hing 25/08/26",
+      "cat": "frozen",
+      "unit": "pack",
+      "price": 1.99,
+      "weekly": 2
+    },
+    {
+      "id": 7,
+      "name": "TYJ Spring Roll Pastry 8.5in",
+      "hint": "Stock 11771 • 20×550g • Hoo Hing 25/08/26",
+      "cat": "frozen",
+      "unit": "case",
+      "price": 26.99,
+      "weekly": 1
+    },
+    {
+      "id": 8,
+      "name": "Pork & Prawn Siu Mai",
+      "hint": "",
+      "cat": "frozen",
+      "unit": "case",
+      "price": null,
+      "weekly": 1
+    },
+    {
+      "id": 9,
+      "name": "Fish Cake (ลูกชิ้นปลา)",
+      "hint": "",
+      "cat": "frozen",
+      "unit": "pack",
+      "price": null,
+      "weekly": 0
+    },
+    {
+      "id": 10,
+      "name": "Shrimp Chip 500g",
+      "hint": "",
+      "cat": "frozen",
+      "unit": "case",
+      "price": null,
+      "weekly": 1
+    },
+    {
+      "id": 11,
+      "name": "เนื้อปลากราย",
+      "hint": "",
+      "cat": "frozen",
+      "unit": "pack",
+      "price": null,
+      "weekly": 6
+    },
+    {
+      "id": 12,
+      "name": "Fresh Bean Sprouts",
+      "hint": "Stock 58971 • 4kg bag • Hoo Hing 25/08/26",
+      "cat": "produce",
+      "unit": "case",
+      "price": 4.79,
+      "weekly": 2
+    },
+    {
+      "id": 13,
+      "name": "French Beans",
+      "hint": "Stock 258481 • 1.5kg case • Hoo Hing 25/08/26",
+      "cat": "produce",
+      "unit": "pack",
+      "price": 10.99,
+      "weekly": 2
+    },
+    {
+      "id": 14,
+      "name": "Lemon",
+      "hint": "Stock 258621 • 40pcs • Hoo Hing 18/08/26",
+      "cat": "produce",
+      "unit": "pack",
+      "price": 14.99,
+      "weekly": 1
+    },
+    {
+      "id": 15,
+      "name": "Broccoli",
+      "hint": "Stock 258151 • 4.5kg • Hoo Hing 25/08/26",
+      "cat": "produce",
+      "unit": "pack",
+      "price": 19.99,
+      "weekly": 1
+    },
+    {
+      "id": 16,
+      "name": "Onion (White) 20KG",
+      "hint": "Stock 59721 • 20kg bag • Hoo Hing 25/08/26",
+      "cat": "produce",
+      "unit": "pack",
+      "price": 10.99,
+      "weekly": 1
+    },
+    {
+      "id": 17,
+      "name": "Spring Onion",
+      "hint": "Stock 259731 • 12s case • Hoo Hing 25/08/26",
+      "cat": "produce",
+      "unit": "pack",
+      "price": 9.5,
+      "weekly": 1
+    },
+    {
+      "id": 18,
+      "name": "Aubergine",
+      "hint": "Stock 258051 • 5kg case • Hoo Hing 25/08/26",
+      "cat": "produce",
+      "unit": "pack",
+      "price": 9.99,
+      "weekly": 1
+    },
+    {
+      "id": 19,
+      "name": "Carrots",
+      "hint": "Stock 259761 • 10kg bag • Hoo Hing 25/08/26",
+      "cat": "produce",
+      "unit": "pack",
+      "price": 8.99,
+      "weekly": 1
+    },
+    {
+      "id": 20,
+      "name": "Red Onion",
+      "hint": "Stock 259671 • 5kg • Hoo Hing 25/08/26",
+      "cat": "produce",
+      "unit": "pack",
+      "price": 10.99,
+      "weekly": 1
+    },
+    {
+      "id": 21,
+      "name": "Lemongrass",
+      "hint": "Stock 58062 • 100g loose rate • Hoo Hing 25/08/26",
+      "cat": "produce",
+      "unit": "pack",
+      "price": 0.99,
+      "weekly": 3
+    },
+    {
+      "id": 22,
+      "name": "Peeled Garlic",
+      "hint": "Stock 257382 • 1kg • Hoo Hing 25/08/26",
+      "cat": "produce",
+      "unit": "pack",
+      "price": 4.35,
+      "weekly": 2
+    },
+    {
+      "id": 23,
+      "name": "Long Red Chilli",
+      "hint": "",
+      "cat": "produce",
+      "unit": "pack",
+      "price": null,
+      "weekly": 1
+    },
+    {
+      "id": 24,
+      "name": "Small Red Chilli",
+      "hint": "Stock 258291 • 1.5kg • Hoo Hing 25/08/26",
+      "cat": "produce",
+      "unit": "pack",
+      "price": 18.99,
+      "weekly": 1
+    },
+    {
+      "id": 25,
+      "name": "Cabbage White",
+      "hint": "",
+      "cat": "produce",
+      "unit": "pack",
+      "price": null,
+      "weekly": 1
+    },
+    {
+      "id": 26,
+      "name": "Galangal (ข่า)",
+      "hint": "Stock 58982 • 200g loose rate • Hoo Hing 25/08/26",
+      "cat": "produce",
+      "unit": "pack",
+      "price": 2.25,
+      "weekly": 3
+    },
+    {
+      "id": 27,
+      "name": "Lime (มะนาวเขียว)",
+      "hint": "Stock 258661 • case • Hoo Hing 25/08/26",
+      "cat": "produce",
+      "unit": "pack",
+      "price": 14.99,
+      "weekly": 1
+    },
+    {
+      "id": 28,
+      "name": "Bamboo Shoot Halves",
+      "hint": "",
+      "cat": "produce",
+      "unit": "case",
+      "price": null,
+      "weekly": 1
+    },
+    {
+      "id": 29,
+      "name": "Large Eggs",
+      "hint": "",
+      "cat": "produce",
+      "unit": "case",
+      "price": null,
+      "weekly": 1
+    },
+    {
+      "id": 30,
+      "name": "GREEN DRAGON Thai Fragrant Rice 20kg",
+      "hint": "Stock 51141 • 20kg bag • Hoo Hing 25/08/26",
+      "cat": "staples",
+      "unit": "bag",
+      "price": 38.99,
+      "weekly": 2
+    },
+    {
+      "id": 31,
+      "name": "FIRST LADY Thai Glutinous Rice Premium 10kg",
+      "hint": "Stock 53861 • 10kg bag • Hoo Hing 25/08/26",
+      "cat": "staples",
+      "unit": "case",
+      "price": 16.99,
+      "weekly": 1
+    },
+    {
+      "id": 32,
+      "name": "GOLD PLUM Rice Sticks 5mm Medium",
+      "hint": "Stock 71611 • 30×400g • Hoo Hing 25/08/26",
+      "cat": "staples",
+      "unit": "pack",
+      "price": 38.99,
+      "weekly": 1
+    },
+    {
+      "id": 33,
+      "name": "Rice Stick 10mm",
+      "hint": "",
+      "cat": "staples",
+      "unit": "pack",
+      "price": null,
+      "weekly": 1
+    },
+    {
+      "id": 34,
+      "name": "GOLD PLUM Funsee Vermicelli Mung Bean",
+      "hint": "Stock 10602 • 1kg pkt • Hoo Hing 25/08/26",
+      "cat": "staples",
+      "unit": "pack",
+      "price": 3.89,
+      "weekly": 2
+    },
+    {
+      "id": 35,
+      "name": "Cooking Salt",
+      "hint": "Stock 30711 • 25kg bag • Hoo Hing 25/08/26",
+      "cat": "staples",
+      "unit": "pack",
+      "price": 10.79,
+      "weekly": 1
+    },
+    {
+      "id": 36,
+      "name": "JB Farina Potato Starch",
+      "hint": "Stock 81632 • 3kg pkt • Hoo Hing 25/08/26",
+      "cat": "staples",
+      "unit": "pack",
+      "price": 6.99,
+      "weekly": 1
+    },
+    {
+      "id": 37,
+      "name": "BRITISH SUGAR Granulated Sugar",
+      "hint": "Stock 30781 • 25kg bag • Hoo Hing 25/08/26",
+      "cat": "staples",
+      "unit": "bag",
+      "price": 16.99,
+      "weekly": 1
+    },
+    {
+      "id": 38,
+      "name": "GREEN DRAGON Self Raising Flour",
+      "hint": "Stock 81581 • 10×1.5kg • Hoo Hing 25/08/26",
+      "cat": "staples",
+      "unit": "pack",
+      "price": 14.99,
+      "weekly": 1
+    },
+    {
+      "id": 39,
+      "name": "A10 CHAOKOH Coconut Milk Catering Size",
+      "hint": "Stock 32821 • 6×2900ml • Hoo Hing 25 & 27/08/26",
+      "cat": "sauces",
+      "unit": "case",
+      "price": 45.5,
+      "weekly": 3
+    },
+    {
+      "id": 40,
+      "name": "CHAOKOH Coconut Milk 400ml",
+      "hint": "Stock 32801 • 24×400ml • Hoo Hing 27/08/26",
+      "cat": "sauces",
+      "unit": "pack",
+      "price": 30.99,
+      "weekly": 1
+    },
+    {
+      "id": 41,
+      "name": "MAE PLOY Red Curry Paste",
+      "hint": "Stock 44732 • 1kg tub • Hoo Hing 25/08/26",
+      "cat": "sauces",
+      "unit": "pack",
+      "price": 4.59,
+      "weekly": 2
+    },
+    {
+      "id": 42,
+      "name": "MAE PLOY Green Curry Paste",
+      "hint": "Stock 44722 • 1kg tub • Hoo Hing 25/08/26",
+      "cat": "sauces",
+      "unit": "pack",
+      "price": 4.59,
+      "weekly": 3
+    },
+    {
+      "id": 43,
+      "name": "MAE PLOY Massaman Curry Paste",
+      "hint": "Stock 44782 • 1kg tub • Hoo Hing 25/08/26",
+      "cat": "sauces",
+      "unit": "pack",
+      "price": 4.59,
+      "weekly": 2
+    },
+    {
+      "id": 44,
+      "name": "MAE PLOY Tom Yum Curry Paste",
+      "hint": "Stock 44852 • 1kg tub • Hoo Hing 25/08/26",
+      "cat": "sauces",
+      "unit": "pack",
+      "price": 4.59,
+      "weekly": 1
+    },
+    {
+      "id": 45,
+      "name": "Thin Soy Sauce",
+      "hint": "",
+      "cat": "sauces",
+      "unit": "pack",
+      "price": null,
+      "weekly": 2
+    },
+    {
+      "id": 46,
+      "name": "GOLDEN MOUNTAIN Seasoning Sauce",
+      "hint": "Stock 52201 • 12×600ml • Hoo Hing 25/08/26",
+      "cat": "sauces",
+      "unit": "pack",
+      "price": 25.99,
+      "weekly": 1
+    },
+    {
+      "id": 47,
+      "name": "LKK PANDA Oyster Sauce",
+      "hint": "Stock 37171 • 6×2.27kg • Hoo Hing 25/08/26",
+      "cat": "sauces",
+      "unit": "pack",
+      "price": 32.99,
+      "weekly": 1
+    },
+    {
+      "id": 48,
+      "name": "LKK Premium Dark Soy Sauce",
+      "hint": "Stock 57111 • 12×500ml • Hoo Hing 25/08/26",
+      "cat": "sauces",
+      "unit": "pack",
+      "price": 21.49,
+      "weekly": 1
+    },
+    {
+      "id": 49,
+      "name": "Sweet Chilli Sauce",
+      "hint": "",
+      "cat": "sauces",
+      "unit": "pack",
+      "price": null,
+      "weekly": 1
+    },
+    {
+      "id": 50,
+      "name": "SARSONS Distilled White Vinegar",
+      "hint": "Stock 12981 • 2×5L • Hoo Hing 25/08/26",
+      "cat": "sauces",
+      "unit": "pack",
+      "price": 10.99,
+      "weekly": 1
+    },
+    {
+      "id": 51,
+      "name": "PENTA Pure Palm Sugar Blocks",
+      "hint": "Stock 31122 • 454g pkt • Hoo Hing 25/08/26",
+      "cat": "sauces",
+      "unit": "pack",
+      "price": 1.79,
+      "weekly": 6
+    },
+    {
+      "id": 52,
+      "name": "Chopped Sweet Radish",
+      "hint": "",
+      "cat": "sauces",
+      "unit": "pack",
+      "price": null,
+      "weekly": 3
+    },
+    {
+      "id": 53,
+      "name": "Seedless Tamarind",
+      "hint": "",
+      "cat": "sauces",
+      "unit": "pack",
+      "price": null,
+      "weekly": 6
+    },
+    {
+      "id": 54,
+      "name": "Rapeseed Oil 20L",
+      "hint": "",
+      "cat": "sauces",
+      "unit": "tin",
+      "price": null,
+      "weekly": 2
+    },
+    {
+      "id": 55,
+      "name": "Fish Sauce (Case)",
+      "hint": "",
+      "cat": "sauces",
+      "unit": "case",
+      "price": null,
+      "weekly": 1
+    },
+    {
+      "id": 56,
+      "name": "Fish Sauce (ขวด)",
+      "hint": "",
+      "cat": "sauces",
+      "unit": "bottle",
+      "price": null,
+      "weekly": 6
+    },
+    {
+      "id": 57,
+      "name": "Roasted Chilli Paste",
+      "hint": "",
+      "cat": "sauces",
+      "unit": "pack",
+      "price": null,
+      "weekly": 1
+    },
+    {
+      "id": 58,
+      "name": "Tomato Paste",
+      "hint": "",
+      "cat": "sauces",
+      "unit": "pack",
+      "price": null,
+      "weekly": 1
+    },
+    {
+      "id": 59,
+      "name": "Kikoman Soy Sauce",
+      "hint": "",
+      "cat": "sauces",
+      "unit": "bottle",
+      "price": null,
+      "weekly": 2
+    },
+    {
+      "id": 60,
+      "name": "Raw Cashew Nuts",
+      "hint": "",
+      "cat": "spices",
+      "unit": "pack",
+      "price": null,
+      "weekly": 2
+    },
+    {
+      "id": 61,
+      "name": "Blanched Peanut",
+      "hint": "",
+      "cat": "spices",
+      "unit": "pack",
+      "price": null,
+      "weekly": 3
+    },
+    {
+      "id": 62,
+      "name": "KNORR Chicken Powder +10% Extra",
+      "hint": "Stock 40232 • 900g+90g • Hoo Hing 25/08/26",
+      "cat": "spices",
+      "unit": "pack",
+      "price": 8.59,
+      "weekly": 1
+    },
+    {
+      "id": 63,
+      "name": "MSG 500g (VAT)",
+      "hint": "",
+      "cat": "spices",
+      "unit": "pack",
+      "price": null,
+      "weekly": 2
+    },
+    {
+      "id": 64,
+      "name": "Crushed Chilli 1KG",
+      "hint": "",
+      "cat": "spices",
+      "unit": "pack",
+      "price": null,
+      "weekly": 2
+    },
+    {
+      "id": 65,
+      "name": "White Pepper 1KG",
+      "hint": "",
+      "cat": "spices",
+      "unit": "pack",
+      "price": null,
+      "weekly": 1
+    },
+    {
+      "id": 66,
+      "name": "MOUNT ELEPHANT Cinnamon / Cassia Sticks",
+      "hint": "Stock 57532 • 1kg • Hoo Hing 25/08/26",
+      "cat": "spices",
+      "unit": "pack",
+      "price": 6.19,
+      "weekly": 1
+    },
+    {
+      "id": 67,
+      "name": "RAJAH Haldi Powder (Ground Turmeric)",
+      "hint": "Stock 10792 • 1kg • Hoo Hing 25/08/26",
+      "cat": "spices",
+      "unit": "pack",
+      "price": 7.69,
+      "weekly": 1
+    },
+    {
+      "id": 68,
+      "name": "Coriander Seed 300g",
+      "hint": "",
+      "cat": "spices",
+      "unit": "pack",
+      "price": null,
+      "weekly": 1
+    },
+    {
+      "id": 69,
+      "name": "Star Aniseed 1KG",
+      "hint": "",
+      "cat": "spices",
+      "unit": "pack",
+      "price": null,
+      "weekly": 1
+    },
+    {
+      "id": 70,
+      "name": "Plastic Containers C500 (VAT)",
+      "hint": "",
+      "cat": "nonfood",
+      "unit": "case",
+      "price": null,
+      "weekly": 1
+    },
+    {
+      "id": 71,
+      "name": "Plastic Containers C650 (VAT)",
+      "hint": "",
+      "cat": "nonfood",
+      "unit": "case",
+      "price": null,
+      "weekly": 1
+    },
+    {
+      "id": 72,
+      "name": "Kitchen Gloves Medium (VAT)",
+      "hint": "",
+      "cat": "nonfood",
+      "unit": "pack",
+      "price": null,
+      "weekly": 1
+    },
+    {
+      "id": 73,
+      "name": "Bamboo Chopsticks",
+      "hint": "",
+      "cat": "nonfood",
+      "unit": "case",
+      "price": null,
+      "weekly": 5
+    },
+    {
+      "id": 74,
+      "name": "Bamboo Skewers 6in",
+      "hint": "Stock 20622 • 100pcs • Hoo Hing 25/08/26",
+      "cat": "nonfood",
+      "unit": "pack",
+      "price": 0.39,
+      "weekly": 10
+    },
+    {
+      "id": 75,
+      "name": "Sponge Scourers (VAT)",
+      "hint": "",
+      "cat": "nonfood",
+      "unit": "pack",
+      "price": null,
+      "weekly": 2
+    }
+  ],
+  "booker": [
+    {
+      "id": 1,
+      "name": "RM Curtis Chopped Mixed Nuts",
+      "hint": "Code 193015 · 1kg",
+      "cat": "other",
+      "unit": "1kg pack",
+      "price": 8.99,
+      "weekly": 1
+    },
+    {
+      "id": 2,
+      "name": "CE Chicken Breast Fillet",
+      "hint": "Code 147179 · 5kg · Booker 29/08/26",
+      "cat": "meat",
+      "unit": "5kg pack",
+      "price": 55.99,
+      "weekly": 7
+    },
+    {
+      "id": 3,
+      "name": "H/Land Spring Water Still",
+      "hint": "Code 301648 · 12 × 1.5L",
+      "cat": "other",
+      "unit": "case",
+      "price": 6.75,
+      "weekly": 2
+    },
+    {
+      "id": 4,
+      "name": "Coke Zero",
+      "hint": "Code 063724 · 24 × 330ml · Booker 29/08/26",
+      "cat": "other",
+      "unit": "case",
+      "price": 9.0,
+      "weekly": 2
+    },
+    {
+      "id": 5,
+      "name": "CL Cod Fillet Skinless/Boneless",
+      "hint": "Code 256183 · 1.816kg",
+      "cat": "fish",
+      "unit": "pack",
+      "price": 45.99,
+      "weekly": 1
+    },
+    {
+      "id": 6,
+      "name": "CE Mid & Prime Chicken Wings",
+      "hint": "Code 321688 · 4.5kg",
+      "cat": "meat",
+      "unit": "4.5kg pack",
+      "price": 13.99,
+      "weekly": 2
+    },
+    {
+      "id": 7,
+      "name": "Flat Iron Beef Steak",
+      "hint": "Code 134043 · avg 2kg · Booker 29/08/26 · receipt weight 4.080kg",
+      "cat": "meat",
+      "unit": "pack",
+      "price": 57.08,
+      "weekly": 2
+    },
+    {
+      "id": 8,
+      "name": "Chefs Choice Vegetable Oil",
+      "hint": "Code 312427 · 20L · Booker 29/08/26",
+      "cat": "other",
+      "unit": "20L tin",
+      "price": 26.99,
+      "weekly": 2
+    },
+    {
+      "id": 9,
+      "name": "Harpic Prof Power Plus Original",
+      "hint": "Code 250742 · 1L",
+      "cat": "other",
+      "unit": "bottle",
+      "price": 2.29,
+      "weekly": 1
+    },
+    {
+      "id": 10,
+      "name": "Flash Professional Glass Cleaner",
+      "hint": "Code 306094 · 750ml",
+      "cat": "other",
+      "unit": "bottle",
+      "price": 3.99,
+      "weekly": 1
+    },
+    {
+      "id": 11,
+      "name": "Professional Finish All in 1 Lemon",
+      "hint": "Code 948497 · 5L",
+      "cat": "other",
+      "unit": "5L",
+      "price": 8.99,
+      "weekly": 1
+    },
+    {
+      "id": 12,
+      "name": "Large Eggs",
+      "hint": "Code 168775 · 180",
+      "cat": "other",
+      "unit": "case 180",
+      "price": 33.99,
+      "weekly": 1
+    },
+    {
+      "id": 13,
+      "name": "CP Mini Jumbo White T/Rolls",
+      "hint": "Code 247794 · 6pk",
+      "cat": "other",
+      "unit": "pack",
+      "price": 12.99,
+      "weekly": 1
+    },
+    {
+      "id": 14,
+      "name": "CP ZFold White Paper Towels",
+      "hint": "Code 293395 · 15 × 198s",
+      "cat": "other",
+      "unit": "case",
+      "price": 29.99,
+      "weekly": 1
+    },
+    {
+      "id": 15,
+      "name": "H/Land Spring Still 6×1.5L",
+      "hint": "Code 154217 · 6 × 1.5L · Booker 29/08/26",
+      "cat": "other",
+      "unit": "6×1.5L pack",
+      "price": 3.49,
+      "weekly": 6
+    },
+    {
+      "id": 16,
+      "name": "CE Chicken Drumsticks",
+      "hint": "Code 320974 · 4.5kg · Booker 29/08/26",
+      "cat": "meat",
+      "unit": "4.5kg pack",
+      "price": 14.79,
+      "weekly": 1
+    },
+    {
+      "id": 17,
+      "name": "CE Oyster Chicken Thigh",
+      "hint": "Code 320976 · 4.5kg · Booker 29/08/26",
+      "cat": "meat",
+      "unit": "4.5kg pack",
+      "price": 15.69,
+      "weekly": 1
+    },
+    {
+      "id": 18,
+      "name": "Byffes Giant Pineapple",
+      "hint": "Code 275225 · single · Booker 29/08/26",
+      "cat": "produce",
+      "unit": "each",
+      "price": 0.99,
+      "weekly": 4
+    },
+    {
+      "id": 19,
+      "name": "Jacks White Potatoes",
+      "hint": "Code 273108 · 2kg · Booker 29/08/26",
+      "cat": "produce",
+      "unit": "2kg pack",
+      "price": 1.49,
+      "weekly": 2
+    },
+    {
+      "id": 20,
+      "name": "Micro Containers w/Lids 500ml",
+      "hint": "Code 307038 · 250s · Booker 29/08/26",
+      "cat": "other",
+      "unit": "250 pack",
+      "price": 36.99,
+      "weekly": 1
+    },
+    {
+      "id": 21,
+      "name": "Micro Containers w/Lids 650ml",
+      "hint": "Code 307039 · 250s · Booker 29/08/26",
+      "cat": "other",
+      "unit": "250 pack",
+      "price": 37.99,
+      "weekly": 1
+    }
+  ],
+  "sains": [
+    {
+      "id": 1,
+      "name": "Coca-Cola Original Taste",
+      "hint": "24 × 330ml · receipt 02/07/26",
+      "cat": "other",
+      "unit": "case",
+      "price": 15.25,
+      "weekly": 2
+    },
+    {
+      "id": 2,
+      "name": "Coca-Cola Zero Sugar",
+      "hint": "24 × 330ml · latest receipt 11/07/26",
+      "cat": "other",
+      "unit": "case",
+      "price": 8.0,
+      "weekly": 3
+    },
+    {
+      "id": 3,
+      "name": "Highland Still Spring Water",
+      "hint": "10L · latest receipt 11/07/26",
+      "cat": "other",
+      "unit": "10L",
+      "price": 5.85,
+      "weekly": 6
+    },
+    {
+      "id": 4,
+      "name": "Sainsbury’s British Bottled Spring Water",
+      "hint": "12 × 500ml · receipt 02/07/26",
+      "cat": "other",
+      "unit": "case",
+      "price": 2.5,
+      "weekly": 6
+    },
+    {
+      "id": 5,
+      "name": "Rubicon Lychee Fruit Juice Drink",
+      "hint": "1L · latest receipt 26/08/26",
+      "cat": "other",
+      "unit": "bottle",
+      "price": 2.1,
+      "weekly": 3
+    },
+    {
+      "id": 6,
+      "name": "Rubicon Mango Fruit Juice Drink",
+      "hint": "1L · receipt 11/07/26",
+      "cat": "other",
+      "unit": "bottle",
+      "price": 1.7,
+      "weekly": 3
+    },
+    {
+      "id": 7,
+      "name": "British Fresh Chicken Skin on Drumsticks",
+      "hint": "1kg · 26/08 ordered 3 but unavailable",
+      "cat": "meat",
+      "unit": "1kg pack",
+      "price": 2.15,
+      "weekly": 3
+    },
+    {
+      "id": 8,
+      "name": "British Fresh Chicken Skin on Thighs",
+      "hint": "1kg · receipt 26/08/26",
+      "cat": "meat",
+      "unit": "1kg pack",
+      "price": 2.99,
+      "weekly": 5
+    },
+    {
+      "id": 9,
+      "name": "Extra Lean Pork Mince 5% Fat",
+      "hint": "500g · Sainsbury’s receipt 28/08/26",
+      "cat": "meat",
+      "unit": "500g pack",
+      "price": 2.49,
+      "weekly": 8,
+      "size": 0.5,
+      "sizeUnit": "kg"
+    },
+    {
+      "id": 10,
+      "name": "British Small Whole Chicken",
+      "hint": "variable-weight item · receipt 26/08/26",
+      "cat": "meat",
+      "unit": "whole",
+      "price": 2.72,
+      "weekly": 5
+    },
+    {
+      "id": 11,
+      "name": "Evaporated Milk",
+      "hint": "410g · receipt 26/08/26",
+      "cat": "dairy",
+      "unit": "tin",
+      "price": 0.52,
+      "weekly": 8
+    },
+    {
+      "id": 12,
+      "name": "Wall’s Soft Scoop Vanilla Ice Cream",
+      "hint": "1.8L tub · receipt 26/08/26",
+      "cat": "dairy",
+      "unit": "tub",
+      "price": 2.75,
+      "weekly": 3
+    },
+    {
+      "id": 13,
+      "name": "Baby Potatoes",
+      "hint": "1kg · receipt 26/08/26",
+      "cat": "produce",
+      "unit": "1kg pack",
+      "price": 0.99,
+      "weekly": 2
+    },
+    {
+      "id": 14,
+      "name": "Cherry Tomatoes",
+      "hint": "330g · receipt 26/08/26",
+      "cat": "produce",
+      "unit": "330g pack",
+      "price": 0.89,
+      "weekly": 5
+    },
+    {
+      "id": 15,
+      "name": "Crownless Pineapple",
+      "hint": "each · receipt 26/08/26",
+      "cat": "produce",
+      "unit": "each",
+      "price": 1.0,
+      "weekly": 3
+    },
+    {
+      "id": 16,
+      "name": "Fine Beans",
+      "hint": "120g · Sainsbury’s receipt 28/08/26",
+      "cat": "produce",
+      "unit": "120g pack",
+      "price": 1.1,
+      "weekly": 4,
+      "size": 120,
+      "sizeUnit": "g"
+    },
+    {
+      "id": 17,
+      "name": "Spring Green",
+      "hint": "ASDA receipt 28/08/26",
+      "cat": "produce",
+      "unit": "each",
+      "price": 0.84,
+      "weekly": 4,
+      "size": 1,
+      "sizeUnit": "piece"
+    },
+    {
+      "id": 18,
+      "name": "Nuts",
+      "hint": "ASDA receipt 28/08/26 · receipt label “NUTS”; promotion applied at till",
+      "cat": "other",
+      "unit": "pack",
+      "price": 2.28,
+      "weekly": 5
+    }
+  ]
+}</script>
+<style>
+/* ---------- V8 additions ---------- */
+.v8bar{padding:8px 12px;border-bottom:1px solid #eee;display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}
+.v8bar button{border:1px solid #ddd;background:#fff;border-radius:9px;padding:9px 4px;font-weight:800;font-size:12px}
+.v8bar .send{background:#0a84ff;border-color:#0a84ff;color:#fff}
+.sugg{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:5px;font-size:10.5px;color:#555}
+.chip{border-radius:999px;padding:2px 8px;font-weight:800;font-size:10.5px;white-space:nowrap}
+.chip.stock{background:#eef3f8;color:#2c5c8a}
+.chip.use{background:#f4f0fa;color:#6a3f9c}
+.chip.need{background:#fff1e6;color:#c05600}
+.chip.ok{background:#eaf8ed;color:#188331}
+.applybtn{border:1px solid #f0a45c;background:#fff7ef;color:#c05600;border-radius:999px;padding:3px 9px;font-weight:800;font-size:10.5px}
+.ordrow{border:1px solid #e2e2e2;border-radius:11px;padding:10px;margin-bottom:8px}
+.ordrow .t{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+.ordrow h4{margin:0;font-size:14px}
+.ordrow small{color:#777;font-size:11px}
+.st{border-radius:999px;padding:3px 9px;font-size:11px;font-weight:800;white-space:nowrap}
+.st.draft{background:#eee;color:#555}
+.st.sent{background:#e6f0ff;color:#0a5bd1}
+.st.received{background:#eaf8ed;color:#188331}
+.st.partial{background:#fff4e0;color:#b06a00}
+.ordacts{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.ordacts button{border:1px solid #ddd;background:#fff;border-radius:8px;padding:6px 10px;font-size:11.5px;font-weight:800}
+.recvline{display:grid;grid-template-columns:1fr 72px 72px;gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid #eee;font-size:12.5px}
+.recvline input{height:38px;width:100%;border:1.5px solid #cfd8e3;border-radius:8px;text-align:center;font-size:16px;font-weight:750}
+.recvline .want{background:#f7f7f7;color:#666}
+.stkline{display:grid;grid-template-columns:1fr 78px;gap:8px;align-items:center;padding:7px 0;border-bottom:1px solid #eee;font-size:12.5px}
+.stkline input{height:38px;width:100%;border:1.5px solid #91d39b;border-radius:8px;text-align:center;font-size:16px;font-weight:750}
+.v8form{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:8px 0}
+.v8form label{display:flex;flex-direction:column;font-size:11.5px;font-weight:700;gap:4px}
+.v8form label.full{grid-column:1/-1}
+.v8form input{height:40px;border:1px solid #ddd;border-radius:9px;padding:0 10px;font-size:16px}
+.otext{width:100%;min-height:190px;border:1px solid #ddd;border-radius:10px;padding:10px;font-size:13px;font-family:inherit;line-height:1.5}
+.sendrow{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.sendrow button{border-radius:10px;padding:12px;font-weight:800;font-size:14px;border:1px solid #ddd;background:#fff}
+.sendrow .wa{background:#25d366;border-color:#25d366;color:#fff}
+.sendrow .em{background:#0a84ff;border-color:#0a84ff;color:#fff}
+.sendrow .full{grid-column:1/-1}
+.hint2{font-size:11px;color:#777;line-height:1.55;margin-top:8px}
+@media print{.v8bar,.sugg,.ordacts{display:none!important}}
+@media(max-width:720px){.actions{grid-template-columns:1fr 1fr}}
+</style>
+
+<div class="modal" id="ordersModal"><div class="dialog" style="width:min(680px,100%)">
+  <h2 style="margin-top:0">📦 ออเดอร์ทั้งหมด</h2>
+  <div id="ordersBody"></div>
+  <div class="dialogActions" style="margin-top:12px"><button class="btn" onclick="closeV8('ordersModal')">ปิด</button></div>
+</div></div>
+
+<div class="modal" id="sendModal"><div class="dialog" style="width:min(680px,100%)">
+  <h2 style="margin-top:0" id="sendTitle">ส่งออเดอร์</h2>
+  <div id="sendMeta" class="hint2"></div>
+  <textarea class="otext" id="sendText"></textarea>
+  <div class="sendrow">
+    <button class="wa" onclick="sendVia('wa')">💬 WhatsApp</button>
+    <button class="em" onclick="sendVia('email')">✉️ Email</button>
+    <button onclick="sendVia('copy')">📋 คัดลอกข้อความ</button>
+    <button onclick="sendVia('save')">💾 บันทึกเป็นออเดอร์</button>
+  </div>
+  <div class="hint2" id="sendHint"></div>
+  <div class="dialogActions" style="margin-top:10px"><button class="btn" onclick="closeV8('sendModal')">ปิด</button></div>
+</div></div>
+
+<div class="modal" id="recvModal"><div class="dialog" style="width:min(680px,100%)">
+  <h2 style="margin-top:0" id="recvTitle">✅ เช็ครับของ</h2>
+  <div class="hint2">ใส่จำนวนที่ได้รับจริง ถ้าตรงกับที่สั่งไม่ต้องแก้ · ของที่รับจะถูกบวกเข้าสต็อกและยอดใช้สัปดาห์นี้อัตโนมัติ</div>
+  <div class="recvline" style="font-weight:800;color:#666"><span>รายการ</span><span style="text-align:center">สั่ง</span><span style="text-align:center">รับจริง</span></div>
+  <div id="recvBody"></div>
+  <div class="dialogActions" style="margin-top:12px">
+    <button class="btn" onclick="closeV8('recvModal')">ยกเลิก</button>
+    <button class="btn" style="background:#188331;color:#fff;border-color:#188331" onclick="confirmReceive()">ยืนยันรับของ</button>
+  </div>
+</div></div>
+
+<div class="modal" id="stockModal"><div class="dialog" style="width:min(680px,100%)">
+  <h2 style="margin-top:0" id="stockTitle">📋 นับสต็อก</h2>
+  <div class="hint2">ใส่จำนวนคงเหลือที่นับได้จริง เว้นว่าง = ไม่เปลี่ยน · ระบบใช้ตัวเลขนี้คำนวณจำนวนที่ควรสั่ง</div>
+  <div id="stockBody" style="max-height:52vh;overflow:auto"></div>
+  <div class="dialogActions" style="margin-top:12px">
+    <button class="btn" onclick="closeV8('stockModal')">ยกเลิก</button>
+    <button class="btn" style="background:#0a84ff;color:#fff;border-color:#0a84ff" onclick="saveStockCount()">บันทึกสต็อก</button>
+  </div>
+</div></div>
+
+<div class="modal" id="cfgModal"><div class="dialog" style="width:min(620px,100%)">
+  <h2 style="margin-top:0">⚙️ ตั้งค่าร้าน &amp; ซัพพลายเออร์</h2>
+  <h3 style="font-size:13px;margin:10px 0 0">ข้อมูลร้าน</h3>
+  <div class="v8form">
+    <label class="full">ชื่อร้าน<input id="cShop"></label>
+    <label class="full">ที่อยู่จัดส่ง<input id="cAddr"></label>
+    <label>เบอร์ติดต่อ<input id="cTel"></label>
+    <label>สั่งเผื่อกี่สัปดาห์<input id="cCover" type="number" min="0.5" step="0.5"></label>
+  </div>
+  <div id="cfgSups"></div>
+  <div class="hint2">เบอร์ WhatsApp ใส่รหัสประเทศไม่ต้องมี + หรือ 0 นำหน้า เช่น อังกฤษ 07552601551 → <b>447552601551</b></div>
+  <div class="dialogActions" style="margin-top:12px">
+    <button class="btn" onclick="closeV8('cfgModal')">ยกเลิก</button>
+    <button class="btn" style="background:#0a84ff;color:#fff;border-color:#0a84ff" onclick="saveConfig()">บันทึก</button>
+  </div>
+</div></div>
+
+<script>
+/* ============================================================
+   V8 — Send order · Order status · Stock & auto-suggest · PWA
+   ============================================================ */
+const V8_SUPKEY='restaurant_supplier_contacts_v8';
+const V8_ORDKEY='restaurant_supplier_orders_v8';
+const V8_STOCKKEY='restaurant_supplier_stock_v8';
+const V8_CFGKEY='restaurant_supplier_config_v8';
+const SUPNAME={thch:'TH/CH SUP',booker:'BOOKER SUP',sains:'SUPERMARKET'};
+const SUPCLS={thch:'th',booker:'bk',sains:'sa'};
+
+function lsGet(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){console.warn('read fail',k,e);return d}}
+function lsSet(k,v){try{localStorage.setItem(k,JSON.stringify(v));return true}catch(e){console.warn('save fail',k,e);return false}}
+
+let contacts=lsGet(V8_SUPKEY,{
+  thch:{label:'TH/CH SUP (Hoo Hing)',phone:'',email:''},
+  booker:{label:'BOOKER SUP',phone:'',email:''},
+  sains:{label:'SUPERMARKET',phone:'',email:''}
+});
+let orders=lsGet(V8_ORDKEY,[]);
+let stock=lsGet(V8_STOCKKEY,{});
+let cfg=lsGet(V8_CFGKEY,{shop:'Kaosarn SW11',addr:"110 St John's Hill, London SW11 1SJ",tel:'',cover:1});
+
+function saveV8(){lsSet(V8_SUPKEY,contacts);lsSet(V8_ORDKEY,orders);lsSet(V8_STOCKKEY,stock);lsSet(V8_CFGKEY,cfg)}
+function closeV8(id){document.getElementById(id).classList.remove('show')}
+function openV8(id){document.getElementById(id).classList.add('show')}
+function dstr(d){return new Date(d).toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'})}
+function dtstr(d){return new Date(d).toLocaleString('en-GB',{day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'})}
+function esc(s){return String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+
+/* ---------- Stock + usage + suggestion ---------- */
+function stockOf(s,id){return +(stock[key(s,id)]?.qty||0)}
+function usageStats(s,id){
+  let vals=[];
+  (history||[]).slice(-6).forEach(h=>{
+    if(!h.items)return;
+    const it=h.items.find(x=>x.supplier===s&&x.id===id);
+    vals.push(it?(+it.qty||0):0);
+  });
+  const byWeek={};
+  (orders||[]).filter(o=>o.supplier===s&&(o.status==='received'||o.status==='partial')).forEach(o=>{
+    const w=weekStart(o.receivedAt||o.createdAt).toISOString().slice(0,10);
+    (o.lines||[]).filter(l=>l.id===id).forEach(l=>byWeek[w]=(byWeek[w]||0)+(+l.recvQty||0));
+  });
+  vals=vals.concat(Object.values(byWeek));
+  let n=vals.length,avg=n?vals.reduce((a,b)=>a+b,0)/n:0;
+  let src='จากประวัติ '+n+' สัปดาห์';
+  if(!n){const i=(DATA[s]||[]).find(x=>x.id===id);avg=+(i?.weekly)||0;src='ค่าตั้งต้น'}
+  return {avg:Math.round(avg*100)/100,n,src};
+}
+function suggestQty(s,id){
+  const avg=usageStats(s,id).avg, on=stockOf(s,id), cover=+cfg.cover||1;
+  return Math.max(0,Math.ceil(avg*cover-on-1e-9));
+}
+function setStock(s,id,v){
+  const k=key(s,id);
+  if(v===''||v==null){delete stock[k]}else{stock[k]={qty:Math.max(0,+v||0),at:new Date().toISOString()}}
+  saveV8();
+}
+function promptStock(s,id){
+  const i=(DATA[s]||[]).find(x=>x.id===id);if(!i)return;
+  const cur=stock[key(s,id)]?.qty;
+  const v=prompt('สต็อกคงเหลือของ "'+i.name+'" ('+i.unit+')',cur??'');
+  if(v===null)return;
+  setStock(s,id,v.trim());render();
+}
+function applySuggest(s,id){setWant(s,id,suggestQty(s,id));render()}
+function applyAllSuggest(s){
+  let n=0;
+  for(const i of DATA[s]){const q=suggestQty(s,i.id);if(q>0){setWant(s,i.id,q);n++}}
+  render();
+  alert(n?('เติมจำนวนแนะนำแล้ว '+n+' รายการ — ตรวจทานก่อนส่งได้เลย'):'ยังไม่มีรายการที่ต้องสั่งเพิ่ม (สต็อกพอสำหรับ '+(cfg.cover||1)+' สัปดาห์)');
+}
+
+/* ---------- Stock count screen ---------- */
+let stockCtx=null;
+function openStockCount(s){
+  stockCtx=s;
+  document.getElementById('stockTitle').textContent='📋 นับสต็อก · '+SUPNAME[s];
+  document.getElementById('stockBody').innerHTML=(DATA[s]||[]).map(i=>{
+    const cur=stock[key(s,i.id)]?.qty;
+    return `<div class="stkline"><div><b>${esc(i.name)}</b><br><small style="color:#888">${esc(i.unit)} · ใช้เฉลี่ย ${usageStats(s,i.id).avg}/สัปดาห์</small></div>
+    <input type="number" min="0" step="0.001" inputmode="decimal" data-stk="${i.id}" value="${cur??''}" placeholder="—"></div>`;
+  }).join('');
+  openV8('stockModal');
+}
+function saveStockCount(){
+  if(!stockCtx)return;
+  document.querySelectorAll('[data-stk]').forEach(el=>setStock(stockCtx,+el.dataset.stk,el.value.trim()));
+  closeV8('stockModal');render();
+}
+
+/* ---------- Order text + sending ---------- */
+function orderLinesFor(s){
+  const out=[];
+  for(const i of DATA[s]){
+    const q=+(state[key(s,i.id)]?.want||0);
+    if(q>0)out.push({id:i.id,name:i.name,unit:i.unit||'item',price:+i.price||0,qty:q,recvQty:q});
+  }
+  return out;
+}
+function orderText(s,lines){
+  const c=contacts[s]||{},tot=lines.reduce((a,l)=>a+l.qty*l.price,0);
+  let t=(cfg.shop||'Kaosarn')+' — Order '+new Date().toLocaleDateString('en-GB')+'\n';
+  t+=(c.label||SUPNAME[s])+'\n\n';
+  lines.forEach((l,ix)=>{t+=(ix+1)+'. '+l.name+' — '+l.qty+' '+l.unit+'\n'});
+  t+='\nรวม '+lines.length+' รายการ';
+  if(tot>0)t+=' · ประมาณ '+money(tot);
+  t+='\n\nจัดส่งที่: '+(cfg.addr||'');
+  if(cfg.tel)t+='\nติดต่อ: '+cfg.tel;
+  return t;
+}
+let sendCtx=null;
+function openSendOrder(s){
+  const lines=orderLinesFor(s);
+  if(!lines.length)return alert('ยังไม่มีรายการที่ใส่ "จำนวนที่ต้องการ" ของ '+SUPNAME[s]+'\n\nลองกด “✨ เติมจำนวนแนะนำ” หรือกรอกจำนวนเองก่อนครับ');
+  sendCtx={s,lines};
+  const c=contacts[s]||{};
+  document.getElementById('sendTitle').textContent='📤 ส่งออเดอร์ · '+SUPNAME[s];
+  document.getElementById('sendMeta').innerHTML=`${lines.length} รายการ · ประมาณ <b>${money(lines.reduce((a,l)=>a+l.qty*l.price,0))}</b>`
+    +`<br>WhatsApp: ${c.phone?esc(c.phone):'<b style="color:#b00020">ยังไม่ตั้งค่า</b>'} · Email: ${c.email?esc(c.email):'<b style="color:#b00020">ยังไม่ตั้งค่า</b>'} <button class="applybtn" onclick="openConfig()">ตั้งค่า</button>`;
+  document.getElementById('sendText').value=orderText(s,lines);
+  document.getElementById('sendHint').textContent='กดส่งแล้วระบบจะบันทึกเป็นออเดอร์สถานะ “ส่งแล้ว” และล้างช่องจำนวนที่ต้องการให้อัตโนมัติ';
+  openV8('sendModal');
+}
+function commitOrder(via){
+  const {s,lines}=sendCtx;
+  const o={oid:'O'+Date.now(),supplier:s,createdAt:new Date().toISOString(),sentAt:new Date().toISOString(),
+    status:'sent',via,lines:lines.map(l=>({...l})),text:document.getElementById('sendText').value};
+  orders.unshift(o);
+  lines.forEach(l=>{const k=key(s,l.id);state[k]=state[k]||{want:0,total:0};state[k].want=0});
+  saveV8();save();render();
+  closeV8('sendModal');
+  alert('บันทึกออเดอร์แล้ว ('+lines.length+' รายการ)\nดูและเช็ครับของได้ที่ปุ่ม 📦 ออเดอร์');
+}
+function sendVia(mode){
+  if(!sendCtx)return;
+  const {s}=sendCtx,c=contacts[s]||{},txt=document.getElementById('sendText').value;
+  if(mode==='wa'){
+    const ph=(c.phone||'').replace(/[^0-9]/g,'');
+    if(!ph)return alert('ยังไม่ได้ใส่เบอร์ WhatsApp ของ '+SUPNAME[s]+' — กด “ตั้งค่า” ก่อนครับ');
+    window.open('https://wa.me/'+ph+'?text='+encodeURIComponent(txt),'_blank');
+    commitOrder('whatsapp');
+  }else if(mode==='email'){
+    if(!c.email)return alert('ยังไม่ได้ใส่อีเมลของ '+SUPNAME[s]+' — กด “ตั้งค่า” ก่อนครับ');
+    location.href='mailto:'+encodeURIComponent(c.email)+'?subject='+encodeURIComponent((cfg.shop||'Kaosarn')+' order '+new Date().toLocaleDateString('en-GB'))+'&body='+encodeURIComponent(txt);
+    commitOrder('email');
+  }else if(mode==='copy'){
+    const done=()=>{alert('คัดลอกข้อความแล้ว วางในแอปไหนก็ได้');commitOrder('copy')};
+    if(navigator.clipboard?.writeText){navigator.clipboard.writeText(txt).then(done).catch(()=>{fallbackCopy(txt);done()})}
+    else{fallbackCopy(txt);done()}
+  }else{commitOrder('manual')}
+}
+function fallbackCopy(t){const ta=document.getElementById('sendText');ta.select();try{document.execCommand('copy')}catch(e){}}
+
+/* ---------- Orders list + receiving ---------- */
+function openOrders(){renderOrders();openV8('ordersModal')}
+function renderOrders(){
+  const b=document.getElementById('ordersBody');
+  if(!orders.length){b.innerHTML='<p style="color:#777">ยังไม่มีออเดอร์ — กด “📤 ส่งออเดอร์” ในกล่อง Supplier เพื่อสร้างออเดอร์แรก</p>';return}
+  const label={draft:'ร่าง',sent:'ส่งแล้ว',received:'รับของแล้ว',partial:'รับไม่ครบ'};
+  b.innerHTML=orders.slice(0,60).map(o=>{
+    const tot=(o.lines||[]).reduce((a,l)=>a+(+l.qty||0)*(+l.price||0),0);
+    const rtot=(o.lines||[]).reduce((a,l)=>a+(+l.recvQty||0)*(+l.price||0),0);
+    return `<div class="ordrow">
+      <div class="t">
+        <div><h4>${SUPNAME[o.supplier]||o.supplier}</h4>
+          <small>สั่ง ${dtstr(o.createdAt)}${o.receivedAt?' · รับ '+dtstr(o.receivedAt):''} · ${(o.lines||[]).length} รายการ · ${money(o.status==='received'||o.status==='partial'?rtot:tot)}${o.via?' · '+o.via:''}</small></div>
+        <span class="st ${o.status}">${label[o.status]||o.status}</span>
+      </div>
+      <div class="ordacts">
+        ${o.status==='sent'?`<button onclick="openReceive('${o.oid}')">✅ เช็ครับของ</button>`:''}
+        <button onclick="reopenSend('${o.oid}')">📤 ส่งซ้ำ</button>
+        <button onclick="viewOrder('${o.oid}')">👁 ดูรายการ</button>
+        <button style="color:#b00020" onclick="delOrder('${o.oid}')">ลบ</button>
+      </div></div>`;
+  }).join('');
+}
+function viewOrder(oid){
+  const o=orders.find(x=>x.oid===oid);if(!o)return;
+  alert((o.text||'')+'\n\n— สถานะ: '+o.status);
+}
+function reopenSend(oid){
+  const o=orders.find(x=>x.oid===oid);if(!o)return;
+  sendCtx={s:o.supplier,lines:o.lines.map(l=>({...l}))};
+  document.getElementById('sendTitle').textContent='📤 ส่งซ้ำ · '+SUPNAME[o.supplier];
+  document.getElementById('sendMeta').innerHTML=`ออเดอร์เดิม ${dtstr(o.createdAt)} · ${o.lines.length} รายการ`;
+  document.getElementById('sendText').value=o.text||orderText(o.supplier,o.lines);
+  document.getElementById('sendHint').textContent='การส่งซ้ำจะสร้างออเดอร์ใหม่อีก 1 รายการในประวัติ';
+  closeV8('ordersModal');openV8('sendModal');
+}
+function delOrder(oid){
+  if(!confirm('ลบออเดอร์นี้ออกจากประวัติหรือไม่?'))return;
+  orders=orders.filter(x=>x.oid!==oid);saveV8();renderOrders();
+}
+let recvCtx=null;
+function openReceive(oid){
+  const o=orders.find(x=>x.oid===oid);if(!o)return;
+  recvCtx=oid;
+  document.getElementById('recvTitle').textContent='✅ เช็ครับของ · '+SUPNAME[o.supplier];
+  document.getElementById('recvBody').innerHTML=o.lines.map(l=>
+    `<div class="recvline"><div><b>${esc(l.name)}</b><br><small style="color:#888">${esc(l.unit)} · ${money(l.price)}</small></div>
+     <input class="want" readonly value="${l.qty}">
+     <input type="number" min="0" step="0.001" inputmode="decimal" data-rv="${l.id}" value="${l.recvQty??l.qty}"></div>`).join('');
+  closeV8('ordersModal');openV8('recvModal');
+}
+function confirmReceive(){
+  const o=orders.find(x=>x.oid===recvCtx);if(!o)return;
+  let short=false;
+  document.querySelectorAll('[data-rv]').forEach(el=>{
+    const l=o.lines.find(x=>x.id===+el.dataset.rv);if(!l)return;
+    l.recvQty=Math.max(0,+el.value||0);
+    if(l.recvQty<l.qty)short=true;
+  });
+  o.receivedAt=new Date().toISOString();
+  o.status=short?'partial':'received';
+  o.lines.forEach(l=>{
+    const k=key(o.supplier,l.id),q=+l.recvQty||0;if(!q)return;
+    state[k]=state[k]||{want:0,total:0};
+    state[k].total=(+state[k].total||0)+q;
+    stock[k]={qty:stockOf(o.supplier,l.id)+q,at:o.receivedAt};
+    receiptHistory.push({at:o.receivedAt,supplier:o.supplier,id:l.id,name:l.name,qty:q,unit:l.unit,
+      price:l.price,amount:q*(l.price||0),source:'order-received'});
+  });
+  saveReceiptHistory();saveV8();save();render();
+  closeV8('recvModal');
+  alert(short?'บันทึกแล้ว — มีของรับไม่ครบ ระบบทำเครื่องหมาย “รับไม่ครบ” ไว้ให้':'รับของครบแล้ว ✅ ยอดถูกบวกเข้าสต็อกและยอดใช้สัปดาห์นี้เรียบร้อย');
+}
+
+/* ---------- Settings ---------- */
+function openConfig(){
+  document.getElementById('cShop').value=cfg.shop||'';
+  document.getElementById('cAddr').value=cfg.addr||'';
+  document.getElementById('cTel').value=cfg.tel||'';
+  document.getElementById('cCover').value=cfg.cover||1;
+  document.getElementById('cfgSups').innerHTML=Object.keys(SUPNAME).map(s=>{
+    const c=contacts[s]||{};
+    return `<h3 style="font-size:13px;margin:14px 0 0">${SUPNAME[s]}</h3><div class="v8form">
+      <label class="full">ชื่อที่แสดงในออเดอร์<input data-c="${s}.label" value="${esc(c.label||SUPNAME[s])}"></label>
+      <label>WhatsApp (เช่น 447…)<input data-c="${s}.phone" inputmode="numeric" value="${esc(c.phone||'')}"></label>
+      <label>Email<input data-c="${s}.email" type="email" value="${esc(c.email||'')}"></label></div>`;
+  }).join('');
+  openV8('cfgModal');
+}
+function saveConfig(){
+  cfg.shop=document.getElementById('cShop').value.trim();
+  cfg.addr=document.getElementById('cAddr').value.trim();
+  cfg.tel=document.getElementById('cTel').value.trim();
+  cfg.cover=Math.max(0.5,+document.getElementById('cCover').value||1);
+  document.querySelectorAll('[data-c]').forEach(el=>{
+    const [s,f]=el.dataset.c.split('.');
+    contacts[s]=contacts[s]||{};contacts[s][f]=el.value.trim();
+  });
+  saveV8();closeV8('cfgModal');render();
+}
+
+/* ---------- Panel override: adds V8 action bar + stock/suggestion chips ---------- */
+function panel(s,title,cls){
+  const groups={};DATA[s].forEach(i=>(groups[i.cat]??=[]).push(i));
+  const costly=expensiveSet();let displayNo=0;
+  let pend=orders.filter(o=>o.supplier===s&&o.status==='sent').length;
+  let html=`<section class="supplier ${cls}"><div class="head"><span>${title}</span><button class="pdfbtn" onclick="supplierPDF('${s}')">PDF</button></div>`;
+  html+=`<div class="v8bar"><button class="send" onclick="openSendOrder('${s}')">📤 ส่งออเดอร์</button>`
+      + `<button onclick="applyAllSuggest('${s}')">✨ เติมจำนวนแนะนำ</button>`
+      + `<button onclick="openStockCount('${s}')">📋 นับสต็อก</button></div>`;
+  if(pend)html+=`<div style="padding:8px 12px;background:#e6f0ff;color:#0a5bd1;font-size:12px;font-weight:800">📦 มี ${pend} ออเดอร์รอรับของ · <button class="applybtn" style="border-color:#0a5bd1;color:#0a5bd1;background:#fff" onclick="openOrders()">เช็ครับของ</button></div>`;
+  html+=`<div class="addbar"><button class="addbtn" onclick="openItem('${s}')">＋ เพิ่มสินค้า</button><button class="addbtn" onclick="openReceiptOCRFor('${s}')">📷 ใบเสร็จ</button></div>`;
+  html+=`<div class="sub"><span>รายการ / ราคา</span><span class="want">จำนวนที่<br>ต้องการ</span><span class="week">ผลรวมสั่ง<br>1 สัปดาห์</span></div>`;
+  for(const [cat,items] of Object.entries(groups)){
+    html+=`<div class="cat">${CAT[cat]||cat}</div>`;
+    for(const i of items){
+      displayNo++;
+      const k=key(s,i.id);let st=state[k]||{want:0,total:i.weekly||0};if(!state[k])state[k]=st;
+      const warn=costly.has(k)?'<span class="warn" title="พบสินค้าประเภทเดียวกันที่ราคาต่อหน่วยถูกกว่าใน Supplier อื่น">!</span>':'';
+      const on=stock[k]?.qty,u=usageStats(s,i.id),sg=suggestQty(s,i.id);
+      let chips=`<div class="sugg">`
+        +`<span class="chip stock" onclick="promptStock('${s}',${i.id})" style="cursor:pointer">คงเหลือ ${on==null?'—':on}</span>`
+        +`<span class="chip use">ใช้ ${u.avg}/สัปดาห์</span>`
+        +(sg>0?`<span class="chip need">ควรสั่ง ${sg}</span><button class="applybtn" onclick="applySuggest('${s}',${i.id})">ใช้</button>`
+              :`<span class="chip ok">สต็อกพอ</span>`)
+        +`</div>`;
+      html+=`<div class="row"><div><div class="name">${displayNo}. ${i.name}${warn}</div>
+        <div class="hint">${i.hint||''}</div><div class="price">£${(i.price||0).toFixed(2)} · ${i.unit}</div>
+        ${chips}
+        <div class="manage"><button class="mini" onclick="openItem('${s}',${i.id})">แก้ไข</button><button class="mini danger" onclick="deleteItem('${s}',${i.id})">ลบ</button></div></div>
+        <div><input class="qty" type="number" min="0" inputmode="decimal" value="${st.want||''}" oninput="setWant('${s}',${i.id},this.value)"><div class="unit">${i.unit}</div></div>
+        <div><input class="weekly" readonly value="${st.total||0}"><div class="unit">${i.unit}</div></div></div>`;
+    }
+  }
+  html+=`<div class="sum"><span>มูลค่าที่ต้องการวันนี้</span><span data-total="${s}">£0.00</span></div></section>`;
+  return html;
+}
+
+/* ---------- Safety net: offline / file:// data load ---------- */
+setTimeout(()=>{
+  if(DATA&&Object.keys(DATA).length)return;
+  const saved=localStorage.getItem(MASTERKEY);
+  const fb=document.getElementById('fallbackData');
+  try{
+    DATA=saved?JSON.parse(saved):JSON.parse(fb.textContent);
+    if(!saved)persistMaster();
+    render();
+    console.log('V8: loaded data from '+(saved?'localStorage':'embedded fallback'));
+  }catch(e){console.error('V8 fallback load failed',e)}
+},1200);
+
+/* ---------- PWA ---------- */
+if('serviceWorker' in navigator){
+  window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js')
+    .then(()=>console.log('V8: service worker ready'))
+    .catch(e=>console.log('V8: sw not registered (ต้องเปิดผ่าน http/https)',e.message)));
+}
+let deferredPrompt=null;
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e});
+/* ติดตั้งแล้ว (เปิดจากไอคอนโฮม) ไม่ต้องโชว์ปุ่ม */
+if(window.matchMedia&&window.matchMedia('(display-mode: standalone)').matches||navigator.standalone){
+  const b=document.getElementById('installBtn');if(b)b.style.display='none';
+}
+function installApp(){
+  if(deferredPrompt){deferredPrompt.prompt();deferredPrompt.userChoice.then(()=>{deferredPrompt=null;document.getElementById('installBtn').style.display='none'})}
+  else alert('iPhone/iPad: กดปุ่มแชร์ ⬆️ ใน Safari แล้วเลือก “Add to Home Screen”\n\nAndroid/Chrome: เมนู ⋮ แล้วเลือก “ติดตั้งแอป”');
+}
+</script>
+
+</body></html>
