@@ -7,7 +7,7 @@
 .receiptBtn{background:#0a84ff;color:#fff;border-color:#0a84ff;white-space:nowrap}.receiptFab{display:none;position:fixed;right:16px;bottom:82px;z-index:20;border:0;border-radius:999px;background:#0a84ff;color:white;box-shadow:0 4px 18px #0003;padding:12px 16px;font-weight:800;font-size:17px;gap:6px;align-items:center}.receiptFab span{font-size:14px}
 @media(max-width:720px){.top{position:sticky;align-items:stretch;flex-direction:column;gap:10px;padding:10px 12px}.topTitle{width:100%}.actions{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:8px}.actions .receiptBtn{grid-column:1/-1;font-size:16px;padding:12px}.actions .btn{white-space:normal;line-height:1.2}.receiptFab{display:flex}.grid{grid-template-columns:1fr;padding:10px}.modal .dialog{max-height:88vh;overflow:auto}.ocrtable{font-size:11px;display:block;overflow-x:auto}.ocrtable th,.ocrtable td{min-width:90px}.ocrtable th:first-child,.ocrtable td:first-child{min-width:180px}}
 </style><script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script></head><body>
-<div class="top"><div class="topTitle"><h1>🛒 แผนการสั่งซื้อวัตถุดิบ</h1><small>รวมทุก Supplier ในหน้าเดียว · <b>V8.0 · ส่งออเดอร์ · เช็ครับของ · สต็อกอัตโนมัติ · PWA</b></small></div><div class="actions"><button id="receiptOcrTopBtn" class="btn receiptBtn" onclick="openReceiptOCR()">📷 ถ่าย / อ่านใบเสร็จ</button><button class="btn" onclick="resetWeek()">ปิดสัปดาห์ / เริ่มสัปดาห์ใหม่</button><button class="btn" onclick="combinedPDF()">📊 PDF สรุปเดือน</button><button class="btn" onclick="usageCostPDF()">🧾 PDF ใช้สินค้า / ค่าใช้จ่าย</button><button class="btn" style="background:#0a5bd1;color:#fff;border-color:#0a5bd1" onclick="openOrders()">📦 ออเดอร์</button><button class="btn" onclick="openConfig()">⚙️ ตั้งค่า</button><button class="btn" id="installBtn" onclick="installApp()">⬇️ ติดตั้งแอป</button></div></div><button class="receiptFab" onclick="openReceiptOCR()" aria-label="ถ่ายหรืออ่านใบเสร็จ">📷<span>ใบเสร็จ</span></button><main class="grid" id="app"></main><section id="report"></section><div class="modal" id="editModal"><div class="dialog"><h2 id="modalTitle">สินค้า</h2><div class="form"><label class="full">ชื่อสินค้า<input id="fName"></label><label>หมวด<select id="fCat"></select></label><label>หน่วย<input id="fUnit" placeholder="kg / pack / case"></label><label>ราคา £<input id="fPrice" type="number" min="0" step="0.01"></label><label>ปริมาณต่อแพ็ก (ถ้าทราบ)<input id="fSize" type="number" min="0" step="0.001"></label><label>หน่วยปริมาณ<select id="fSizeUnit"><option value="">—</option><option>kg</option><option>g</option><option>L</option><option>ml</option><option>piece</option></select></label><label class="full">รายละเอียด / ยี่ห้อ<input id="fHint"></label></div><div class="dialogActions"><button class="btn" onclick="closeModal()">ยกเลิก</button><button class="btn" onclick="saveItem()">บันทึก</button></div></div></div>
+<div class="top"><div class="topTitle"><h1>🛒 แผนการสั่งซื้อวัตถุดิบ</h1><small>รวมทุก Supplier ในหน้าเดียว · <b>V8.1 · ส่งออเดอร์ · เช็ครับของ · สต็อกอัตโนมัติ · PWA</b></small></div><div class="actions"><button id="receiptOcrTopBtn" class="btn receiptBtn" onclick="openReceiptOCR()">📷 ถ่าย / อ่านใบเสร็จ</button><button class="btn" onclick="resetWeek()">ปิดสัปดาห์ / เริ่มสัปดาห์ใหม่</button><button class="btn" onclick="combinedPDF()">📊 PDF สรุปเดือน</button><button class="btn" onclick="usageCostPDF()">🧾 PDF ใช้สินค้า / ค่าใช้จ่าย</button><button class="btn" style="background:#0a5bd1;color:#fff;border-color:#0a5bd1" onclick="openOrders()">📦 ออเดอร์</button><button class="btn" style="color:#b00020" onclick="clearAllWants()">🧹 ล้างจำนวนทั้งหมด</button><button class="btn" onclick="openConfig()">⚙️ ตั้งค่า</button><button class="btn" id="installBtn" onclick="installApp()">⬇️ ติดตั้งแอป</button></div></div><button class="receiptFab" onclick="openReceiptOCR()" aria-label="ถ่ายหรืออ่านใบเสร็จ">📷<span>ใบเสร็จ</span></button><main class="grid" id="app"></main><section id="report"></section><div class="modal" id="editModal"><div class="dialog"><h2 id="modalTitle">สินค้า</h2><div class="form"><label class="full">ชื่อสินค้า<input id="fName"></label><label>หมวด<select id="fCat"></select></label><label>หน่วย<input id="fUnit" placeholder="kg / pack / case"></label><label>ราคา £<input id="fPrice" type="number" min="0" step="0.01"></label><label>ปริมาณต่อแพ็ก (ถ้าทราบ)<input id="fSize" type="number" min="0" step="0.001"></label><label>หน่วยปริมาณ<select id="fSizeUnit"><option value="">—</option><option>kg</option><option>g</option><option>L</option><option>ml</option><option>piece</option></select></label><label class="full">รายละเอียด / ยี่ห้อ<input id="fHint"></label></div><div class="dialogActions"><button class="btn" onclick="closeModal()">ยกเลิก</button><button class="btn" onclick="saveItem()">บันทึก</button></div></div></div>
 <div class="modal" id="ocrModal"><div class="dialog" style="width:min(760px,100%)"><h2>📷 อ่านใบเสร็จ</h2><div class="ocrbox"><label><b>Supplier</b><select id="ocrSupplier" style="margin-left:8px;padding:7px;border-radius:7px"><option value="thch">TH/CH SUP</option><option value="booker">BOOKER SUP</option><option value="sains">SUPERMARKET</option></select></label><div class="ocrActions" style="margin-top:10px"><button class="btn" type="button" onclick="receiptCamera.click()">📷 ถ่ายใบเสร็จ</button><button class="btn" type="button" onclick="receiptLibrary.click()">🖼 เลือกรูปใบเสร็จ</button></div><input id="receiptCamera" type="file" accept="image/*" capture="environment" style="display:none"><input id="receiptLibrary" type="file" accept="image/*" style="display:none"><div id="receiptFileName" class="muted" style="margin-top:8px">ยังไม่ได้เลือกรูป</div><img id="receiptPreview" class="ocrpreview" style="display:none"><div class="progress"><div id="ocrProgress"></div></div><div id="ocrStatus" class="statusline">ถ่ายรูปหรือเลือกภาพใบเสร็จ แล้วกด “อ่านใบเสร็จ”</div><div class="ocrActions"><button class="btn" onclick="runReceiptOCR()">อ่านใบเสร็จ</button><button class="btn" onclick="closeReceiptOCR()">ปิด</button></div></div><div id="ocrResults"></div></div></div>
 <script>
 const CAT={frozen:'1. แช่แข็ง / ซีฟู้ด',produce:'2. ผักสด / ไข่',rice:'3. ข้าว / เส้น / แป้ง / น้ำตาล',sauce:'4. ซอส / กะทิ / เครื่องแกง',seasoning:'5. เครื่องปรุง / สมุนไพร',meat:'1. เนื้อสัตว์ / ไก่',fish:'2. อาหารทะเล / แช่แข็ง',other:'3. อื่น ๆ'};
@@ -1395,7 +1395,7 @@ fetch('data.json').then(r=>r.json()).then(d=>{let saved=localStorage.getItem(MAS
 }</script>
 <style>
 /* ---------- V8 additions ---------- */
-.v8bar{padding:8px 12px;border-bottom:1px solid #eee;display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}
+.v8bar{padding:8px 12px;border-bottom:1px solid #eee;display:grid;grid-template-columns:1fr 1fr;gap:6px}.v8bar .clear{color:#b00020;border-color:#f0b8c0}
 .v8bar button{border:1px solid #ddd;background:#fff;border-radius:9px;padding:9px 4px;font-weight:800;font-size:12px}
 .v8bar .send{background:#0a84ff;border-color:#0a84ff;color:#fff}
 .sugg{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:5px;font-size:10.5px;color:#555}
@@ -1562,10 +1562,26 @@ function promptStock(s,id){
 }
 function applySuggest(s,id){setWant(s,id,suggestQty(s,id));render()}
 function applyAllSuggest(s){
-  let n=0;
-  for(const i of DATA[s]){const q=suggestQty(s,i.id);if(q>0){setWant(s,i.id,q);n++}}
+  const plan=[];
+  for(const i of DATA[s]){const q=suggestQty(s,i.id);if(q>0)plan.push({i,q})}
+  if(!plan.length)return alert('ยังไม่มีรายการที่ต้องสั่งเพิ่ม (สต็อกพอสำหรับ '+(cfg.cover||1)+' สัปดาห์)');
+  const val=plan.reduce((a,x)=>a+x.q*(+x.i.price||0),0);
+  const preview=plan.slice(0,6).map(x=>'• '+x.i.name+' × '+x.q).join('\n')+(plan.length>6?'\n• …อีก '+(plan.length-6)+' รายการ':'');
+  if(!confirm('จะเติมจำนวนแนะนำ '+plan.length+' รายการ (ประมาณ '+money(val)+')\n\n'+preview+'\n\nรายการที่กรอกไว้แล้วจะถูกทับ — ตกลงหรือไม่?'))return;
+  plan.forEach(x=>setWant(s,x.i.id,x.q));
   render();
-  alert(n?('เติมจำนวนแนะนำแล้ว '+n+' รายการ — ตรวจทานก่อนส่งได้เลย'):'ยังไม่มีรายการที่ต้องสั่งเพิ่ม (สต็อกพอสำหรับ '+(cfg.cover||1)+' สัปดาห์)');
+}
+function clearWants(s){
+  const n=DATA[s].reduce((a,i)=>a+(+(state[key(s,i.id)]?.want||0)>0?1:0),0);
+  if(!n)return alert('ยังไม่มีจำนวนที่ต้องการใน '+SUPNAME[s]);
+  if(!confirm('ล้างช่อง “จำนวนที่ต้องการ” ทั้งหมด '+n+' รายการของ '+SUPNAME[s]+' หรือไม่?\n\n(ผลรวมสั่ง 1 สัปดาห์ และสต็อก ไม่ถูกแตะต้อง)'))return;
+  for(const i of DATA[s]){const k=key(s,i.id);if(state[k])state[k].want=0}
+  save();render();
+}
+function clearAllWants(){
+  if(!confirm('ล้างช่อง “จำนวนที่ต้องการ” ของทุก Supplier หรือไม่?'))return;
+  for(const s in DATA)for(const i of DATA[s]){const k=key(s,i.id);if(state[k])state[k].want=0}
+  save();render();
 }
 
 /* ---------- Stock count screen ---------- */
@@ -1756,7 +1772,9 @@ function panel(s,title,cls){
   const costly=expensiveSet();let displayNo=0;
   let pend=orders.filter(o=>o.supplier===s&&o.status==='sent').length;
   let html=`<section class="supplier ${cls}"><div class="head"><span>${title}</span><button class="pdfbtn" onclick="supplierPDF('${s}')">PDF</button></div>`;
-  html+=`<div class="v8bar"><button class="send" onclick="openSendOrder('${s}')">📤 ส่งออเดอร์</button>`
+  const pendingWant=DATA[s].reduce((a,i)=>a+(+(state[key(s,i.id)]?.want||0)>0?1:0),0);
+  html+=`<div class="v8bar"><button class="send" onclick="openSendOrder('${s}')">📤 ส่งออเดอร์${pendingWant?' ('+pendingWant+')':''}</button>`
+      + `<button class="clear" onclick="clearWants('${s}')">🧹 ล้างจำนวน${pendingWant?' ('+pendingWant+')':''}</button>`
       + `<button onclick="applyAllSuggest('${s}')">✨ เติมจำนวนแนะนำ</button>`
       + `<button onclick="openStockCount('${s}')">📋 นับสต็อก</button></div>`;
   if(pend)html+=`<div style="padding:8px 12px;background:#e6f0ff;color:#0a5bd1;font-size:12px;font-weight:800">📦 มี ${pend} ออเดอร์รอรับของ · <button class="applybtn" style="border-color:#0a5bd1;color:#0a5bd1;background:#fff" onclick="openOrders()">เช็ครับของ</button></div>`;
@@ -1779,7 +1797,7 @@ function panel(s,title,cls){
         <div class="hint">${i.hint||''}</div><div class="price">£${(i.price||0).toFixed(2)} · ${i.unit}</div>
         ${chips}
         <div class="manage"><button class="mini" onclick="openItem('${s}',${i.id})">แก้ไข</button><button class="mini danger" onclick="deleteItem('${s}',${i.id})">ลบ</button></div></div>
-        <div><input class="qty" type="number" min="0" inputmode="decimal" value="${st.want||''}" oninput="setWant('${s}',${i.id},this.value)"><div class="unit">${i.unit}</div></div>
+        <div><input class="qty" type="number" min="0" inputmode="decimal" value="${st.want||''}" onfocus="this.select()" oninput="setWant('${s}',${i.id},this.value)"><div class="unit">${i.unit}</div></div>
         <div><input class="weekly" readonly value="${st.total||0}"><div class="unit">${i.unit}</div></div></div>`;
     }
   }
