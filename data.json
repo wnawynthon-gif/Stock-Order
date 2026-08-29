@@ -689,7 +689,7 @@
     {
       "id": 2,
       "name": "CE Chicken Breast Fillet",
-      "hint": "Code 147179 · 5kg",
+      "hint": "Code 147179 · 5kg · Booker 29/08/26",
       "cat": "meat",
       "unit": "5kg pack",
       "price": 55.99,
@@ -707,7 +707,7 @@
     {
       "id": 4,
       "name": "Coke Zero",
-      "hint": "Code 063724 · 24 × 330ml",
+      "hint": "Code 063724 · 24 × 330ml · Booker 29/08/26",
       "cat": "other",
       "unit": "case",
       "price": 9.0,
@@ -734,16 +734,16 @@
     {
       "id": 7,
       "name": "Flat Iron Beef Steak",
-      "hint": "Code 134043 · avg 2kg",
+      "hint": "Code 134043 · avg 2kg · Booker 29/08/26 · receipt weight 4.080kg",
       "cat": "meat",
       "unit": "pack",
-      "price": 35.7,
+      "price": 57.08,
       "weekly": 2
     },
     {
       "id": 8,
       "name": "Chefs Choice Vegetable Oil",
-      "hint": "Code 312427 · 20L",
+      "hint": "Code 312427 · 20L · Booker 29/08/26",
       "cat": "other",
       "unit": "20L tin",
       "price": 26.99,
@@ -801,6 +801,69 @@
       "cat": "other",
       "unit": "case",
       "price": 29.99,
+      "weekly": 1
+    },
+    {
+      "id": 15,
+      "name": "H/Land Spring Still 6×1.5L",
+      "hint": "Code 154217 · 6 × 1.5L · Booker 29/08/26",
+      "cat": "other",
+      "unit": "6×1.5L pack",
+      "price": 3.49,
+      "weekly": 6
+    },
+    {
+      "id": 16,
+      "name": "CE Chicken Drumsticks",
+      "hint": "Code 320974 · 4.5kg · Booker 29/08/26",
+      "cat": "meat",
+      "unit": "4.5kg pack",
+      "price": 14.79,
+      "weekly": 1
+    },
+    {
+      "id": 17,
+      "name": "CE Oyster Chicken Thigh",
+      "hint": "Code 320976 · 4.5kg · Booker 29/08/26",
+      "cat": "meat",
+      "unit": "4.5kg pack",
+      "price": 15.69,
+      "weekly": 1
+    },
+    {
+      "id": 18,
+      "name": "Byffes Giant Pineapple",
+      "hint": "Code 275225 · single · Booker 29/08/26",
+      "cat": "produce",
+      "unit": "each",
+      "price": 0.99,
+      "weekly": 4
+    },
+    {
+      "id": 19,
+      "name": "Jacks White Potatoes",
+      "hint": "Code 273108 · 2kg · Booker 29/08/26",
+      "cat": "produce",
+      "unit": "2kg pack",
+      "price": 1.49,
+      "weekly": 2
+    },
+    {
+      "id": 20,
+      "name": "Micro Containers w/Lids 500ml",
+      "hint": "Code 307038 · 250s · Booker 29/08/26",
+      "cat": "other",
+      "unit": "250 pack",
+      "price": 36.99,
+      "weekly": 1
+    },
+    {
+      "id": 21,
+      "name": "Micro Containers w/Lids 650ml",
+      "hint": "Code 307039 · 250s · Booker 29/08/26",
+      "cat": "other",
+      "unit": "250 pack",
+      "price": 37.99,
       "weekly": 1
     }
   ],
