@@ -7,7 +7,7 @@
 .receiptBtn{background:#0a84ff;color:#fff;border-color:#0a84ff;white-space:nowrap}.receiptFab{display:none;position:fixed;right:16px;bottom:82px;z-index:20;border:0;border-radius:999px;background:#0a84ff;color:white;box-shadow:0 4px 18px #0003;padding:12px 16px;font-weight:800;font-size:17px;gap:6px;align-items:center}.receiptFab span{font-size:14px}
 @media(max-width:720px){.top{position:sticky;align-items:stretch;flex-direction:column;gap:10px;padding:10px 12px}.topTitle{width:100%}.actions{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:8px}.actions .receiptBtn{grid-column:1/-1;font-size:16px;padding:12px}.actions .btn{white-space:normal;line-height:1.2}.receiptFab{display:flex}.grid{grid-template-columns:1fr;padding:10px}.modal .dialog{max-height:88vh;overflow:auto}.ocrtable{font-size:11px;display:block;overflow-x:auto}.ocrtable th,.ocrtable td{min-width:90px}.ocrtable th:first-child,.ocrtable td:first-child{min-width:180px}}
 </style><script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script></head><body>
-<div class="top"><div class="topTitle"><h1>🛒 แผนการสั่งซื้อวัตถุดิบ</h1><small>รวมทุก Supplier ในหน้าเดียว · <b>V8.3 · ใบสั่งของแยก Supplier · วันสั่งของ · รายงานค่าใช้จ่ายเต็ม</b></small></div><div class="actions"><button id="receiptOcrTopBtn" class="btn receiptBtn" onclick="openReceiptOCR()">📷 ถ่าย / อ่านใบเสร็จ</button><button class="btn" onclick="resetWeek()">ปิดสัปดาห์ / เริ่มสัปดาห์ใหม่</button><button class="btn" onclick="combinedPDF()">📊 PDF สรุปเดือน</button><button class="btn" onclick="usageCostPDF()">🧾 PDF ใช้สินค้า / ค่าใช้จ่าย</button><button class="btn" style="background:#0a5bd1;color:#fff;border-color:#0a5bd1" onclick="openOrders()">📦 ออเดอร์</button><button class="btn" style="color:#b00020" onclick="clearAllWants()">🧹 ล้างจำนวนทั้งหมด</button><button class="btn" onclick="openConfig()">⚙️ ตั้งค่า</button><button class="btn" id="installBtn" onclick="installApp()">⬇️ ติดตั้งแอป</button></div></div><button class="receiptFab" onclick="openReceiptOCR()" aria-label="ถ่ายหรืออ่านใบเสร็จ">📷<span>ใบเสร็จ</span></button><main class="grid" id="app"></main><section id="report"></section><div class="modal" id="editModal"><div class="dialog"><h2 id="modalTitle">สินค้า</h2><div class="form"><label class="full">ชื่อสินค้า<input id="fName"></label><label>หมวด<select id="fCat"></select></label><label>หน่วย<input id="fUnit" placeholder="kg / pack / case"></label><label>ราคา £<input id="fPrice" type="number" min="0" step="0.01"></label><label>ปริมาณต่อแพ็ก (ถ้าทราบ)<input id="fSize" type="number" min="0" step="0.001"></label><label>หน่วยปริมาณ<select id="fSizeUnit"><option value="">—</option><option>kg</option><option>g</option><option>L</option><option>ml</option><option>piece</option></select></label><label class="full">รายละเอียด / ยี่ห้อ<input id="fHint"></label></div><div class="dialogActions"><button class="btn" onclick="closeModal()">ยกเลิก</button><button class="btn" onclick="saveItem()">บันทึก</button></div></div></div>
+<div class="top"><div class="topTitle"><h1>🛒 แผนการสั่งซื้อวัตถุดิบ</h1><small>รวมทุก Supplier ในหน้าเดียว · <b>V8.4 · ใบสั่งของ 15 ช่อง · วันสั่งของ · รายงานค่าใช้จ่ายเต็ม</b></small></div><div class="actions"><button id="receiptOcrTopBtn" class="btn receiptBtn" onclick="openReceiptOCR()">📷 ถ่าย / อ่านใบเสร็จ</button><button class="btn" onclick="resetWeek()">ปิดสัปดาห์ / เริ่มสัปดาห์ใหม่</button><button class="btn" onclick="combinedPDF()">📊 PDF สรุปเดือน</button><button class="btn" onclick="usageCostPDF()">🧾 PDF ใช้สินค้า / ค่าใช้จ่าย</button><button class="btn" style="background:#0a5bd1;color:#fff;border-color:#0a5bd1" onclick="openOrders()">📦 ออเดอร์</button><button class="btn" style="color:#b00020" onclick="clearAllWants()">🧹 ล้างจำนวนทั้งหมด</button><button class="btn" onclick="openConfig()">⚙️ ตั้งค่า</button><button class="btn" id="installBtn" onclick="installApp()">⬇️ ติดตั้งแอป</button></div></div><button class="receiptFab" onclick="openReceiptOCR()" aria-label="ถ่ายหรืออ่านใบเสร็จ">📷<span>ใบเสร็จ</span></button><main class="grid" id="app"></main><section id="report"></section><div class="modal" id="editModal"><div class="dialog"><h2 id="modalTitle">สินค้า</h2><div class="form"><label class="full">ชื่อสินค้า<input id="fName"></label><label>หมวด<select id="fCat"></select></label><label>หน่วย<input id="fUnit" placeholder="kg / pack / case"></label><label>ราคา £<input id="fPrice" type="number" min="0" step="0.01"></label><label>ปริมาณต่อแพ็ก (ถ้าทราบ)<input id="fSize" type="number" min="0" step="0.001"></label><label>หน่วยปริมาณ<select id="fSizeUnit"><option value="">—</option><option>kg</option><option>g</option><option>L</option><option>ml</option><option>piece</option></select></label><label class="full">รายละเอียด / ยี่ห้อ<input id="fHint"></label></div><div class="dialogActions"><button class="btn" onclick="closeModal()">ยกเลิก</button><button class="btn" onclick="saveItem()">บันทึก</button></div></div></div>
 <div class="modal" id="ocrModal"><div class="dialog" style="width:min(760px,100%)"><h2>📷 อ่านใบเสร็จ</h2><div class="ocrbox"><label><b>Supplier</b><select id="ocrSupplier" style="margin-left:8px;padding:7px;border-radius:7px"><option value="thch">TH/CH SUP</option><option value="booker">BOOKER SUP</option><option value="sains">SUPERMARKET</option></select></label><div class="ocrActions" style="margin-top:10px"><button class="btn" type="button" onclick="receiptCamera.click()">📷 ถ่ายใบเสร็จ</button><button class="btn" type="button" onclick="receiptLibrary.click()">🖼 เลือกรูปใบเสร็จ</button></div><input id="receiptCamera" type="file" accept="image/*" capture="environment" style="display:none"><input id="receiptLibrary" type="file" accept="image/*" style="display:none"><div id="receiptFileName" class="muted" style="margin-top:8px">ยังไม่ได้เลือกรูป</div><img id="receiptPreview" class="ocrpreview" style="display:none"><div class="progress"><div id="ocrProgress"></div></div><div id="ocrStatus" class="statusline">ถ่ายรูปหรือเลือกภาพใบเสร็จ แล้วกด “อ่านใบเสร็จ”</div><div class="ocrActions"><button class="btn" onclick="runReceiptOCR()">อ่านใบเสร็จ</button><button class="btn" onclick="closeReceiptOCR()">ปิด</button></div></div><div id="ocrResults"></div></div></div>
 <script>
 const CAT={frozen:'1. แช่แข็ง / ซีฟู้ด',produce:'2. ผักสด / ไข่',rice:'3. ข้าว / เส้น / แป้ง / น้ำตาล',sauce:'4. ซอส / กะทิ / เครื่องแกง',seasoning:'5. เครื่องปรุง / สมุนไพร',meat:'1. เนื้อสัตว์ / ไก่',fish:'2. อาหารทะเล / แช่แข็ง',other:'3. อื่น ๆ'};
@@ -2215,6 +2215,139 @@ function combinedPDF(){
 }
 
 Object.assign(window,{supplierPDF,usageCostPDF,combinedPDF,buildOrderSheet,printWith});
+})();
+</script>
+
+<style>
+/* ---------- V8.4 : ใบสั่งของแบบตาราง 15 ช่อง ---------- */
+.gridSheet{font-size:11px}
+.gridSheet .gsHead{display:table;width:100%;margin-bottom:6px}
+.gridSheet .gsHead>div{display:table-cell;vertical-align:bottom}
+.gridSheet .gsHead .r{text-align:right;font-size:10px;color:#555;line-height:1.5}
+.gridSheet h1{font-size:17px;margin:0}
+.gridSheet .supline{font-size:14px;font-weight:800;margin:3px 0 0}
+.gridSheet .days{font-size:11.5px;font-weight:700;color:#0a5bd1}
+.gstable{width:100%;border-collapse:collapse;table-layout:fixed;margin-top:4px}
+.gstable th,.gstable td{border:1px solid #9aa8a3;padding:0}
+.gstable thead th{background:#eef2f0;font-size:9px;font-weight:800;text-align:center;padding:2px 1px;line-height:1.2}
+.gstable th.nm{text-align:left;padding:3px 5px;font-size:10px}
+.gstable td.nm{padding:2px 5px;font-size:10px;line-height:1.25;word-wrap:break-word;overflow:hidden}
+.gstable td.nm b{font-weight:700}
+.gstable td.nm span{color:#777;font-size:8.5px}
+.gstable td.box{height:17px}
+.gstable tr.cat td{background:#e6ece9;font-weight:800;font-size:9.5px;padding:2px 5px;border-color:#7d8f89}
+.gstable tr:nth-child(even) td.nm{background:#fbfcfc}
+.gsnum{color:#aab;font-size:7.5px}
+.gsfoot{margin-top:8px;font-size:9.5px;color:#666;line-height:1.6}
+@media print{
+  body[data-print-order] .gridSheet{font-size:10.5px}
+  .gstable thead{display:table-header-group}
+  .gstable tr{break-inside:avoid}
+}
+</style>
+<script>
+(function(){
+/* ============================================================
+   V8.4 — ปุ่ม PDF ของแต่ละ Supplier = ใบสั่งของแบบตาราง
+   มี 15 ช่องว่างด้านขวาของทุกรายการ ไว้เขียนจำนวนด้วยมือ
+   (ใบสั่งของแบบกรอกจำนวนแล้ว ย้ายไปอยู่ในหน้า "ส่งออเดอร์")
+   ============================================================ */
+const BOXES=15;
+/* หมวดที่มีในข้อมูลแต่ไม่มีชื่อไทยใน CAT เดิม — เติมให้ครบ ใช้ทั้งหน้าแอปและใบ PDF */
+const EXTRA_CAT={staples:'3. ข้าว / เส้น / แป้ง / น้ำตาล',sauces:'4. ซอส / กะทิ / เครื่องแกง',
+  spices:'5. เครื่องปรุง / สมุนไพร',dairy:'6. นม / ไข่ / ของสด',nonfood:'7. ของใช้ / บรรจุภัณฑ์'};
+try{Object.keys(EXTRA_CAT).forEach(k=>{if(!CAT[k])CAT[k]=EXTRA_CAT[k]})}catch(e){}
+/* จัดหมวดใหญ่ให้ถูกในรายงานค่าใช้จ่าย */
+const BIGGROUP={meat:'เนื้อสัตว์ & อาหารทะเล',fish:'เนื้อสัตว์ & อาหารทะเล',frozen:'เนื้อสัตว์ & อาหารทะเล',
+  produce:'ผักสด & ไข่',dairy:'ผักสด & ไข่',rice:'ข้าว / เส้น / แป้ง / น้ำตาล',staples:'ข้าว / เส้น / แป้ง / น้ำตาล',
+  sauce:'ซอส / กะทิ / เครื่องแกง',sauces:'ซอส / กะทิ / เครื่องแกง',
+  seasoning:'เครื่องปรุง / สมุนไพร',spices:'เครื่องปรุง / สมุนไพร',
+  nonfood:'ของใช้ / บรรจุภัณฑ์',other:'เครื่องดื่ม / ของใช้ / อื่น ๆ'};
+function catOf(sup,id,name){
+  const i=(DATA[sup]||[]).find(x=>x.id===id);
+  const c=i?.cat||(typeof guessReceiptCategory==='function'?guessReceiptCategory(name||''):'other');
+  return BIGGROUP[c]||'เครื่องดื่ม / ของใช้ / อื่น ๆ';
+}
+const _esc=window.esc||(s=>String(s??''));
+const _days=window.orderDays||(()=>'');
+const _sheet=window.buildOrderSheet;
+
+function buildOrderGrid(s){
+  const list=(DATA[s]||[]);
+  if(!list.length)return 0;
+  const c=contacts[s]||{},d=_days(s),now=new Date();
+  const groups={};
+  list.forEach(i=>(groups[i.cat]??=[]).push(i));
+
+  let head='<thead><tr><th class="nm">รายการ / ราคา</th>';
+  for(let b=1;b<=BOXES;b++)head+=`<th><span class="gsnum">${b}</span><br>วันที่</th>`;
+  head+='</tr></thead>';
+
+  let rows='',no=0;
+  for(const [cat,items] of Object.entries(groups)){
+    rows+=`<tr class="cat"><td colspan="${BOXES+1}">${_esc(CAT[cat]||cat)}</td></tr>`;
+    for(const i of items){
+      no++;
+      const pr=(+i.price||0)?money(i.price):'—';
+      rows+=`<tr><td class="nm"><b>${no}. ${_esc(i.name)}</b> <span>${pr} · ${_esc(i.unit||'')}</span></td>`
+        +'<td class="box"></td>'.repeat(BOXES)+'</tr>';
+    }
+  }
+
+  const colw=`<colgroup><col style="width:34%">${`<col style="width:${(66/BOXES).toFixed(2)}%">`.repeat(BOXES)}</colgroup>`;
+
+  document.getElementById('report').innerHTML=`<div class="report gridSheet">
+    <div class="gsHead">
+      <div>
+        <h1>ใบสั่งซื้อวัตถุดิบ</h1>
+        <div class="supline">${_esc(c.label||SUPNAME[s]||s)}</div>
+        ${d?`<div class="days">(${_esc(d)})</div>`:''}
+      </div>
+      <div class="r">
+        <b>${_esc(cfg.shop||'Kaosarn')}</b><br>${_esc(cfg.addr||'')}<br>
+        ${c.phone?'WhatsApp '+_esc(c.phone)+' &nbsp; ':''}${c.email?_esc(c.email):''}<br>
+        ${no} รายการ · พิมพ์ ${now.toLocaleDateString('en-GB')}
+      </div>
+    </div>
+    <table class="gstable">${colw}${head}<tbody>${rows}</tbody></table>
+    <div class="gsfoot">เขียนจำนวนที่ต้องการลงในช่องของแต่ละรอบสั่ง · เขียนวันที่ไว้บนหัวคอลัมน์
+      · ราคาที่แสดงคือราคาล่าสุดที่บันทึกไว้ อาจต่างจากใบเสร็จจริง</div>
+  </div>`;
+  return no;
+}
+
+/* ปุ่ม PDF ในหัวกล่อง Supplier → ใบตาราง 15 ช่อง */
+function supplierPDF(s){
+  const n=buildOrderGrid(s);
+  if(!n)return alert('ยังไม่มีสินค้าใน '+(SUPNAME[s]||s));
+  printWith('printOrder','1','ใบสั่งของ_'+String(SUPNAME[s]||s).replace(/[\s/]+/g,'')
+    +'_'+new Date().toLocaleDateString('en-GB').replace(/\//g,'-'));
+}
+
+/* ใบสั่งของที่กรอกจำนวนแล้ว → เรียกจากหน้า "ส่งออเดอร์" */
+function printFilledOrder(s){
+  if(typeof _sheet!=='function')return;
+  const n=_sheet(s,'order');
+  if(!n)return alert('ยังไม่มีรายการที่กรอกจำนวน');
+  printWith('printOrder','1','ใบสั่งของ_'+String(SUPNAME[s]||s).replace(/[\s/]+/g,'')
+    +'_'+new Date().toLocaleDateString('en-GB').replace(/\//g,'-'));
+}
+
+/* เพิ่มปุ่มพิมพ์ในกล่องส่งออเดอร์ */
+const _openSend=window.openSendOrder;
+function openSendOrder(s){
+  if(typeof _openSend==='function')_openSend(s);
+  const row=document.querySelector('#sendModal .sendrow');
+  if(row&&!row.querySelector('[data-printorder]')){
+    const b=document.createElement('button');
+    b.className='full';b.dataset.printorder='1';
+    b.textContent='🖨 พิมพ์ใบสั่งของ (เฉพาะรายการที่กรอก)';
+    b.onclick=()=>printFilledOrder(sendCtx?.s||s);
+    row.appendChild(b);
+  }
+}
+
+Object.assign(window,{supplierPDF,buildOrderGrid,printFilledOrder,openSendOrder,catOf});
 })();
 </script>
 
