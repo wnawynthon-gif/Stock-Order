@@ -7,7 +7,7 @@
 .receiptBtn{background:#0a84ff;color:#fff;border-color:#0a84ff;white-space:nowrap}.receiptFab{display:none;position:fixed;right:16px;bottom:82px;z-index:20;border:0;border-radius:999px;background:#0a84ff;color:white;box-shadow:0 4px 18px #0003;padding:12px 16px;font-weight:800;font-size:17px;gap:6px;align-items:center}.receiptFab span{font-size:14px}
 @media(max-width:720px){.top{position:sticky;align-items:stretch;flex-direction:column;gap:10px;padding:10px 12px}.topTitle{width:100%}.actions{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:8px}.actions .receiptBtn{grid-column:1/-1;font-size:16px;padding:12px}.actions .btn{white-space:normal;line-height:1.2}.receiptFab{display:flex}.grid{grid-template-columns:1fr;padding:10px}.modal .dialog{max-height:88vh;overflow:auto}.ocrtable{font-size:11px;display:block;overflow-x:auto}.ocrtable th,.ocrtable td{min-width:90px}.ocrtable th:first-child,.ocrtable td:first-child{min-width:180px}}
 </style><script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script></head><body>
-<div class="top"><div class="topTitle"><h1>🛒 แผนการสั่งซื้อวัตถุดิบ</h1><small>รวมทุก Supplier ในหน้าเดียว · <b>V8.1 · ส่งออเดอร์ · เช็ครับของ · สต็อกอัตโนมัติ · PWA</b></small></div><div class="actions"><button id="receiptOcrTopBtn" class="btn receiptBtn" onclick="openReceiptOCR()">📷 ถ่าย / อ่านใบเสร็จ</button><button class="btn" onclick="resetWeek()">ปิดสัปดาห์ / เริ่มสัปดาห์ใหม่</button><button class="btn" onclick="combinedPDF()">📊 PDF สรุปเดือน</button><button class="btn" onclick="usageCostPDF()">🧾 PDF ใช้สินค้า / ค่าใช้จ่าย</button><button class="btn" style="background:#0a5bd1;color:#fff;border-color:#0a5bd1" onclick="openOrders()">📦 ออเดอร์</button><button class="btn" style="color:#b00020" onclick="clearAllWants()">🧹 ล้างจำนวนทั้งหมด</button><button class="btn" onclick="openConfig()">⚙️ ตั้งค่า</button><button class="btn" id="installBtn" onclick="installApp()">⬇️ ติดตั้งแอป</button></div></div><button class="receiptFab" onclick="openReceiptOCR()" aria-label="ถ่ายหรืออ่านใบเสร็จ">📷<span>ใบเสร็จ</span></button><main class="grid" id="app"></main><section id="report"></section><div class="modal" id="editModal"><div class="dialog"><h2 id="modalTitle">สินค้า</h2><div class="form"><label class="full">ชื่อสินค้า<input id="fName"></label><label>หมวด<select id="fCat"></select></label><label>หน่วย<input id="fUnit" placeholder="kg / pack / case"></label><label>ราคา £<input id="fPrice" type="number" min="0" step="0.01"></label><label>ปริมาณต่อแพ็ก (ถ้าทราบ)<input id="fSize" type="number" min="0" step="0.001"></label><label>หน่วยปริมาณ<select id="fSizeUnit"><option value="">—</option><option>kg</option><option>g</option><option>L</option><option>ml</option><option>piece</option></select></label><label class="full">รายละเอียด / ยี่ห้อ<input id="fHint"></label></div><div class="dialogActions"><button class="btn" onclick="closeModal()">ยกเลิก</button><button class="btn" onclick="saveItem()">บันทึก</button></div></div></div>
+<div class="top"><div class="topTitle"><h1>🛒 แผนการสั่งซื้อวัตถุดิบ</h1><small>รวมทุก Supplier ในหน้าเดียว · <b>V8.2 · วันสั่งของ · รายงานค่าใช้จ่ายเต็ม · แก้ OCR Hoo Hing</b></small></div><div class="actions"><button id="receiptOcrTopBtn" class="btn receiptBtn" onclick="openReceiptOCR()">📷 ถ่าย / อ่านใบเสร็จ</button><button class="btn" onclick="resetWeek()">ปิดสัปดาห์ / เริ่มสัปดาห์ใหม่</button><button class="btn" onclick="combinedPDF()">📊 PDF สรุปเดือน</button><button class="btn" onclick="usageCostPDF()">🧾 PDF ใช้สินค้า / ค่าใช้จ่าย</button><button class="btn" style="background:#0a5bd1;color:#fff;border-color:#0a5bd1" onclick="openOrders()">📦 ออเดอร์</button><button class="btn" style="color:#b00020" onclick="clearAllWants()">🧹 ล้างจำนวนทั้งหมด</button><button class="btn" onclick="openConfig()">⚙️ ตั้งค่า</button><button class="btn" id="installBtn" onclick="installApp()">⬇️ ติดตั้งแอป</button></div></div><button class="receiptFab" onclick="openReceiptOCR()" aria-label="ถ่ายหรืออ่านใบเสร็จ">📷<span>ใบเสร็จ</span></button><main class="grid" id="app"></main><section id="report"></section><div class="modal" id="editModal"><div class="dialog"><h2 id="modalTitle">สินค้า</h2><div class="form"><label class="full">ชื่อสินค้า<input id="fName"></label><label>หมวด<select id="fCat"></select></label><label>หน่วย<input id="fUnit" placeholder="kg / pack / case"></label><label>ราคา £<input id="fPrice" type="number" min="0" step="0.01"></label><label>ปริมาณต่อแพ็ก (ถ้าทราบ)<input id="fSize" type="number" min="0" step="0.001"></label><label>หน่วยปริมาณ<select id="fSizeUnit"><option value="">—</option><option>kg</option><option>g</option><option>L</option><option>ml</option><option>piece</option></select></label><label class="full">รายละเอียด / ยี่ห้อ<input id="fHint"></label></div><div class="dialogActions"><button class="btn" onclick="closeModal()">ยกเลิก</button><button class="btn" onclick="saveItem()">บันทึก</button></div></div></div>
 <div class="modal" id="ocrModal"><div class="dialog" style="width:min(760px,100%)"><h2>📷 อ่านใบเสร็จ</h2><div class="ocrbox"><label><b>Supplier</b><select id="ocrSupplier" style="margin-left:8px;padding:7px;border-radius:7px"><option value="thch">TH/CH SUP</option><option value="booker">BOOKER SUP</option><option value="sains">SUPERMARKET</option></select></label><div class="ocrActions" style="margin-top:10px"><button class="btn" type="button" onclick="receiptCamera.click()">📷 ถ่ายใบเสร็จ</button><button class="btn" type="button" onclick="receiptLibrary.click()">🖼 เลือกรูปใบเสร็จ</button></div><input id="receiptCamera" type="file" accept="image/*" capture="environment" style="display:none"><input id="receiptLibrary" type="file" accept="image/*" style="display:none"><div id="receiptFileName" class="muted" style="margin-top:8px">ยังไม่ได้เลือกรูป</div><img id="receiptPreview" class="ocrpreview" style="display:none"><div class="progress"><div id="ocrProgress"></div></div><div id="ocrStatus" class="statusline">ถ่ายรูปหรือเลือกภาพใบเสร็จ แล้วกด “อ่านใบเสร็จ”</div><div class="ocrActions"><button class="btn" onclick="runReceiptOCR()">อ่านใบเสร็จ</button><button class="btn" onclick="closeReceiptOCR()">ปิด</button></div></div><div id="ocrResults"></div></div></div>
 <script>
 const CAT={frozen:'1. แช่แข็ง / ซีฟู้ด',produce:'2. ผักสด / ไข่',rice:'3. ข้าว / เส้น / แป้ง / น้ำตาล',sauce:'4. ซอส / กะทิ / เครื่องแกง',seasoning:'5. เครื่องปรุง / สมุนไพร',meat:'1. เนื้อสัตว์ / ไก่',fish:'2. อาหารทะเล / แช่แข็ง',other:'3. อื่น ๆ'};
@@ -60,18 +60,18 @@ function guessReceiptCategory(name){
 }
 function parseHooHingReceipt(text){
   const lines=text.split(/\n+/).map(cleanReceiptLine).filter(x=>x.length>1),out=[];
-  const stop=/^(?:\*{2,}|goods total|carriage|v\.?a\.?t|grand total|amount tendered|home delivery|you would|please keep|total savings|tax summary)/i;
+  const stop=/^(?:goods\s*total|carriage|v\.?\s*a\.?\s*t[\s.]*total|grand\s*total|amount\s*tendered|home\s*delivery|you would|please keep|total savings|tax summary|dividend card)/i;
   const header=/^(?:mitcham branch|bond rd|www\.|awrs|telephone|vat registration|sale by|invoice|date|product description|quantity|price per|total\b)/i;
-  const stripMarks=x=>x.replace(/^(?:[#>*+@]{1,6}\s*)+/,'').replace(/\s{2,}/g,' ').trim();
+  const stripMarks=x=>x.replace(/^(?:[#>*+@]{1,8}\s*)+/,'').replace(/[*#+@>\s]+$/,'').replace(/\s{2,}/g,' ').trim();
   let cur=null,pendingDesc='';
   const pushCur=()=>{if(cur&&cur.name&&cur.price>0){cur.name=receiptAliasName(cur.name);if(isValidReceiptProductName(cur.name))out.push(cur)}cur=null};
   for(let raw of lines){
     let line=raw.replace(/,/g,'.').trim();
-    if(stop.test(line)){pushCur();break}
+    if(stop.test(stripMarks(line))){pushCur();break}
     if(header.test(line))continue;
     let sm=line.match(/stock\s*code\s*[=:]?\s*([0-9OIl]{3,8})/i);
     if(sm){pushCur();let code=sm[1].replace(/[O]/g,'0').replace(/[Il]/g,'1');cur={raw:'',stockCode:code,name:'',qty:1,price:0,total:0,pack:''};continue}
-    let q=line.match(/^\s*(\d+(?:\.\d+)?)\s*[xX×%]\s*(?:£\s*)?(\d+(?:\.\d{1,2}))(?:\s+(.*?))?(?:\s+(\d+(?:\.\d{2})))?\s*$/);
+    let q=line.match(/^\s*(\d+(?:\.\d+)?)\s*[xX×%*]\s*(?:£\s*)?(\d*\.\d{1,2}|\d+)(?:\s+(.*?))?(?:\s+(\d+(?:\.\d{2})))?\s*$/);
     if(q&&!cur&&pendingDesc){cur={raw:'',stockCode:'',name:pendingDesc,qty:1,price:0,total:0,pack:''}}
     if(!cur){let pd=stripMarks(line);if(pd&&/[A-Za-z]{3}/.test(pd)&&!/^(?:stock|code|invoice|registration|number|points|cash|card|change)/i.test(pd))pendingDesc=pd;continue}
     if(q){let qty=parseFloat(q[1]),price=parseFloat(q[2]);if(qty>0)cur.qty=qty;if(price>0)cur.price=price;let tail=(q[3]||'').trim();let tm=tail.match(/^(.*?)(?:\s+)(\d+(?:\.\d{2}))$/);if(tm){tail=tm[1].trim();cur.total=parseFloat(tm[2])||0}else if(q[4])cur.total=parseFloat(q[4])||0;cur.pack=tail;cur.raw=(cur.name+' | '+raw).trim();pushCur();pendingDesc='';continue}
@@ -1834,6 +1834,226 @@ function installApp(){
   if(deferredPrompt){deferredPrompt.prompt();deferredPrompt.userChoice.then(()=>{deferredPrompt=null;document.getElementById('installBtn').style.display='none'})}
   else alert('iPhone/iPad: กดปุ่มแชร์ ⬆️ ใน Safari แล้วเลือก “Add to Home Screen”\n\nAndroid/Chrome: เมนู ⋮ แล้วเลือก “ติดตั้งแอป”');
 }
+</script>
+
+<style>
+/* ---------- V8.2 ---------- */
+.odays{display:block;font-size:11px;font-weight:700;opacity:.85;margin-top:2px}
+.repHead{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
+.report .kpi{display:table;width:100%;table-layout:fixed;border-spacing:5px;margin:8px 0 12px}
+.report .kpi div{display:table-cell;border:1px solid #ccd;border-radius:9px;padding:8px;text-align:center;font-size:11px;vertical-align:middle}
+.report .kpi b{display:block;font-size:15px;margin-top:3px}
+.report h2{margin:18px 0 6px;font-size:14px;background:#0f3d2e;color:#fff;padding:5px 8px;border-radius:4px}
+.report h3{margin:14px 0 4px;font-size:12.5px;border-bottom:1.5px solid #0f3d2e;padding-bottom:2px}
+.usageReport .rtable td,.usageReport .rtable th{text-align:left}
+.rtable td.n,.rtable th.n{text-align:right;white-space:nowrap}
+.rtable td.c,.rtable th.c{text-align:center;white-space:nowrap}
+.obs{border:1px solid #b9c9c3;background:#f7faf9;padding:9px 11px;font-size:11.5px;line-height:1.7;border-radius:6px}
+@media print{body[data-print-usage] .repSection{break-inside:auto}}
+</style>
+<script>
+(function(){
+/* ============================================================
+   V8.2 — วันสั่งของต่อ Supplier + รายงานค่าใช้จ่ายแบบสรุปเต็ม
+   + แก้ parser ใบเสร็จ Hoo Hing (VAT Registration / ราคา .79 / บรรทัด ****)
+   ============================================================ */
+const DEFAULT_ORDER_DAYS={thch:'order Hoohing Mon/Thur',booker:'order Mon/Wed/Fri',sains:'order Mon/Fri'};
+Object.keys(DEFAULT_ORDER_DAYS).forEach(s=>{
+  contacts[s]=contacts[s]||{};
+  if(contacts[s].days==null)contacts[s].days=DEFAULT_ORDER_DAYS[s];
+});
+saveV8();
+function orderDays(s){return (contacts[s]?.days||'').trim()}
+
+/* ---------- panel: แสดงวันสั่งของใต้ชื่อ Supplier ---------- */
+const _panelV81=window.panel;   /* ต้องอ่านจาก window ก่อน เพราะ function ในสโคปนี้ถูก hoist */
+function panel(s,title,cls){
+  if(typeof _panelV81!=='function')return '';
+  const d=orderDays(s);
+  return _panelV81(s,title+(d?`<small class="odays">(${esc(d)})</small>`:''),cls);
+}
+
+/* ---------- ตั้งค่า: เพิ่มช่องวันสั่งของ ---------- */
+const _openConfigV81=window.openConfig;
+function openConfig(){
+  if(typeof _openConfigV81!=='function')return;
+  _openConfigV81();
+  document.querySelectorAll('#cfgSups .v8form').forEach((f,ix)=>{
+    const s=Object.keys(SUPNAME)[ix];
+    const lb=document.createElement('label');
+    lb.className='full';
+    lb.innerHTML='วันสั่งของ (แสดงใต้ชื่อ Supplier)<input data-c="'+s+'.days" value="'+esc(orderDays(s))+'">';
+    f.appendChild(lb);
+  });
+}
+
+/* ---------- ใส่วันสั่งของในข้อความออเดอร์ ---------- */
+const _orderTextV81=window.orderText;
+function orderText(s,lines){
+  let t=(typeof _orderTextV81==='function')?_orderTextV81(s,lines):'';
+  const d=orderDays(s);
+  if(d)t=t.replace('\n\n1.','\n('+d+')\n\n1.');
+  return t;
+}
+
+/* ---------- ตั้งชื่อไฟล์ตอน Save as PDF ---------- */
+function printAs(title,fn){
+  const old=document.title;
+  document.title=title;
+  try{fn()}finally{setTimeout(()=>document.title=old,800)}
+}
+function usageCostPDF(){
+  buildUsageCostReport();
+  const m=new Date().toLocaleDateString('en-GB',{month:'short',year:'numeric'}).replace(' ','');
+  document.body.dataset.printUsage='1';
+  printAs('สรุปค่าใช้จ่าย_Supplier_'+(cfg.shop||'Kaosarn').replace(/\s+/g,'')+'_'+m,()=>window.print());
+  setTimeout(()=>delete document.body.dataset.printUsage,500);
+}
+
+/* ---------- รายงานค่าใช้จ่ายแบบสรุปเต็ม ---------- */
+const CATGROUP={meat:'เนื้อสัตว์ & อาหารทะเล',fish:'เนื้อสัตว์ & อาหารทะเล',frozen:'เนื้อสัตว์ & อาหารทะเล',
+  produce:'ผักสด & ไข่',rice:'ข้าว / เส้น / แป้ง / น้ำตาล',sauce:'ซอส / กะทิ / เครื่องแกง',
+  seasoning:'เครื่องปรุง / สมุนไพร',other:'เครื่องดื่ม / ของใช้ / อื่น ๆ'};
+function catOf(sup,id,name){
+  const i=(DATA[sup]||[]).find(x=>x.id===id);
+  const c=i?.cat||(typeof guessReceiptCategory==='function'?guessReceiptCategory(name||''):'other');
+  return CATGROUP[c]||'เครื่องดื่ม / ของใช้ / อื่น ๆ';
+}
+function buildUsageCostReport(){
+  const now=new Date(), rg=monthRange(now);
+  const rec=receiptHistory.filter(r=>{const d=new Date(r.at);return d>=rg.start&&d<=rg.end});
+  const sups=['thch','booker','sains'];
+  const fmtD=d=>new Date(d).toLocaleDateString('en-GB',{day:'2-digit',month:'short'});
+  const pct=(v,t)=>t?((v/t)*100).toFixed(1)+'%':'0%';
+  const grand=rec.reduce((a,x)=>a+(+x.amount||0),0);
+
+  let html=`<div class="report usageReport">
+    <div class="repHead"><div>
+      <h1>สรุปค่าใช้จ่ายวัตถุดิบ — ${esc(cfg.shop||'Kaosarn')}</h1>
+      <div class="period">${esc(cfg.addr||'')}</div>
+      <div class="period">ช่วงวันที่ ${rg.start.toLocaleDateString('en-GB')} – ${rg.end.toLocaleDateString('en-GB')}</div>
+    </div></div>`;
+
+  if(!rec.length){
+    html+='<p>ยังไม่มีข้อมูลในเดือนนี้ — ข้อมูลจะเข้ามาจาก 2 ทาง: (1) อ่านใบเสร็จแล้วกด “ยืนยันและอัปเดต” (2) เช็ครับของจากออเดอร์</p></div>';
+    document.getElementById('report').innerHTML=html;return;
+  }
+
+  const entries=rec.length, byDate=rec.map(r=>new Date(r.at)).sort((a,b)=>a-b);
+  const qtyAll=rec.reduce((a,x)=>a+(+x.qty||0),0);
+  html+=`<div class="kpi">
+    <div>มูลค่ารวม<b>${money(grand)}</b></div>
+    <div>จำนวนหน่วยรวม<b>${Number(qtyAll.toFixed(2))}</b></div>
+    <div>รายการที่บันทึก<b>${entries}</b></div>
+    <div>ช่วงข้อมูล<b>${fmtD(byDate[0])} – ${fmtD(byDate[byDate.length-1])}</b></div></div>`;
+
+  /* 1. ต่อ Supplier */
+  html+='<h2>1. สรุปยอดรวมต่อซัพพลายเออร์</h2><table class="rtable"><tr><th>ซัพพลายเออร์</th><th class="c">วันสั่งของ</th><th class="c">ช่วงวันที่</th><th class="c">จำนวนรายการ</th><th class="n">มูลค่า (£)</th><th class="c">สัดส่วน</th></tr>';
+  sups.forEach(s=>{
+    const rr=rec.filter(x=>x.supplier===s);
+    const v=rr.reduce((a,x)=>a+(+x.amount||0),0);
+    const ds=rr.map(x=>new Date(x.at)).sort((a,b)=>a-b);
+    html+=`<tr><td><b>${SUPNAME[s]}</b></td><td class="c">${esc(orderDays(s))||'—'}</td>`
+      +`<td class="c">${ds.length?fmtD(ds[0])+' – '+fmtD(ds[ds.length-1]):'—'}</td>`
+      +`<td class="c">${rr.length}</td><td class="n">${v.toFixed(2)}</td><td class="c">${pct(v,grand)}</td></tr>`;
+  });
+  html+=`<tr class="grand"><td>รวมทั้งหมด</td><td class="c">—</td><td class="c">${fmtD(byDate[0])} – ${fmtD(byDate[byDate.length-1])}</td><td class="c">${entries}</td><td class="n">${grand.toFixed(2)}</td><td class="c">100%</td></tr></table>`;
+
+  /* 2. ตามหมวดสินค้า */
+  const cats={};
+  rec.forEach(x=>{const g=catOf(x.supplier,x.id,x.name);(cats[g]??={v:0,names:new Set()});cats[g].v+=+x.amount||0;cats[g].names.add(x.name)});
+  html+='<h2>2. สรุปตามหมวดสินค้า</h2><table class="rtable"><tr><th>หมวด</th><th>ตัวอย่างรายการ</th><th class="n">มูลค่า (£)</th><th class="c">%</th></tr>';
+  Object.entries(cats).sort((a,b)=>b[1].v-a[1].v).forEach(([g,o])=>{
+    html+=`<tr><td><b>${g}</b></td><td>${[...o.names].slice(0,5).map(esc).join(', ')}</td><td class="n">${o.v.toFixed(2)}</td><td class="c">${pct(o.v,grand)}</td></tr>`;
+  });
+  html+=`<tr class="grand"><td colspan="2">รวม</td><td class="n">${grand.toFixed(2)}</td><td class="c">100%</td></tr></table>`;
+
+  /* 3. Top items */
+  const items={};
+  rec.forEach(x=>{
+    const k=x.supplier+'_'+(x.id||x.name);
+    (items[k]??={sup:x.supplier,name:x.name,unit:x.unit||'item',qty:0,cost:0,times:0,prices:[]});
+    items[k].qty+=+x.qty||0;items[k].cost+=+x.amount||0;items[k].times++;
+    if(+x.price)items[k].prices.push(+x.price);
+  });
+  const top=Object.values(items).sort((a,b)=>b.cost-a.cost);
+  html+='<h2>3. รายการที่ใช้มากที่สุด (Top 25 by มูลค่า)</h2><table class="rtable"><tr><th class="c">#</th><th>รายการ</th><th>ซัพพลายเออร์</th><th class="c">จำนวนรวม</th><th class="c">ครั้งที่ซื้อ</th><th class="n">รวม (£)</th></tr>';
+  top.slice(0,25).forEach((it,i)=>{
+    html+=`<tr><td class="c">${i+1}</td><td>${esc(it.name)}</td><td>${SUPNAME[it.sup]}</td>`
+      +`<td class="c">${Number(it.qty.toFixed(3))} ${esc(it.unit)}</td><td class="c">${it.times}</td><td class="n">${it.cost.toFixed(2)}</td></tr>`;
+  });
+  html+='</table>';
+  if(top.length>25){
+    const restV=top.slice(25).reduce((a,x)=>a+x.cost,0);
+    html+=`<div class="note">อีก ${top.length-25} รายการที่เหลือ รวม ${money(restV)} (${pct(restV,grand)}) — ดูรายละเอียดครบในหัวข้อ 4</div>`;
+  }
+
+  /* 4. รายละเอียดแต่ละ Supplier */
+  html+='<h2>4. รายละเอียดทุกรายการ แยกตามซัพพลายเออร์</h2>';
+  sups.forEach(s=>{
+    const list=top.filter(x=>x.sup===s);
+    if(!list.length)return;
+    const v=list.reduce((a,x)=>a+x.cost,0);
+    html+=`<div class="repSection"><h3>${SUPNAME[s]}${orderDays(s)?' · '+esc(orderDays(s)):''}</h3>`
+      +'<table class="rtable"><tr><th>รายการ</th><th class="c">หน่วย</th><th class="c">จำนวนรวม</th><th class="n">ราคาเฉลี่ย</th><th class="c">ครั้ง</th><th class="n">รวม (£)</th></tr>';
+    list.forEach(it=>{
+      const avg=it.prices.length?it.prices.reduce((a,b)=>a+b,0)/it.prices.length:0;
+      const spread=it.prices.length>1&&Math.max(...it.prices)!==Math.min(...it.prices)
+        ?` <small>(${money(Math.min(...it.prices))}–${money(Math.max(...it.prices))})</small>`:'';
+      html+=`<tr><td>${esc(it.name)}</td><td class="c">${esc(it.unit)}</td><td class="c">${Number(it.qty.toFixed(3))}</td>`
+        +`<td class="n">${avg.toFixed(2)}${spread}</td><td class="c">${it.times}</td><td class="n">${it.cost.toFixed(2)}</td></tr>`;
+    });
+    html+=`<tr class="grand"><td colspan="5">รวม ${SUPNAME[s]} (${list.length} รายการ)</td><td class="n">${v.toFixed(2)}</td></tr></table></div>`;
+  });
+
+  /* 5. รายสัปดาห์ */
+  const starts=[];for(let d=weekStart(rg.start);d<=rg.end;d=new Date(d.getTime()+604800000))starts.push(new Date(d));
+  html+='<h2>5. สรุปรายสัปดาห์ (จันทร์–อาทิตย์)</h2><table class="rtable"><tr><th>สัปดาห์</th>'
+    +sups.map(s=>`<th class="c">${SUPNAME[s]}</th>`).join('')+'<th class="n">รวม (£)</th></tr>';
+  starts.forEach((st,i)=>{
+    const en=new Date(st.getTime()+604800000);
+    const w=rec.filter(x=>{const d=new Date(x.at);return d>=st&&d<en});
+    if(!w.length)return;
+    const tot=w.reduce((a,x)=>a+(+x.amount||0),0);
+    html+=`<tr><td>W${i+1} <small>${fmtD(st)}</small></td>`
+      +sups.map(s=>`<td class="c">${money(w.filter(x=>x.supplier===s).reduce((a,x)=>a+(+x.amount||0),0))}</td>`).join('')
+      +`<td class="n"><b>${tot.toFixed(2)}</b></td></tr>`;
+  });
+  html+=`<tr class="grand"><td>รวมเดือน</td>`
+    +sups.map(s=>`<td class="c">${money(rec.filter(x=>x.supplier===s).reduce((a,x)=>a+(+x.amount||0),0))}</td>`).join('')
+    +`<td class="n">${grand.toFixed(2)}</td></tr></table>`;
+
+  /* 6. ข้อสังเกตอัตโนมัติ */
+  const obs=[];
+  if(top[0])obs.push(`รายจ่ายก้อนใหญ่ที่สุดคือ <b>${esc(top[0].name)}</b> ${money(top[0].cost)} (${pct(top[0].cost,grand)} ของทั้งหมด) จาก ${SUPNAME[top[0].sup]}`);
+  const supV=sups.map(s=>({s,v:rec.filter(x=>x.supplier===s).reduce((a,x)=>a+(+x.amount||0),0)})).sort((a,b)=>b.v-a.v);
+  if(supV[1])obs.push(`${SUPNAME[supV[0].s]} + ${SUPNAME[supV[1].s]} รวมกัน ${pct(supV[0].v+supV[1].v,grand)} ของยอดซื้อ — ต่อรองราคา/เครดิตเทอมกับ 2 เจ้านี้จะได้ผลมากที่สุด`);
+  const moved=top.filter(x=>x.prices.length>1&&Math.max(...x.prices)>Math.min(...x.prices)*1.03).slice(0,3);
+  moved.forEach(x=>obs.push(`<b>ราคาขยับ:</b> ${esc(x.name)} ${money(Math.min(...x.prices))} → ${money(Math.max(...x.prices))} (${(((Math.max(...x.prices)/Math.min(...x.prices))-1)*100).toFixed(1)}%)`));
+  const freq=top.filter(x=>x.times>=3).sort((a,b)=>b.times-a.times).slice(0,3);
+  freq.forEach(x=>obs.push(`${esc(x.name)} ซื้อ ${x.times} ครั้งในเดือนนี้ — ถ้ารวมออเดอร์ได้จะลดรอบวิ่งและอาจต่อราคาเป็นลังได้`));
+  if(obs.length)html+='<h2>6. ข้อสังเกต</h2><div class="obs">'+obs.map((o,i)=>`<b>${i+1}.</b> ${o}`).join('<br>')+'</div>';
+
+  html+=`<div class="note">ข้อมูลมาจากใบเสร็จที่ OCR แล้วกด “ยืนยันและอัปเดต” และจากออเดอร์ที่กด “เช็ครับของ” แล้วเท่านั้น • มูลค่า = จำนวน × ราคาที่บันทึก • รอบเดือนวันที่ 1 ถึงวันสุดท้ายของเดือน • จัดทำ ${now.toLocaleDateString('en-GB')}</div></div>`;
+  document.getElementById('report').innerHTML=html;
+}
+
+/* ---------- ตั้งชื่อไฟล์ให้ PDF อีก 2 ปุ่ม ---------- */
+function combinedPDF(){
+  buildReport();document.body.dataset.printCombined='1';
+  printAs('สรุปรายเดือน_'+(cfg.shop||'Kaosarn').replace(/\s+/g,''),()=>window.print());
+  setTimeout(()=>delete document.body.dataset.printCombined,500);
+}
+function supplierPDF(s){
+  document.body.dataset.printSupplier=s;
+  printAs('ใบสั่งของ_'+SUPNAME[s].replace(/[\s/]+/g,'')+'_'+new Date().toLocaleDateString('en-GB').replace(/\//g,'-'),()=>window.print());
+  setTimeout(()=>delete document.body.dataset.printSupplier,500);
+}
+/* ผูกกับ window เพื่อทับของเดิม และให้ onclick ใน HTML เรียกได้ */
+Object.assign(window,{panel,openConfig,orderText,usageCostPDF,buildUsageCostReport,
+  combinedPDF,supplierPDF,printAs,orderDays,catOf});
+setTimeout(()=>{try{render()}catch(e){}},60);
+})();
 </script>
 
 </body></html>
