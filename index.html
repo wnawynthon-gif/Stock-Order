@@ -7,7 +7,7 @@
 .receiptBtn{background:#0a84ff;color:#fff;border-color:#0a84ff;white-space:nowrap}.receiptFab{display:none;position:fixed;right:16px;bottom:82px;z-index:20;border:0;border-radius:999px;background:#0a84ff;color:white;box-shadow:0 4px 18px #0003;padding:12px 16px;font-weight:800;font-size:17px;gap:6px;align-items:center}.receiptFab span{font-size:14px}
 @media(max-width:720px){.top{position:sticky;align-items:stretch;flex-direction:column;gap:10px;padding:10px 12px}.topTitle{width:100%}.actions{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:8px}.actions .receiptBtn{grid-column:1/-1;font-size:16px;padding:12px}.actions .btn{white-space:normal;line-height:1.2}.receiptFab{display:flex}.grid{grid-template-columns:1fr;padding:10px}.modal .dialog{max-height:88vh;overflow:auto}.ocrtable{font-size:11px;display:block;overflow-x:auto}.ocrtable th,.ocrtable td{min-width:90px}.ocrtable th:first-child,.ocrtable td:first-child{min-width:180px}}
 </style><script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script></head><body>
-<div class="top"><div class="topTitle"><h1>🛒 แผนการสั่งซื้อวัตถุดิบ</h1><small>รวมทุก Supplier ในหน้าเดียว · <b>V8.7 · อัปเดต Booker 03/09 · เตือนของแพงกว่าเจ้าอื่น</b></small></div><div class="actions"><button id="receiptOcrTopBtn" class="btn receiptBtn" onclick="openReceiptOCR()">📷 ถ่าย / อ่านใบเสร็จ</button><button class="btn" onclick="resetWeek()">ปิดสัปดาห์ / เริ่มสัปดาห์ใหม่</button><button class="btn" onclick="combinedPDF()">📊 PDF สรุปเดือน</button><button class="btn" onclick="usageCostPDF()">🧾 PDF ใช้สินค้า / ค่าใช้จ่าย</button><button class="btn" style="background:#0a5bd1;color:#fff;border-color:#0a5bd1" onclick="openOrders()">📦 ออเดอร์</button><button class="btn" style="color:#b00020" onclick="clearAllWants()">🧹 ล้างจำนวนทั้งหมด</button><button class="btn" style="color:#a34700" onclick="openPriceCompare()">⚖️ เทียบราคา</button><button class="btn" onclick="openConfig()">⚙️ ตั้งค่า</button><button class="btn" id="installBtn" onclick="installApp()">⬇️ ติดตั้งแอป</button></div></div><button class="receiptFab" onclick="openReceiptOCR()" aria-label="ถ่ายหรืออ่านใบเสร็จ">📷<span>ใบเสร็จ</span></button><main class="grid" id="app"></main><section id="report"></section><div class="modal" id="editModal"><div class="dialog"><h2 id="modalTitle">สินค้า</h2><div class="form"><label class="full">ชื่อสินค้า<input id="fName"></label><label>หมวด<select id="fCat"></select></label><label>หน่วย<input id="fUnit" placeholder="kg / pack / case"></label><label>ราคา £<input id="fPrice" type="number" min="0" step="0.01"></label><label>ปริมาณต่อแพ็ก (ถ้าทราบ)<input id="fSize" type="number" min="0" step="0.001"></label><label>หน่วยปริมาณ<select id="fSizeUnit"><option value="">—</option><option>kg</option><option>g</option><option>L</option><option>ml</option><option>piece</option></select></label><label class="full">รายละเอียด / ยี่ห้อ<input id="fHint"></label></div><div class="dialogActions"><button class="btn" onclick="closeModal()">ยกเลิก</button><button class="btn" onclick="saveItem()">บันทึก</button></div></div></div>
+<div class="top"><div class="topTitle"><h1>🛒 แผนการสั่งซื้อวัตถุดิบ</h1><small>รวมทุก Supplier ในหน้าเดียว · <b>V8.8 · แก้ผลรวมสัปดาห์หาย · สำรอง/กู้คืนข้อมูล</b></small></div><div class="actions"><button id="receiptOcrTopBtn" class="btn receiptBtn" onclick="openReceiptOCR()">📷 ถ่าย / อ่านใบเสร็จ</button><button class="btn" onclick="resetWeek()">ปิดสัปดาห์ / เริ่มสัปดาห์ใหม่</button><button class="btn" onclick="combinedPDF()">📊 PDF สรุปเดือน</button><button class="btn" onclick="usageCostPDF()">🧾 PDF ใช้สินค้า / ค่าใช้จ่าย</button><button class="btn" style="background:#0a5bd1;color:#fff;border-color:#0a5bd1" onclick="openOrders()">📦 ออเดอร์</button><button class="btn" style="color:#b00020" onclick="clearAllWants()">🧹 ล้างจำนวนทั้งหมด</button><button class="btn" style="color:#a34700" onclick="openPriceCompare()">⚖️ เทียบราคา</button><button class="btn" onclick="openBackup()">💾 สำรอง/กู้คืน</button><button class="btn" onclick="openConfig()">⚙️ ตั้งค่า</button><button class="btn" id="installBtn" onclick="installApp()">⬇️ ติดตั้งแอป</button></div></div><button class="receiptFab" onclick="openReceiptOCR()" aria-label="ถ่ายหรืออ่านใบเสร็จ">📷<span>ใบเสร็จ</span></button><main class="grid" id="app"></main><section id="report"></section><div class="modal" id="editModal"><div class="dialog"><h2 id="modalTitle">สินค้า</h2><div class="form"><label class="full">ชื่อสินค้า<input id="fName"></label><label>หมวด<select id="fCat"></select></label><label>หน่วย<input id="fUnit" placeholder="kg / pack / case"></label><label>ราคา £<input id="fPrice" type="number" min="0" step="0.01"></label><label>ปริมาณต่อแพ็ก (ถ้าทราบ)<input id="fSize" type="number" min="0" step="0.001"></label><label>หน่วยปริมาณ<select id="fSizeUnit"><option value="">—</option><option>kg</option><option>g</option><option>L</option><option>ml</option><option>piece</option></select></label><label class="full">รายละเอียด / ยี่ห้อ<input id="fHint"></label></div><div class="dialogActions"><button class="btn" onclick="closeModal()">ยกเลิก</button><button class="btn" onclick="saveItem()">บันทึก</button></div></div></div>
 <div class="modal" id="ocrModal"><div class="dialog" style="width:min(760px,100%)"><h2>📷 อ่านใบเสร็จ</h2><div class="ocrbox"><label><b>Supplier</b><select id="ocrSupplier" style="margin-left:8px;padding:7px;border-radius:7px"><option value="thch">TH/CH SUP</option><option value="booker">BOOKER SUP</option><option value="sains">SUPERMARKET</option></select></label><div class="ocrActions" style="margin-top:10px"><button class="btn" type="button" onclick="receiptCamera.click()">📷 ถ่ายใบเสร็จ</button><button class="btn" type="button" onclick="receiptLibrary.click()">🖼 เลือกรูปใบเสร็จ</button></div><input id="receiptCamera" type="file" accept="image/*" capture="environment" style="display:none"><input id="receiptLibrary" type="file" accept="image/*" style="display:none"><div id="receiptFileName" class="muted" style="margin-top:8px">ยังไม่ได้เลือกรูป</div><img id="receiptPreview" class="ocrpreview" style="display:none"><div class="progress"><div id="ocrProgress"></div></div><div id="ocrStatus" class="statusline">ถ่ายรูปหรือเลือกภาพใบเสร็จ แล้วกด “อ่านใบเสร็จ”</div><div class="ocrActions"><button class="btn" onclick="runReceiptOCR()">อ่านใบเสร็จ</button><button class="btn" onclick="closeReceiptOCR()">ปิด</button></div></div><div id="ocrResults"></div></div></div>
 <script>
 const CAT={frozen:'1. แช่แข็ง / ซีฟู้ด',produce:'2. ผักสด / ไข่',rice:'3. ข้าว / เส้น / แป้ง / น้ำตาล',sauce:'4. ซอส / กะทิ / เครื่องแกง',seasoning:'5. เครื่องปรุง / สมุนไพร',meat:'1. เนื้อสัตว์ / ไก่',fish:'2. อาหารทะเล / แช่แข็ง',other:'3. อื่น ๆ'};
@@ -2587,6 +2587,118 @@ function render(){
 }
 Object.assign(window,{render,priceCompare,sameSupplierPairs,annotatePrices,openPriceCompare,applySupermarketUpdate20260902,applyBookerUpdate20260903});
 setTimeout(()=>{try{render()}catch(e){}},200);
+})();
+</script>
+
+<script>
+(function(){
+/* ============================================================
+   V8.8
+   1) แก้ "ผลรวมสั่ง 1 สัปดาห์" หายหลังกดส่งออเดอร์
+      เดิม: ส่งออเดอร์ → ล้าง want แต่ไม่บวกเข้า total → ตัวเลขหายทั้ง 2 ช่อง
+      ใหม่: ส่งออเดอร์ → บวกจำนวนเข้า total ทันที (เพราะ "สั่งไปแล้ว")
+            แล้วตอนเช็ครับของไม่บวกซ้ำ แต่ปรับส่วนต่างถ้ารับมาไม่เท่าที่สั่ง
+   2) สำรอง / กู้คืนข้อมูลทั้งหมดเป็นไฟล์ JSON
+   ============================================================ */
+
+/* ---------- 1) ส่งออเดอร์ → บวกเข้าผลรวมสัปดาห์ทันที ---------- */
+function commitOrder(via){
+  if(!sendCtx)return;
+  const {s,lines}=sendCtx;
+  const o={oid:'O'+Date.now(),supplier:s,createdAt:new Date().toISOString(),sentAt:new Date().toISOString(),
+    status:'sent',via,lines:lines.map(l=>({...l})),text:document.getElementById('sendText').value};
+  orders.unshift(o);
+  lines.forEach(l=>{
+    const k=key(s,l.id);
+    state[k]=state[k]||{want:0,total:0};
+    state[k].total=(+state[k].total||0)+(+l.qty||0);   /* ← ย้ายจาก "ต้องการ" ไป "สั่งแล้ว" */
+    state[k].want=0;
+  });
+  saveV8();save();render();
+  closeV8('sendModal');
+  alert('บันทึกออเดอร์แล้ว ('+lines.length+' รายการ)\nจำนวนถูกย้ายไปช่อง “ผลรวมสั่ง 1 สัปดาห์” เรียบร้อย\nเช็ครับของได้ที่ปุ่ม 📦 ออเดอร์');
+}
+
+/* ---------- แก้รับของ: ไม่บวกซ้ำ ปรับเฉพาะส่วนต่าง ---------- */
+function confirmReceive(){
+  const o=orders.find(x=>x.oid===recvCtx);if(!o)return;
+  if(o.status==='received'||o.status==='partial')
+    if(!confirm('ออเดอร์นี้เช็ครับของไปแล้ว ต้องการบันทึกทับหรือไม่?'))return;
+  let short=false;
+  document.querySelectorAll('[data-rv]').forEach(el=>{
+    const l=o.lines.find(x=>x.id===+el.dataset.rv);if(!l)return;
+    l.recvQty=Math.max(0,+el.value||0);
+    if(l.recvQty<l.qty)short=true;
+  });
+  o.receivedAt=new Date().toISOString();
+  const already=o.countedInTotal===true;
+  o.lines.forEach(l=>{
+    const k=key(o.supplier,l.id),q=+l.recvQty||0,ordered=+l.qty||0;
+    state[k]=state[k]||{want:0,total:0};
+    /* ตอนส่งออเดอร์บวก "จำนวนที่สั่ง" ไปแล้ว → ตรงนี้ปรับเฉพาะส่วนต่างที่รับจริง */
+    const delta=already?0:(q-(o.addedAtSend===false?0:ordered));
+    if(delta)state[k].total=Math.max(0,(+state[k].total||0)+delta);
+    if(q){
+      stock[k]={qty:stockOf(o.supplier,l.id)+q,at:o.receivedAt};
+      receiptHistory.push({at:o.receivedAt,supplier:o.supplier,id:l.id,name:l.name,qty:q,unit:l.unit,
+        price:l.price,amount:q*(l.price||0),source:'order-received'});
+    }
+  });
+  o.countedInTotal=true;
+  o.status=short?'partial':'received';
+  saveReceiptHistory();saveV8();save();render();
+  closeV8('recvModal');
+  alert(short?'บันทึกแล้ว — มีของรับไม่ครบ ปรับผลรวมสัปดาห์ตามจำนวนที่รับจริงให้แล้ว'
+             :'รับของครบแล้ว ✅ บวกเข้าสต็อกและประวัติค่าใช้จ่ายเรียบร้อย');
+}
+
+/* ---------- 2) สำรอง / กู้คืนข้อมูล ---------- */
+const BACKUP_KEYS=['restaurant_supplier_master_v4','restaurant_supplier_combined_v1',
+  'restaurant_supplier_order_history_v3','restaurant_supplier_price_history_v6',
+  'restaurant_supplier_receipt_history_v72','restaurant_supplier_orders_v8',
+  'restaurant_supplier_stock_v8','restaurant_supplier_contacts_v8','restaurant_supplier_config_v8'];
+function exportBackup(){
+  const out={app:'kaosarn-order',version:'8.8',at:new Date().toISOString(),data:{}};
+  for(let i=0;i<localStorage.length;i++){
+    const k=localStorage.key(i);
+    if(BACKUP_KEYS.includes(k)||/^restaurant_supplier/.test(k)||/^sains_update|^booker_update/.test(k))
+      out.data[k]=localStorage.getItem(k);
+  }
+  const blob=new Blob([JSON.stringify(out,null,1)],{type:'application/json'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download='kaosarn-order-backup-'+new Date().toISOString().slice(0,10)+'.json';
+  document.body.appendChild(a);a.click();
+  setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},1500);
+}
+function importBackup(){
+  const inp=document.createElement('input');
+  inp.type='file';inp.accept='application/json,.json';
+  inp.onchange=()=>{
+    const f=inp.files&&inp.files[0];if(!f)return;
+    const r=new FileReader();
+    r.onload=()=>{
+      let j;
+      try{j=JSON.parse(r.result)}catch(e){return alert('ไฟล์ไม่ถูกต้อง อ่านไม่ได้')}
+      if(!j||!j.data)return alert('ไฟล์นี้ไม่ใช่ไฟล์สำรองของแอปนี้');
+      const n=Object.keys(j.data).length;
+      if(!confirm('กู้คืนข้อมูล '+n+' ชุด จากไฟล์วันที่ '+(j.at||'').slice(0,10)+'\n\nข้อมูลปัจจุบันจะถูกเขียนทับทั้งหมด ตกลงหรือไม่?'))return;
+      Object.entries(j.data).forEach(([k,v])=>{try{localStorage.setItem(k,v)}catch(e){}});
+      alert('กู้คืนเรียบร้อย กำลังโหลดแอปใหม่');
+      location.reload();
+    };
+    r.readAsText(f);
+  };
+  inp.click();
+}
+function openBackup(){
+  const n=BACKUP_KEYS.filter(k=>localStorage.getItem(k)).length;
+  if(confirm('สำรองข้อมูลทั้งหมด ('+n+' ชุด) เป็นไฟล์ JSON?\n\nกด OK = ดาวน์โหลดไฟล์สำรอง\nกด Cancel = เลือกไฟล์เพื่อกู้คืนข้อมูลเก่า'))
+    exportBackup();
+  else importBackup();
+}
+
+Object.assign(window,{commitOrder,confirmReceive,exportBackup,importBackup,openBackup});
 })();
 </script>
 
