@@ -7,7 +7,7 @@
 .receiptBtn{background:#0a84ff;color:#fff;border-color:#0a84ff;white-space:nowrap}.receiptFab{display:none;position:fixed;right:16px;bottom:82px;z-index:20;border:0;border-radius:999px;background:#0a84ff;color:white;box-shadow:0 4px 18px #0003;padding:12px 16px;font-weight:800;font-size:17px;gap:6px;align-items:center}.receiptFab span{font-size:14px}
 @media(max-width:720px){.top{position:sticky;align-items:stretch;flex-direction:column;gap:10px;padding:10px 12px}.topTitle{width:100%}.actions{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:8px}.actions .receiptBtn{grid-column:1/-1;font-size:16px;padding:12px}.actions .btn{white-space:normal;line-height:1.2}.receiptFab{display:flex}.grid{grid-template-columns:1fr;padding:10px}.modal .dialog{max-height:88vh;overflow:auto}.ocrtable{font-size:11px;display:block;overflow-x:auto}.ocrtable th,.ocrtable td{min-width:90px}.ocrtable th:first-child,.ocrtable td:first-child{min-width:180px}}
 </style><script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script></head><body>
-<div class="top"><div class="topTitle"><h1>🛒 แผนการสั่งซื้อวัตถุดิบ</h1><small>รวมทุก Supplier ในหน้าเดียว · <b>V8.5 · ใบสั่งของ 15 ช่อง · แก้หน้าพิมพ์เด้งกลับ</b></small></div><div class="actions"><button id="receiptOcrTopBtn" class="btn receiptBtn" onclick="openReceiptOCR()">📷 ถ่าย / อ่านใบเสร็จ</button><button class="btn" onclick="resetWeek()">ปิดสัปดาห์ / เริ่มสัปดาห์ใหม่</button><button class="btn" onclick="combinedPDF()">📊 PDF สรุปเดือน</button><button class="btn" onclick="usageCostPDF()">🧾 PDF ใช้สินค้า / ค่าใช้จ่าย</button><button class="btn" style="background:#0a5bd1;color:#fff;border-color:#0a5bd1" onclick="openOrders()">📦 ออเดอร์</button><button class="btn" style="color:#b00020" onclick="clearAllWants()">🧹 ล้างจำนวนทั้งหมด</button><button class="btn" onclick="openConfig()">⚙️ ตั้งค่า</button><button class="btn" id="installBtn" onclick="installApp()">⬇️ ติดตั้งแอป</button></div></div><button class="receiptFab" onclick="openReceiptOCR()" aria-label="ถ่ายหรืออ่านใบเสร็จ">📷<span>ใบเสร็จ</span></button><main class="grid" id="app"></main><section id="report"></section><div class="modal" id="editModal"><div class="dialog"><h2 id="modalTitle">สินค้า</h2><div class="form"><label class="full">ชื่อสินค้า<input id="fName"></label><label>หมวด<select id="fCat"></select></label><label>หน่วย<input id="fUnit" placeholder="kg / pack / case"></label><label>ราคา £<input id="fPrice" type="number" min="0" step="0.01"></label><label>ปริมาณต่อแพ็ก (ถ้าทราบ)<input id="fSize" type="number" min="0" step="0.001"></label><label>หน่วยปริมาณ<select id="fSizeUnit"><option value="">—</option><option>kg</option><option>g</option><option>L</option><option>ml</option><option>piece</option></select></label><label class="full">รายละเอียด / ยี่ห้อ<input id="fHint"></label></div><div class="dialogActions"><button class="btn" onclick="closeModal()">ยกเลิก</button><button class="btn" onclick="saveItem()">บันทึก</button></div></div></div>
+<div class="top"><div class="topTitle"><h1>🛒 แผนการสั่งซื้อวัตถุดิบ</h1><small>รวมทุก Supplier ในหน้าเดียว · <b>V8.7 · อัปเดต Booker 03/09 · เตือนของแพงกว่าเจ้าอื่น</b></small></div><div class="actions"><button id="receiptOcrTopBtn" class="btn receiptBtn" onclick="openReceiptOCR()">📷 ถ่าย / อ่านใบเสร็จ</button><button class="btn" onclick="resetWeek()">ปิดสัปดาห์ / เริ่มสัปดาห์ใหม่</button><button class="btn" onclick="combinedPDF()">📊 PDF สรุปเดือน</button><button class="btn" onclick="usageCostPDF()">🧾 PDF ใช้สินค้า / ค่าใช้จ่าย</button><button class="btn" style="background:#0a5bd1;color:#fff;border-color:#0a5bd1" onclick="openOrders()">📦 ออเดอร์</button><button class="btn" style="color:#b00020" onclick="clearAllWants()">🧹 ล้างจำนวนทั้งหมด</button><button class="btn" style="color:#a34700" onclick="openPriceCompare()">⚖️ เทียบราคา</button><button class="btn" onclick="openConfig()">⚙️ ตั้งค่า</button><button class="btn" id="installBtn" onclick="installApp()">⬇️ ติดตั้งแอป</button></div></div><button class="receiptFab" onclick="openReceiptOCR()" aria-label="ถ่ายหรืออ่านใบเสร็จ">📷<span>ใบเสร็จ</span></button><main class="grid" id="app"></main><section id="report"></section><div class="modal" id="editModal"><div class="dialog"><h2 id="modalTitle">สินค้า</h2><div class="form"><label class="full">ชื่อสินค้า<input id="fName"></label><label>หมวด<select id="fCat"></select></label><label>หน่วย<input id="fUnit" placeholder="kg / pack / case"></label><label>ราคา £<input id="fPrice" type="number" min="0" step="0.01"></label><label>ปริมาณต่อแพ็ก (ถ้าทราบ)<input id="fSize" type="number" min="0" step="0.001"></label><label>หน่วยปริมาณ<select id="fSizeUnit"><option value="">—</option><option>kg</option><option>g</option><option>L</option><option>ml</option><option>piece</option></select></label><label class="full">รายละเอียด / ยี่ห้อ<input id="fHint"></label></div><div class="dialogActions"><button class="btn" onclick="closeModal()">ยกเลิก</button><button class="btn" onclick="saveItem()">บันทึก</button></div></div></div>
 <div class="modal" id="ocrModal"><div class="dialog" style="width:min(760px,100%)"><h2>📷 อ่านใบเสร็จ</h2><div class="ocrbox"><label><b>Supplier</b><select id="ocrSupplier" style="margin-left:8px;padding:7px;border-radius:7px"><option value="thch">TH/CH SUP</option><option value="booker">BOOKER SUP</option><option value="sains">SUPERMARKET</option></select></label><div class="ocrActions" style="margin-top:10px"><button class="btn" type="button" onclick="receiptCamera.click()">📷 ถ่ายใบเสร็จ</button><button class="btn" type="button" onclick="receiptLibrary.click()">🖼 เลือกรูปใบเสร็จ</button></div><input id="receiptCamera" type="file" accept="image/*" capture="environment" style="display:none"><input id="receiptLibrary" type="file" accept="image/*" style="display:none"><div id="receiptFileName" class="muted" style="margin-top:8px">ยังไม่ได้เลือกรูป</div><img id="receiptPreview" class="ocrpreview" style="display:none"><div class="progress"><div id="ocrProgress"></div></div><div id="ocrStatus" class="statusline">ถ่ายรูปหรือเลือกภาพใบเสร็จ แล้วกด “อ่านใบเสร็จ”</div><div class="ocrActions"><button class="btn" onclick="runReceiptOCR()">อ่านใบเสร็จ</button><button class="btn" onclick="closeReceiptOCR()">ปิด</button></div></div><div id="ocrResults"></div></div></div>
 <script>
 const CAT={frozen:'1. แช่แข็ง / ซีฟู้ด',produce:'2. ผักสด / ไข่',rice:'3. ข้าว / เส้น / แป้ง / น้ำตาล',sauce:'4. ซอส / กะทิ / เครื่องแกง',seasoning:'5. เครื่องปรุง / สมุนไพร',meat:'1. เนื้อสัตว์ / ไก่',fish:'2. อาหารทะเล / แช่แข็ง',other:'3. อื่น ๆ'};
@@ -2349,6 +2349,244 @@ function openSendOrder(s){
 }
 
 Object.assign(window,{supplierPDF,buildOrderGrid,printFilledOrder,openSendOrder,catOf});
+})();
+</script>
+
+<style>
+/* ---------- V8.6 : เตือนราคาแพงกว่าเจ้าอื่น ---------- */
+.pricewarn{display:block;margin-top:5px;padding:5px 8px;border-radius:8px;background:#fff3e8;
+  border:1px solid #f0b98a;color:#a34700;font-size:10.5px;font-weight:700;line-height:1.5}
+.pricewarn b{color:#8a2b00}
+.pricewarn .cheap{color:#188331}
+.pricebest{display:inline-block;margin-top:4px;padding:2px 8px;border-radius:999px;
+  background:#eaf8ed;color:#188331;font-size:10px;font-weight:800}
+.supwarn{padding:7px 12px;background:#fff3e8;color:#a34700;font-size:11.5px;font-weight:800;
+  border-bottom:1px solid #f0b98a}
+.supwarn button{border:1px solid #a34700;background:#fff;color:#a34700;border-radius:999px;
+  padding:2px 9px;font-weight:800;font-size:10.5px;margin-left:6px}
+#cmpBody .cmprow{border:1px solid #e2e2e2;border-radius:10px;padding:9px 11px;margin-bottom:8px;font-size:12px}
+#cmpBody .cmprow h4{margin:0 0 3px;font-size:13px}
+#cmpBody .cmprow .l{color:#a34700;font-weight:700}
+#cmpBody .cmprow .r{color:#188331;font-weight:700}
+@media print{.pricewarn,.supwarn,.pricebest{display:none!important}}
+</style>
+
+<div class="modal" id="cmpModal"><div class="dialog" style="width:min(680px,100%)">
+  <h2 style="margin-top:0">⚖️ เทียบราคาข้าม Supplier</h2>
+  <div class="hint2" style="font-size:11px;color:#777;margin-bottom:8px">
+    เทียบเฉพาะสินค้าที่ระบุขนาดไว้และชื่อใกล้เคียงกันพอ (เทียบเป็นราคาต่อ kg / ลิตร / ชิ้น)
+    · ส่วนต่างต่ำกว่า 2% ถือว่าเท่ากัน ไม่เตือน
+  </div>
+  <div id="cmpBody"></div>
+  <div class="dialogActions" style="margin-top:12px"><button class="btn" onclick="closeV8('cmpModal')">ปิด</button></div>
+</div></div>
+
+<script>
+(function(){
+/* ============================================================
+   V8.6 — เตือนเมื่อสินค้าตัวไหน "แพงกว่า" อีก Supplier
+          + เพิ่มรายการใหม่ใน SUPERMARKET จากใบเสร็จ 02/09/26
+   ============================================================ */
+const KINDLABEL={kg:'kg',l:'ลิตร',piece:'ชิ้น'};
+const THRESH=1.02;   /* ต่างเกิน 2% ถึงเตือน */
+
+/* ---------- 1) เพิ่มรายการใหม่เข้า master ที่เก็บไว้ในเครื่อง ---------- */
+const SAINS_ADD_KEY='sains_update_20260902';
+const SAINS_ADD=[
+  {cat:'meat',name:'Pork Collar (Karkówka)',price:6.79,unit:'1kg',size:1,sizeUnit:'kg',
+   hint:'£6.79/kg · Delight European Food Store, Tooting · receipt 02/09/26'},
+  {cat:'fish',name:'Sea Bass Large (ปลากะพงตัวใหญ่)',price:5.0,unit:'ตัว',size:1,sizeUnit:'piece',
+   hint:'15 ตัว £75.00 = £5.00/ตัว · Fish Universe SW17 · receipt 02/09/26'},
+  {cat:'other',name:'Prazynki Lapsy Potato Snack',price:1.79,unit:'pack',size:110,sizeUnit:'g',
+   hint:'110g · Delight European Food Store, Tooting · receipt 02/09/26'}
+];
+function applySupermarketUpdate20260902(){
+  if(typeof DATA!=='object'||!DATA||!Array.isArray(DATA.sains))return false;  /* ยังโหลดไม่เสร็จ */
+  if(localStorage.getItem(SAINS_ADD_KEY))return true;
+  let added=0,nid=DATA.sains.reduce((m,x)=>Math.max(m,+x.id||0),0);
+  SAINS_ADD.forEach(it=>{
+    const dup=DATA.sains.some(x=>(x.name||'').toLowerCase().trim()===it.name.toLowerCase().trim());
+    if(dup)return;
+    DATA.sains.push(Object.assign({id:++nid},it));added++;
+  });
+  localStorage.setItem(SAINS_ADD_KEY,'1');
+  if(added){try{persistMaster()}catch(e){}try{render()}catch(e){}console.log('V8.6: เพิ่มสินค้า SUPERMARKET',added,'รายการ')}
+  return true;
+}
+
+/* ---------- 1b) ใบเสร็จ Booker 03/09/26 (inv 0410644 · £511.60) ---------- */
+const BOOKER_ADD_KEY='booker_update_20260903';
+const BOOKER_ADD=[
+  {cat:'other',name:'Kuhne Pickle Gherkins',price:11.29,unit:'2.45kg jar',size:2.45,sizeUnit:'kg',
+   hint:'Code 308192 · 2.45kg · Booker 03/09/26'},
+  {cat:'meat',name:'CE Chicken Breast Fillet (แพ็คเดี่ยว 5kg)',price:29.89,unit:'5kg pack',size:5,sizeUnit:'kg',
+   hint:'Code 147180 · 5kg · £5.98/kg — แพงกว่าแบบ 2×5kg (£5.60/kg) · Booker 03/09/26'},
+  {cat:'other',name:'CTE 1Ply Napkins White 30cm',price:20.49,unit:'case',
+   hint:'Code 308016 · 10 × 500s · ราคาสัญญา (CD) · Booker 03/09/26'},
+  {cat:'other',name:'CTS 2Ply 8-Fold Napkin White 39×40cm',price:44.99,unit:'case',
+   hint:'Code 308022 · 20 × 100s · Booker 03/09/26'},
+  {cat:'other',name:'CP Premium Heavy Duty Blue Centrefeed',price:18.29,unit:'6pk',
+   hint:'Code 278992 · 6pk · Booker 03/09/26'}
+];
+function applyBookerUpdate20260903(){
+  if(typeof DATA!=='object'||!DATA||!Array.isArray(DATA.booker))return false;
+  if(localStorage.getItem(BOOKER_ADD_KEY))return true;
+  let n=0,nid=DATA.booker.reduce((m,x)=>Math.max(m,+x.id||0),0);
+  BOOKER_ADD.forEach(it=>{
+    if(DATA.booker.some(x=>(x.name||'').toLowerCase().trim()===it.name.toLowerCase().trim()))return;
+    DATA.booker.push(Object.assign({id:++nid},it));n++;
+  });
+  /* ราคาล่าสุดจากใบเสร็จเดียวกัน */
+  const fi=DATA.booker.find(x=>/flat iron/i.test(x.name||''));
+  if(fi){fi.price=52.24;fi.hint='Code 134043 · avg 2kg · Booker 03/09/26 · น้ำหนัก 3.734kg = £13.99/kg';n++}
+  const cb=DATA.booker.find(x=>(x.name||'')==='CE Chicken Breast Fillet');
+  if(cb){cb.hint='Code 147179 · 2 × 5kg = £5.60/kg · Booker 03/09/26'}
+  localStorage.setItem(BOOKER_ADD_KEY,'1');
+  if(n){try{persistMaster()}catch(e){}try{render()}catch(e){}console.log('V8.7: อัปเดต BOOKER',n,'รายการ')}
+  return true;
+}
+(function waitData(n){
+  const a=applySupermarketUpdate20260902(),b=applyBookerUpdate20260903();
+  if(a&&b)return;
+  if(n>0)setTimeout(()=>waitData(n-1),300);
+})(30);
+
+/* ---------- 2) คำนวณว่าตัวไหนแพงกว่าเจ้าอื่น ---------- */
+let cmpCache=null,cmpStamp='';
+function priceCompare(){
+  const stamp=JSON.stringify(Object.entries(DATA||{}).map(([s,a])=>[s,a.length,a.reduce((x,i)=>x+(+i.price||0),0)]));
+  if(cmpCache&&stamp===cmpStamp)return cmpCache;
+  const all=[];
+  Object.entries(DATA||{}).forEach(([s,arr])=>arr.forEach(i=>{
+    const b=baseUnit(i);if(b&&isFinite(b.v)&&b.v>0)all.push({s,i,b});
+  }));
+  const out={};
+  for(const a of all){
+    let best=null;
+    for(const b of all){
+      if(b.s===a.s||b.b.kind!==a.b.kind)continue;
+      if(!sameProduct(a.i,b.i))continue;
+      if(!best||b.b.v<best.b.v)best=b;
+    }
+    if(!best)continue;
+    const k=key(a.s,a.i.id);
+    if(a.b.v>best.b.v*THRESH){
+      out[k]={worse:true,sup:best.s,name:best.i.name,mine:a.b.v,theirs:best.b.v,kind:a.b.kind,
+        pct:Math.round((a.b.v/best.b.v-1)*100),save:a.b.v-best.b.v};
+    }else if(best.b.v>a.b.v*THRESH){
+      out[k]={worse:false,sup:best.s,mine:a.b.v,kind:a.b.kind};
+    }
+  }
+  cmpCache=out;cmpStamp=stamp;return out;
+}
+function unitTxt(v,kind){return money(v)+'/'+(KINDLABEL[kind]||kind)}
+/* เทียบขนาดแพ็คภายในร้านเดียวกัน — โชว์แยกเป็น "ควรตรวจสอบ" เพราะชื่อคล้ายกันอาจเป็นคนละสินค้า */
+const PACKAGING=/container|napkin|towel|roll|bag|foil|film|cup|lid|skewer|กล่อง|ทิชชู|ไม้/i;
+function sameSupplierPairs(){
+  const all=[];
+  Object.entries(DATA||{}).forEach(([s,arr])=>arr.forEach(i=>{
+    if(PACKAGING.test(i.name||''))return;
+    const b=baseUnit(i);if(b&&isFinite(b.v)&&b.v>0)all.push({s,i,b});
+  }));
+  const out=[];
+  for(const a of all){
+    let best=null;
+    for(const b of all){
+      if(b.s!==a.s||b.i.id===a.i.id)continue;
+      if(b.b.kind!==a.b.kind||!sameProduct(a.i,b.i))continue;
+      if(!best||b.b.v<best.b.v)best=b;
+    }
+    if(best&&a.b.v>best.b.v*1.05)
+      out.push({s:a.s,i:a.i,mine:a.b.v,other:best.i,theirs:best.b.v,kind:a.b.kind,
+        pct:Math.round((a.b.v/best.b.v-1)*100)});
+  }
+  return out.sort((x,y)=>y.pct-x.pct);
+}
+
+/* ---------- 3) แปะป้ายเตือนลงในแต่ละแถวหลัง render ---------- */
+function annotatePrices(){
+  const cmp=priceCompare();
+  document.querySelectorAll('#app .row').forEach(row=>{
+    row.querySelectorAll('.pricewarn,.pricebest').forEach(e=>e.remove());
+    const q=row.querySelector('.qty');
+    if(!q)return;
+    const m=(q.getAttribute('oninput')||'').match(/setWant\('([^']+)',\s*(\d+)/);
+    if(!m)return;
+    const info=cmp[key(m[1],+m[2])];
+    if(!info)return;
+    const anchor=row.querySelector('.price')||row.querySelector('.name');
+    if(!anchor)return;
+    if(info.worse){
+      anchor.insertAdjacentHTML('afterend',
+        `<div class="pricewarn">⚠️ แพงกว่า <b>${SUPNAME[info.sup]||info.sup} ${info.pct}%</b><br>`
+        +`ที่นี่ ${unitTxt(info.mine,info.kind)} · <span class="cheap">${SUPNAME[info.sup]||info.sup} ${unitTxt(info.theirs,info.kind)}</span>`
+        +`<br><span style="font-weight:600;color:#7a5c48">(${info.name})</span></div>`);
+    }else{
+      anchor.insertAdjacentHTML('afterend',
+        `<span class="pricebest">✓ ถูกที่สุด ${unitTxt(info.mine,info.kind)}</span>`);
+    }
+  });
+  /* แถบสรุปบนหัวแต่ละ Supplier */
+  const bySup={};
+  Object.entries(cmp).forEach(([k,v])=>{if(v.worse){const s=k.split('_')[0];bySup[s]=(bySup[s]||0)+1}});
+  document.querySelectorAll('#app section.supplier').forEach(sec=>{
+    sec.querySelectorAll('.supwarn').forEach(e=>e.remove());
+    const q=sec.querySelector('.qty');
+    if(!q)return;
+    const m=(q.getAttribute('oninput')||'').match(/setWant\('([^']+)'/);
+    if(!m)return;
+    const n=bySup[m[1]];
+    if(!n)return;
+    const bar=sec.querySelector('.v8bar')||sec.querySelector('.head');
+    bar.insertAdjacentHTML('afterend',
+      `<div class="supwarn">⚠️ มี ${n} รายการที่แพงกว่าเจ้าอื่น<button onclick="openPriceCompare()">ดูรายการ</button></div>`);
+  });
+}
+
+/* ---------- 4) หน้าสรุปเทียบราคา ---------- */
+function openPriceCompare(){
+  const cmp=priceCompare();
+  const rows=Object.entries(cmp).filter(([,v])=>v.worse)
+    .map(([k,v])=>{
+      const [s,id]=[k.split('_')[0],+k.split('_')[1]];
+      const i=(DATA[s]||[]).find(x=>x.id===id);
+      return i?{s,i,v}:null;
+    }).filter(Boolean).sort((a,b)=>b.v.pct-a.v.pct);
+  const body=document.getElementById('cmpBody');
+  body.innerHTML=rows.length?rows.map(({s,i,v})=>
+    `<div class="cmprow"><h4>${esc(i.name)}</h4>
+      <div><span class="l">${SUPNAME[s]||s} ${unitTxt(v.mine,v.kind)}</span>
+      &nbsp;→&nbsp; <span class="r">${SUPNAME[v.sup]||v.sup} ${unitTxt(v.theirs,v.kind)}</span>
+      &nbsp;<b style="color:#a34700">แพงกว่า ${v.pct}%</b></div>
+      <div style="color:#777;font-size:11px;margin-top:3px">เทียบกับ: ${esc(v.name)}
+      · ต่างกัน ${money(v.save)} ต่อ ${KINDLABEL[v.kind]||v.kind}</div></div>`).join('')
+    : '<p style="color:#777">ยังไม่พบสินค้าที่แพงกว่าเจ้าอื่น ✓</p>';
+  const same=sameSupplierPairs();
+  if(same.length){
+    body.innerHTML+='<h3 style="font-size:13px;margin:16px 0 6px;border-bottom:1.5px solid #ccc;padding-bottom:3px">'
+      +'ขนาดแพ็คในร้านเดียวกัน — ควรตรวจสอบเอง</h3>'
+      +'<div style="font-size:11px;color:#777;margin-bottom:8px">ชื่อใกล้เคียงกันแต่อาจเป็นคนละสินค้า (คนละชิ้นส่วน คนละรสชาติ) ดูก่อนตัดสินใจ</div>'
+      +same.map(v=>`<div class="cmprow" style="background:#fafafa">
+        <h4>${esc(v.i.name)}</h4>
+        <div><span class="l">${unitTxt(v.mine,v.kind)}</span> &nbsp;→&nbsp;
+        <span class="r">${unitTxt(v.theirs,v.kind)}</span>
+        &nbsp;<b style="color:#a34700">แพงกว่า ${v.pct}%</b></div>
+        <div style="color:#777;font-size:11px;margin-top:3px">เทียบกับ: ${esc(v.other.name)} (${SUPNAME[v.s]||v.s})</div></div>`).join('');
+  }
+  body.innerHTML+='<div style="font-size:10.5px;color:#888;margin-top:10px;line-height:1.6">'
+    +'ระบบเทียบได้เฉพาะสินค้าที่ระบุขนาด (kg / g / ml / L / ชิ้น) และชื่อใกล้เคียงกันพอ '
+    +'— ถ้าอยากให้เทียบตัวไหนเพิ่ม กด “แก้ไข” ที่รายการนั้นแล้วใส่ขนาดลงไป</div>';
+  openV8('cmpModal');
+}
+
+/* ---------- 5) เรียก annotate ทุกครั้งที่ render ---------- */
+const _render=window.render;
+function render(){
+  if(typeof _render==='function')_render();
+  try{annotatePrices()}catch(e){console.warn('annotatePrices',e)}
+}
+Object.assign(window,{render,priceCompare,sameSupplierPairs,annotatePrices,openPriceCompare,applySupermarketUpdate20260902,applyBookerUpdate20260903});
+setTimeout(()=>{try{render()}catch(e){}},200);
 })();
 </script>
 

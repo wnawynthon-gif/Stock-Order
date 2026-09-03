@@ -1,1040 +1,1114 @@
 {
-  "thch": [
-    {
-      "id": 1,
-      "name": "GOLD PLUM Vannamei Prawn PD 21/25",
-      "hint": "Stock 89621 • 10×800g net • Hoo Hing 27/08/26",
-      "cat": "frozen",
-      "unit": "case",
-      "price": 73.99,
-      "weekly": 1
-    },
-    {
-      "id": 2,
-      "name": "GOLD PLUM Vannamei Prawn HLSO 21/25",
-      "hint": "Stock 97901 • 6×800g net • Hoo Hing 25/08/26",
-      "cat": "frozen",
-      "unit": "case",
-      "price": 46.99,
-      "weekly": 1
-    },
-    {
-      "id": 3,
-      "name": "Squid Tubes U5",
-      "hint": "",
-      "cat": "frozen",
-      "unit": "case",
-      "price": null,
-      "weekly": 1
-    },
-    {
-      "id": 4,
-      "name": "Roasted Duck",
-      "hint": "",
-      "cat": "frozen",
-      "unit": "case",
-      "price": null,
-      "weekly": 1
-    },
-    {
-      "id": 5,
-      "name": "BDMP Frozen Lime Leaves 100g",
-      "hint": "Stock 66312 • 100g pkt • Hoo Hing 25/08/26",
-      "cat": "frozen",
-      "unit": "pack",
-      "price": 1.99,
-      "weekly": 3
-    },
-    {
-      "id": 6,
-      "name": "HAPPY BOY Wonton Pastry",
-      "hint": "Stock 11422 • 200g pkt • Hoo Hing 25/08/26",
-      "cat": "frozen",
-      "unit": "pack",
-      "price": 1.99,
-      "weekly": 2
-    },
-    {
-      "id": 7,
-      "name": "TYJ Spring Roll Pastry 8.5in",
-      "hint": "Stock 11771 • 20×550g • Hoo Hing 25/08/26",
-      "cat": "frozen",
-      "unit": "case",
-      "price": 26.99,
-      "weekly": 1
-    },
-    {
-      "id": 8,
-      "name": "Pork & Prawn Siu Mai",
-      "hint": "",
-      "cat": "frozen",
-      "unit": "case",
-      "price": null,
-      "weekly": 1
-    },
-    {
-      "id": 9,
-      "name": "Fish Cake (ลูกชิ้นปลา)",
-      "hint": "",
-      "cat": "frozen",
-      "unit": "pack",
-      "price": null,
-      "weekly": 0
-    },
-    {
-      "id": 10,
-      "name": "Shrimp Chip 500g",
-      "hint": "",
-      "cat": "frozen",
-      "unit": "case",
-      "price": null,
-      "weekly": 1
-    },
-    {
-      "id": 11,
-      "name": "เนื้อปลากราย",
-      "hint": "",
-      "cat": "frozen",
-      "unit": "pack",
-      "price": null,
-      "weekly": 6
-    },
-    {
-      "id": 12,
-      "name": "Fresh Bean Sprouts",
-      "hint": "Stock 58971 • 4kg bag • Hoo Hing 25/08/26",
-      "cat": "produce",
-      "unit": "case",
-      "price": 4.79,
-      "weekly": 2
-    },
-    {
-      "id": 13,
-      "name": "French Beans",
-      "hint": "Stock 258481 • 1.5kg case • Hoo Hing 25/08/26",
-      "cat": "produce",
-      "unit": "pack",
-      "price": 10.99,
-      "weekly": 2
-    },
-    {
-      "id": 14,
-      "name": "Lemon",
-      "hint": "Stock 258621 • 40pcs • Hoo Hing 18/08/26",
-      "cat": "produce",
-      "unit": "pack",
-      "price": 14.99,
-      "weekly": 1
-    },
-    {
-      "id": 15,
-      "name": "Broccoli",
-      "hint": "Stock 258151 • 4.5kg • Hoo Hing 25/08/26",
-      "cat": "produce",
-      "unit": "pack",
-      "price": 19.99,
-      "weekly": 1
-    },
-    {
-      "id": 16,
-      "name": "Onion (White) 20KG",
-      "hint": "Stock 59721 • 20kg bag • Hoo Hing 25/08/26",
-      "cat": "produce",
-      "unit": "pack",
-      "price": 10.99,
-      "weekly": 1
-    },
-    {
-      "id": 17,
-      "name": "Spring Onion",
-      "hint": "Stock 259731 • 12s case • Hoo Hing 25/08/26",
-      "cat": "produce",
-      "unit": "pack",
-      "price": 9.5,
-      "weekly": 1
-    },
-    {
-      "id": 18,
-      "name": "Aubergine",
-      "hint": "Stock 258051 • 5kg case • Hoo Hing 25/08/26",
-      "cat": "produce",
-      "unit": "pack",
-      "price": 9.99,
-      "weekly": 1
-    },
-    {
-      "id": 19,
-      "name": "Carrots",
-      "hint": "Stock 259761 • 10kg bag • Hoo Hing 25/08/26",
-      "cat": "produce",
-      "unit": "pack",
-      "price": 8.99,
-      "weekly": 1
-    },
-    {
-      "id": 20,
-      "name": "Red Onion",
-      "hint": "Stock 259671 • 5kg • Hoo Hing 25/08/26",
-      "cat": "produce",
-      "unit": "pack",
-      "price": 10.99,
-      "weekly": 1
-    },
-    {
-      "id": 21,
-      "name": "Lemongrass",
-      "hint": "Stock 58062 • 100g loose rate • Hoo Hing 25/08/26",
-      "cat": "produce",
-      "unit": "pack",
-      "price": 0.99,
-      "weekly": 3
-    },
-    {
-      "id": 22,
-      "name": "Peeled Garlic",
-      "hint": "Stock 257382 • 1kg • Hoo Hing 25/08/26",
-      "cat": "produce",
-      "unit": "pack",
-      "price": 4.35,
-      "weekly": 2
-    },
-    {
-      "id": 23,
-      "name": "Long Red Chilli",
-      "hint": "",
-      "cat": "produce",
-      "unit": "pack",
-      "price": null,
-      "weekly": 1
-    },
-    {
-      "id": 24,
-      "name": "Small Red Chilli",
-      "hint": "Stock 258291 • 1.5kg • Hoo Hing 25/08/26",
-      "cat": "produce",
-      "unit": "pack",
-      "price": 18.99,
-      "weekly": 1
-    },
-    {
-      "id": 25,
-      "name": "Cabbage White",
-      "hint": "",
-      "cat": "produce",
-      "unit": "pack",
-      "price": null,
-      "weekly": 1
-    },
-    {
-      "id": 26,
-      "name": "Galangal (ข่า)",
-      "hint": "Stock 58982 • 200g loose rate • Hoo Hing 25/08/26",
-      "cat": "produce",
-      "unit": "pack",
-      "price": 2.25,
-      "weekly": 3
-    },
-    {
-      "id": 27,
-      "name": "Lime (มะนาวเขียว)",
-      "hint": "Stock 258661 • case • Hoo Hing 25/08/26",
-      "cat": "produce",
-      "unit": "pack",
-      "price": 14.99,
-      "weekly": 1
-    },
-    {
-      "id": 28,
-      "name": "Bamboo Shoot Halves",
-      "hint": "",
-      "cat": "produce",
-      "unit": "case",
-      "price": null,
-      "weekly": 1
-    },
-    {
-      "id": 29,
-      "name": "Large Eggs",
-      "hint": "",
-      "cat": "produce",
-      "unit": "case",
-      "price": null,
-      "weekly": 1
-    },
-    {
-      "id": 30,
-      "name": "GREEN DRAGON Thai Fragrant Rice 20kg",
-      "hint": "Stock 51141 • 20kg bag • Hoo Hing 25/08/26",
-      "cat": "staples",
-      "unit": "bag",
-      "price": 38.99,
-      "weekly": 2
-    },
-    {
-      "id": 31,
-      "name": "FIRST LADY Thai Glutinous Rice Premium 10kg",
-      "hint": "Stock 53861 • 10kg bag • Hoo Hing 25/08/26",
-      "cat": "staples",
-      "unit": "case",
-      "price": 16.99,
-      "weekly": 1
-    },
-    {
-      "id": 32,
-      "name": "GOLD PLUM Rice Sticks 5mm Medium",
-      "hint": "Stock 71611 • 30×400g • Hoo Hing 25/08/26",
-      "cat": "staples",
-      "unit": "pack",
-      "price": 38.99,
-      "weekly": 1
-    },
-    {
-      "id": 33,
-      "name": "Rice Stick 10mm",
-      "hint": "",
-      "cat": "staples",
-      "unit": "pack",
-      "price": null,
-      "weekly": 1
-    },
-    {
-      "id": 34,
-      "name": "GOLD PLUM Funsee Vermicelli Mung Bean",
-      "hint": "Stock 10602 • 1kg pkt • Hoo Hing 25/08/26",
-      "cat": "staples",
-      "unit": "pack",
-      "price": 3.89,
-      "weekly": 2
-    },
-    {
-      "id": 35,
-      "name": "Cooking Salt",
-      "hint": "Stock 30711 • 25kg bag • Hoo Hing 25/08/26",
-      "cat": "staples",
-      "unit": "pack",
-      "price": 10.79,
-      "weekly": 1
-    },
-    {
-      "id": 36,
-      "name": "JB Farina Potato Starch",
-      "hint": "Stock 81632 • 3kg pkt • Hoo Hing 25/08/26",
-      "cat": "staples",
-      "unit": "pack",
-      "price": 6.99,
-      "weekly": 1
-    },
-    {
-      "id": 37,
-      "name": "BRITISH SUGAR Granulated Sugar",
-      "hint": "Stock 30781 • 25kg bag • Hoo Hing 25/08/26",
-      "cat": "staples",
-      "unit": "bag",
-      "price": 16.99,
-      "weekly": 1
-    },
-    {
-      "id": 38,
-      "name": "GREEN DRAGON Self Raising Flour",
-      "hint": "Stock 81581 • 10×1.5kg • Hoo Hing 25/08/26",
-      "cat": "staples",
-      "unit": "pack",
-      "price": 14.99,
-      "weekly": 1
-    },
-    {
-      "id": 39,
-      "name": "A10 CHAOKOH Coconut Milk Catering Size",
-      "hint": "Stock 32821 • 6×2900ml • Hoo Hing 25 & 27/08/26",
-      "cat": "sauces",
-      "unit": "case",
-      "price": 45.5,
-      "weekly": 3
-    },
-    {
-      "id": 40,
-      "name": "CHAOKOH Coconut Milk 400ml",
-      "hint": "Stock 32801 • 24×400ml • Hoo Hing 27/08/26",
-      "cat": "sauces",
-      "unit": "pack",
-      "price": 30.99,
-      "weekly": 1
-    },
-    {
-      "id": 41,
-      "name": "MAE PLOY Red Curry Paste",
-      "hint": "Stock 44732 • 1kg tub • Hoo Hing 25/08/26",
-      "cat": "sauces",
-      "unit": "pack",
-      "price": 4.59,
-      "weekly": 2
-    },
-    {
-      "id": 42,
-      "name": "MAE PLOY Green Curry Paste",
-      "hint": "Stock 44722 • 1kg tub • Hoo Hing 25/08/26",
-      "cat": "sauces",
-      "unit": "pack",
-      "price": 4.59,
-      "weekly": 3
-    },
-    {
-      "id": 43,
-      "name": "MAE PLOY Massaman Curry Paste",
-      "hint": "Stock 44782 • 1kg tub • Hoo Hing 25/08/26",
-      "cat": "sauces",
-      "unit": "pack",
-      "price": 4.59,
-      "weekly": 2
-    },
-    {
-      "id": 44,
-      "name": "MAE PLOY Tom Yum Curry Paste",
-      "hint": "Stock 44852 • 1kg tub • Hoo Hing 25/08/26",
-      "cat": "sauces",
-      "unit": "pack",
-      "price": 4.59,
-      "weekly": 1
-    },
-    {
-      "id": 45,
-      "name": "Thin Soy Sauce",
-      "hint": "",
-      "cat": "sauces",
-      "unit": "pack",
-      "price": null,
-      "weekly": 2
-    },
-    {
-      "id": 46,
-      "name": "GOLDEN MOUNTAIN Seasoning Sauce",
-      "hint": "Stock 52201 • 12×600ml • Hoo Hing 25/08/26",
-      "cat": "sauces",
-      "unit": "pack",
-      "price": 25.99,
-      "weekly": 1
-    },
-    {
-      "id": 47,
-      "name": "LKK PANDA Oyster Sauce",
-      "hint": "Stock 37171 • 6×2.27kg • Hoo Hing 25/08/26",
-      "cat": "sauces",
-      "unit": "pack",
-      "price": 32.99,
-      "weekly": 1
-    },
-    {
-      "id": 48,
-      "name": "LKK Premium Dark Soy Sauce",
-      "hint": "Stock 57111 • 12×500ml • Hoo Hing 25/08/26",
-      "cat": "sauces",
-      "unit": "pack",
-      "price": 21.49,
-      "weekly": 1
-    },
-    {
-      "id": 49,
-      "name": "Sweet Chilli Sauce",
-      "hint": "",
-      "cat": "sauces",
-      "unit": "pack",
-      "price": null,
-      "weekly": 1
-    },
-    {
-      "id": 50,
-      "name": "SARSONS Distilled White Vinegar",
-      "hint": "Stock 12981 • 2×5L • Hoo Hing 25/08/26",
-      "cat": "sauces",
-      "unit": "pack",
-      "price": 10.99,
-      "weekly": 1
-    },
-    {
-      "id": 51,
-      "name": "PENTA Pure Palm Sugar Blocks",
-      "hint": "Stock 31122 • 454g pkt • Hoo Hing 25/08/26",
-      "cat": "sauces",
-      "unit": "pack",
-      "price": 1.79,
-      "weekly": 6
-    },
-    {
-      "id": 52,
-      "name": "Chopped Sweet Radish",
-      "hint": "",
-      "cat": "sauces",
-      "unit": "pack",
-      "price": null,
-      "weekly": 3
-    },
-    {
-      "id": 53,
-      "name": "Seedless Tamarind",
-      "hint": "",
-      "cat": "sauces",
-      "unit": "pack",
-      "price": null,
-      "weekly": 6
-    },
-    {
-      "id": 54,
-      "name": "Rapeseed Oil 20L",
-      "hint": "",
-      "cat": "sauces",
-      "unit": "tin",
-      "price": null,
-      "weekly": 2
-    },
-    {
-      "id": 55,
-      "name": "Fish Sauce (Case)",
-      "hint": "",
-      "cat": "sauces",
-      "unit": "case",
-      "price": null,
-      "weekly": 1
-    },
-    {
-      "id": 56,
-      "name": "Fish Sauce (ขวด)",
-      "hint": "",
-      "cat": "sauces",
-      "unit": "bottle",
-      "price": null,
-      "weekly": 6
-    },
-    {
-      "id": 57,
-      "name": "Roasted Chilli Paste",
-      "hint": "",
-      "cat": "sauces",
-      "unit": "pack",
-      "price": null,
-      "weekly": 1
-    },
-    {
-      "id": 58,
-      "name": "Tomato Paste",
-      "hint": "",
-      "cat": "sauces",
-      "unit": "pack",
-      "price": null,
-      "weekly": 1
-    },
-    {
-      "id": 59,
-      "name": "Kikoman Soy Sauce",
-      "hint": "",
-      "cat": "sauces",
-      "unit": "bottle",
-      "price": null,
-      "weekly": 2
-    },
-    {
-      "id": 60,
-      "name": "Raw Cashew Nuts",
-      "hint": "",
-      "cat": "spices",
-      "unit": "pack",
-      "price": null,
-      "weekly": 2
-    },
-    {
-      "id": 61,
-      "name": "Blanched Peanut",
-      "hint": "",
-      "cat": "spices",
-      "unit": "pack",
-      "price": null,
-      "weekly": 3
-    },
-    {
-      "id": 62,
-      "name": "KNORR Chicken Powder +10% Extra",
-      "hint": "Stock 40232 • 900g+90g • Hoo Hing 25/08/26",
-      "cat": "spices",
-      "unit": "pack",
-      "price": 8.59,
-      "weekly": 1
-    },
-    {
-      "id": 63,
-      "name": "MSG 500g (VAT)",
-      "hint": "",
-      "cat": "spices",
-      "unit": "pack",
-      "price": null,
-      "weekly": 2
-    },
-    {
-      "id": 64,
-      "name": "Crushed Chilli 1KG",
-      "hint": "",
-      "cat": "spices",
-      "unit": "pack",
-      "price": null,
-      "weekly": 2
-    },
-    {
-      "id": 65,
-      "name": "White Pepper 1KG",
-      "hint": "",
-      "cat": "spices",
-      "unit": "pack",
-      "price": null,
-      "weekly": 1
-    },
-    {
-      "id": 66,
-      "name": "MOUNT ELEPHANT Cinnamon / Cassia Sticks",
-      "hint": "Stock 57532 • 1kg • Hoo Hing 25/08/26",
-      "cat": "spices",
-      "unit": "pack",
-      "price": 6.19,
-      "weekly": 1
-    },
-    {
-      "id": 67,
-      "name": "RAJAH Haldi Powder (Ground Turmeric)",
-      "hint": "Stock 10792 • 1kg • Hoo Hing 25/08/26",
-      "cat": "spices",
-      "unit": "pack",
-      "price": 7.69,
-      "weekly": 1
-    },
-    {
-      "id": 68,
-      "name": "Coriander Seed 300g",
-      "hint": "",
-      "cat": "spices",
-      "unit": "pack",
-      "price": null,
-      "weekly": 1
-    },
-    {
-      "id": 69,
-      "name": "Star Aniseed 1KG",
-      "hint": "",
-      "cat": "spices",
-      "unit": "pack",
-      "price": null,
-      "weekly": 1
-    },
-    {
-      "id": 70,
-      "name": "Plastic Containers C500 (VAT)",
-      "hint": "",
-      "cat": "nonfood",
-      "unit": "case",
-      "price": null,
-      "weekly": 1
-    },
-    {
-      "id": 71,
-      "name": "Plastic Containers C650 (VAT)",
-      "hint": "",
-      "cat": "nonfood",
-      "unit": "case",
-      "price": null,
-      "weekly": 1
-    },
-    {
-      "id": 72,
-      "name": "Kitchen Gloves Medium (VAT)",
-      "hint": "",
-      "cat": "nonfood",
-      "unit": "pack",
-      "price": null,
-      "weekly": 1
-    },
-    {
-      "id": 73,
-      "name": "Bamboo Chopsticks",
-      "hint": "",
-      "cat": "nonfood",
-      "unit": "case",
-      "price": null,
-      "weekly": 5
-    },
-    {
-      "id": 74,
-      "name": "Bamboo Skewers 6in",
-      "hint": "Stock 20622 • 100pcs • Hoo Hing 25/08/26",
-      "cat": "nonfood",
-      "unit": "pack",
-      "price": 0.39,
-      "weekly": 10
-    },
-    {
-      "id": 75,
-      "name": "Sponge Scourers (VAT)",
-      "hint": "",
-      "cat": "nonfood",
-      "unit": "pack",
-      "price": null,
-      "weekly": 2
-    }
-  ],
-  "booker": [
-    {
-      "id": 1,
-      "name": "RM Curtis Chopped Mixed Nuts",
-      "hint": "Code 193015 · 1kg",
-      "cat": "other",
-      "unit": "1kg pack",
-      "price": 8.99,
-      "weekly": 1
-    },
-    {
-      "id": 2,
-      "name": "CE Chicken Breast Fillet",
-      "hint": "Code 147179 · 5kg · Booker 29/08/26",
-      "cat": "meat",
-      "unit": "5kg pack",
-      "price": 55.99,
-      "weekly": 7
-    },
-    {
-      "id": 3,
-      "name": "H/Land Spring Water Still",
-      "hint": "Code 301648 · 12 × 1.5L",
-      "cat": "other",
-      "unit": "case",
-      "price": 6.75,
-      "weekly": 2
-    },
-    {
-      "id": 4,
-      "name": "Coke Zero",
-      "hint": "Code 063724 · 24 × 330ml · Booker 29/08/26",
-      "cat": "other",
-      "unit": "case",
-      "price": 9.0,
-      "weekly": 2
-    },
-    {
-      "id": 5,
-      "name": "CL Cod Fillet Skinless/Boneless",
-      "hint": "Code 256183 · 1.816kg",
-      "cat": "fish",
-      "unit": "pack",
-      "price": 45.99,
-      "weekly": 1
-    },
-    {
-      "id": 6,
-      "name": "CE Mid & Prime Chicken Wings",
-      "hint": "Code 321688 · 4.5kg",
-      "cat": "meat",
-      "unit": "4.5kg pack",
-      "price": 13.99,
-      "weekly": 2
-    },
-    {
-      "id": 7,
-      "name": "Flat Iron Beef Steak",
-      "hint": "Code 134043 · avg 2kg · Booker 29/08/26 · receipt weight 4.080kg",
-      "cat": "meat",
-      "unit": "pack",
-      "price": 57.08,
-      "weekly": 2
-    },
-    {
-      "id": 8,
-      "name": "Chefs Choice Vegetable Oil",
-      "hint": "Code 312427 · 20L · Booker 29/08/26",
-      "cat": "other",
-      "unit": "20L tin",
-      "price": 26.99,
-      "weekly": 2
-    },
-    {
-      "id": 9,
-      "name": "Harpic Prof Power Plus Original",
-      "hint": "Code 250742 · 1L",
-      "cat": "other",
-      "unit": "bottle",
-      "price": 2.29,
-      "weekly": 1
-    },
-    {
-      "id": 10,
-      "name": "Flash Professional Glass Cleaner",
-      "hint": "Code 306094 · 750ml",
-      "cat": "other",
-      "unit": "bottle",
-      "price": 3.99,
-      "weekly": 1
-    },
-    {
-      "id": 11,
-      "name": "Professional Finish All in 1 Lemon",
-      "hint": "Code 948497 · 5L",
-      "cat": "other",
-      "unit": "5L",
-      "price": 8.99,
-      "weekly": 1
-    },
-    {
-      "id": 12,
-      "name": "Large Eggs",
-      "hint": "Code 168775 · 180",
-      "cat": "other",
-      "unit": "case 180",
-      "price": 33.99,
-      "weekly": 1
-    },
-    {
-      "id": 13,
-      "name": "CP Mini Jumbo White T/Rolls",
-      "hint": "Code 247794 · 6pk",
-      "cat": "other",
-      "unit": "pack",
-      "price": 12.99,
-      "weekly": 1
-    },
-    {
-      "id": 14,
-      "name": "CP ZFold White Paper Towels",
-      "hint": "Code 293395 · 15 × 198s",
-      "cat": "other",
-      "unit": "case",
-      "price": 29.99,
-      "weekly": 1
-    },
-    {
-      "id": 15,
-      "name": "H/Land Spring Still 6×1.5L",
-      "hint": "Code 154217 · 6 × 1.5L · Booker 29/08/26",
-      "cat": "other",
-      "unit": "6×1.5L pack",
-      "price": 3.49,
-      "weekly": 6
-    },
-    {
-      "id": 16,
-      "name": "CE Chicken Drumsticks",
-      "hint": "Code 320974 · 4.5kg · Booker 29/08/26",
-      "cat": "meat",
-      "unit": "4.5kg pack",
-      "price": 14.79,
-      "weekly": 1
-    },
-    {
-      "id": 17,
-      "name": "CE Oyster Chicken Thigh",
-      "hint": "Code 320976 · 4.5kg · Booker 29/08/26",
-      "cat": "meat",
-      "unit": "4.5kg pack",
-      "price": 15.69,
-      "weekly": 1
-    },
-    {
-      "id": 18,
-      "name": "Byffes Giant Pineapple",
-      "hint": "Code 275225 · single · Booker 29/08/26",
-      "cat": "produce",
-      "unit": "each",
-      "price": 0.99,
-      "weekly": 4
-    },
-    {
-      "id": 19,
-      "name": "Jacks White Potatoes",
-      "hint": "Code 273108 · 2kg · Booker 29/08/26",
-      "cat": "produce",
-      "unit": "2kg pack",
-      "price": 1.49,
-      "weekly": 2
-    },
-    {
-      "id": 20,
-      "name": "Micro Containers w/Lids 500ml",
-      "hint": "Code 307038 · 250s · Booker 29/08/26",
-      "cat": "other",
-      "unit": "250 pack",
-      "price": 36.99,
-      "weekly": 1
-    },
-    {
-      "id": 21,
-      "name": "Micro Containers w/Lids 650ml",
-      "hint": "Code 307039 · 250s · Booker 29/08/26",
-      "cat": "other",
-      "unit": "250 pack",
-      "price": 37.99,
-      "weekly": 1
-    }
-  ],
-  "sains": [
-    {
-      "id": 1,
-      "name": "Coca-Cola Original Taste",
-      "hint": "24 × 330ml · receipt 02/07/26",
-      "cat": "other",
-      "unit": "case",
-      "price": 15.25,
-      "weekly": 2
-    },
-    {
-      "id": 2,
-      "name": "Coca-Cola Zero Sugar",
-      "hint": "24 × 330ml · latest receipt 11/07/26",
-      "cat": "other",
-      "unit": "case",
-      "price": 8.0,
-      "weekly": 3
-    },
-    {
-      "id": 3,
-      "name": "Highland Still Spring Water",
-      "hint": "10L · latest receipt 11/07/26",
-      "cat": "other",
-      "unit": "10L",
-      "price": 5.85,
-      "weekly": 6
-    },
-    {
-      "id": 4,
-      "name": "Sainsbury’s British Bottled Spring Water",
-      "hint": "12 × 500ml · receipt 02/07/26",
-      "cat": "other",
-      "unit": "case",
-      "price": 2.5,
-      "weekly": 6
-    },
-    {
-      "id": 5,
-      "name": "Rubicon Lychee Fruit Juice Drink",
-      "hint": "1L · latest receipt 26/08/26",
-      "cat": "other",
-      "unit": "bottle",
-      "price": 2.1,
-      "weekly": 3
-    },
-    {
-      "id": 6,
-      "name": "Rubicon Mango Fruit Juice Drink",
-      "hint": "1L · receipt 11/07/26",
-      "cat": "other",
-      "unit": "bottle",
-      "price": 1.7,
-      "weekly": 3
-    },
-    {
-      "id": 7,
-      "name": "British Fresh Chicken Skin on Drumsticks",
-      "hint": "1kg · 26/08 ordered 3 but unavailable",
-      "cat": "meat",
-      "unit": "1kg pack",
-      "price": 2.15,
-      "weekly": 3
-    },
-    {
-      "id": 8,
-      "name": "British Fresh Chicken Skin on Thighs",
-      "hint": "1kg · receipt 26/08/26",
-      "cat": "meat",
-      "unit": "1kg pack",
-      "price": 2.99,
-      "weekly": 5
-    },
-    {
-      "id": 9,
-      "name": "Extra Lean Pork Mince 5% Fat",
-      "hint": "500g · Sainsbury’s receipt 28/08/26",
-      "cat": "meat",
-      "unit": "500g pack",
-      "price": 2.49,
-      "weekly": 8,
-      "size": 0.5,
-      "sizeUnit": "kg"
-    },
-    {
-      "id": 10,
-      "name": "British Small Whole Chicken",
-      "hint": "variable-weight item · receipt 26/08/26",
-      "cat": "meat",
-      "unit": "whole",
-      "price": 2.72,
-      "weekly": 5
-    },
-    {
-      "id": 11,
-      "name": "Evaporated Milk",
-      "hint": "410g · receipt 26/08/26",
-      "cat": "dairy",
-      "unit": "tin",
-      "price": 0.52,
-      "weekly": 8
-    },
-    {
-      "id": 12,
-      "name": "Wall’s Soft Scoop Vanilla Ice Cream",
-      "hint": "1.8L tub · receipt 26/08/26",
-      "cat": "dairy",
-      "unit": "tub",
-      "price": 2.75,
-      "weekly": 3
-    },
-    {
-      "id": 13,
-      "name": "Baby Potatoes",
-      "hint": "1kg · receipt 26/08/26",
-      "cat": "produce",
-      "unit": "1kg pack",
-      "price": 0.99,
-      "weekly": 2
-    },
-    {
-      "id": 14,
-      "name": "Cherry Tomatoes",
-      "hint": "330g · receipt 26/08/26",
-      "cat": "produce",
-      "unit": "330g pack",
-      "price": 0.89,
-      "weekly": 5
-    },
-    {
-      "id": 15,
-      "name": "Crownless Pineapple",
-      "hint": "each · receipt 26/08/26",
-      "cat": "produce",
-      "unit": "each",
-      "price": 1.0,
-      "weekly": 3
-    },
-    {
-      "id": 16,
-      "name": "Fine Beans",
-      "hint": "120g · Sainsbury’s receipt 28/08/26",
-      "cat": "produce",
-      "unit": "120g pack",
-      "price": 1.1,
-      "weekly": 4,
-      "size": 120,
-      "sizeUnit": "g"
-    },
-    {
-      "id": 17,
-      "name": "Spring Green",
-      "hint": "ASDA receipt 28/08/26",
-      "cat": "produce",
-      "unit": "each",
-      "price": 0.84,
-      "weekly": 4,
-      "size": 1,
-      "sizeUnit": "piece"
-    },
-    {
-      "id": 18,
-      "name": "Nuts",
-      "hint": "ASDA receipt 28/08/26 · receipt label “NUTS”; promotion applied at till",
-      "cat": "other",
-      "unit": "pack",
-      "price": 2.28,
-      "weekly": 5
-    }
-  ]
+ "thch": [
+  {
+   "id": 1,
+   "name": "GOLD PLUM Vannamei Prawn PD 21/25",
+   "hint": "Stock 89621 • 10×800g net • Hoo Hing 27/08/26",
+   "cat": "frozen",
+   "unit": "case",
+   "price": 73.99,
+   "weekly": 1
+  },
+  {
+   "id": 2,
+   "name": "GOLD PLUM Vannamei Prawn HLSO 21/25",
+   "hint": "Stock 97901 • 6×800g net • Hoo Hing 25/08/26",
+   "cat": "frozen",
+   "unit": "case",
+   "price": 46.99,
+   "weekly": 1
+  },
+  {
+   "id": 3,
+   "name": "Squid Tubes U5",
+   "hint": "",
+   "cat": "frozen",
+   "unit": "case",
+   "price": null,
+   "weekly": 1
+  },
+  {
+   "id": 4,
+   "name": "Roasted Duck",
+   "hint": "",
+   "cat": "frozen",
+   "unit": "case",
+   "price": null,
+   "weekly": 1
+  },
+  {
+   "id": 5,
+   "name": "BDMP Frozen Lime Leaves 100g",
+   "hint": "Stock 66312 • 100g pkt • Hoo Hing 25/08/26",
+   "cat": "frozen",
+   "unit": "pack",
+   "price": 1.99,
+   "weekly": 3
+  },
+  {
+   "id": 6,
+   "name": "HAPPY BOY Wonton Pastry",
+   "hint": "Stock 11422 • 200g pkt • Hoo Hing 25/08/26",
+   "cat": "frozen",
+   "unit": "pack",
+   "price": 1.99,
+   "weekly": 2
+  },
+  {
+   "id": 7,
+   "name": "TYJ Spring Roll Pastry 8.5in",
+   "hint": "Stock 11771 • 20×550g • Hoo Hing 25/08/26",
+   "cat": "frozen",
+   "unit": "case",
+   "price": 26.99,
+   "weekly": 1
+  },
+  {
+   "id": 8,
+   "name": "Pork & Prawn Siu Mai",
+   "hint": "",
+   "cat": "frozen",
+   "unit": "case",
+   "price": null,
+   "weekly": 1
+  },
+  {
+   "id": 9,
+   "name": "Fish Cake (ลูกชิ้นปลา)",
+   "hint": "",
+   "cat": "frozen",
+   "unit": "pack",
+   "price": null,
+   "weekly": 0
+  },
+  {
+   "id": 10,
+   "name": "Shrimp Chip 500g",
+   "hint": "",
+   "cat": "frozen",
+   "unit": "case",
+   "price": null,
+   "weekly": 1
+  },
+  {
+   "id": 11,
+   "name": "เนื้อปลากราย",
+   "hint": "",
+   "cat": "frozen",
+   "unit": "pack",
+   "price": null,
+   "weekly": 6
+  },
+  {
+   "id": 12,
+   "name": "Fresh Bean Sprouts",
+   "hint": "Stock 58971 • 4kg bag • Hoo Hing 25/08/26",
+   "cat": "produce",
+   "unit": "case",
+   "price": 4.79,
+   "weekly": 2
+  },
+  {
+   "id": 13,
+   "name": "French Beans",
+   "hint": "Stock 258481 • 1.5kg case • Hoo Hing 25/08/26",
+   "cat": "produce",
+   "unit": "pack",
+   "price": 10.99,
+   "weekly": 2
+  },
+  {
+   "id": 14,
+   "name": "Lemon",
+   "hint": "Stock 258621 • 40pcs • Hoo Hing 18/08/26",
+   "cat": "produce",
+   "unit": "pack",
+   "price": 14.99,
+   "weekly": 1
+  },
+  {
+   "id": 15,
+   "name": "Broccoli",
+   "hint": "Stock 258151 • 4.5kg • Hoo Hing 25/08/26",
+   "cat": "produce",
+   "unit": "pack",
+   "price": 19.99,
+   "weekly": 1
+  },
+  {
+   "id": 16,
+   "name": "Onion (White) 20KG",
+   "hint": "Stock 59721 • 20kg bag • Hoo Hing 25/08/26",
+   "cat": "produce",
+   "unit": "pack",
+   "price": 10.99,
+   "weekly": 1
+  },
+  {
+   "id": 17,
+   "name": "Spring Onion",
+   "hint": "Stock 259731 • 12s case • Hoo Hing 25/08/26",
+   "cat": "produce",
+   "unit": "pack",
+   "price": 9.5,
+   "weekly": 1
+  },
+  {
+   "id": 18,
+   "name": "Aubergine",
+   "hint": "Stock 258051 • 5kg case • Hoo Hing 25/08/26",
+   "cat": "produce",
+   "unit": "pack",
+   "price": 9.99,
+   "weekly": 1
+  },
+  {
+   "id": 19,
+   "name": "Carrots",
+   "hint": "Stock 259761 • 10kg bag • Hoo Hing 25/08/26",
+   "cat": "produce",
+   "unit": "pack",
+   "price": 8.99,
+   "weekly": 1
+  },
+  {
+   "id": 20,
+   "name": "Red Onion",
+   "hint": "Stock 259671 • 5kg • Hoo Hing 25/08/26",
+   "cat": "produce",
+   "unit": "pack",
+   "price": 10.99,
+   "weekly": 1
+  },
+  {
+   "id": 21,
+   "name": "Lemongrass",
+   "hint": "Stock 58062 • 100g loose rate • Hoo Hing 25/08/26",
+   "cat": "produce",
+   "unit": "pack",
+   "price": 0.99,
+   "weekly": 3
+  },
+  {
+   "id": 22,
+   "name": "Peeled Garlic",
+   "hint": "Stock 257382 • 1kg • Hoo Hing 25/08/26",
+   "cat": "produce",
+   "unit": "pack",
+   "price": 4.35,
+   "weekly": 2
+  },
+  {
+   "id": 23,
+   "name": "Long Red Chilli",
+   "hint": "",
+   "cat": "produce",
+   "unit": "pack",
+   "price": null,
+   "weekly": 1
+  },
+  {
+   "id": 24,
+   "name": "Small Red Chilli",
+   "hint": "Stock 258291 • 1.5kg • Hoo Hing 25/08/26",
+   "cat": "produce",
+   "unit": "pack",
+   "price": 18.99,
+   "weekly": 1
+  },
+  {
+   "id": 25,
+   "name": "Cabbage White",
+   "hint": "",
+   "cat": "produce",
+   "unit": "pack",
+   "price": null,
+   "weekly": 1
+  },
+  {
+   "id": 26,
+   "name": "Galangal (ข่า)",
+   "hint": "Stock 58982 • 200g loose rate • Hoo Hing 25/08/26",
+   "cat": "produce",
+   "unit": "pack",
+   "price": 2.25,
+   "weekly": 3
+  },
+  {
+   "id": 27,
+   "name": "Lime (มะนาวเขียว)",
+   "hint": "Stock 258661 • case • Hoo Hing 25/08/26",
+   "cat": "produce",
+   "unit": "pack",
+   "price": 14.99,
+   "weekly": 1
+  },
+  {
+   "id": 28,
+   "name": "Bamboo Shoot Halves",
+   "hint": "",
+   "cat": "produce",
+   "unit": "case",
+   "price": null,
+   "weekly": 1
+  },
+  {
+   "id": 29,
+   "name": "Large Eggs",
+   "hint": "",
+   "cat": "produce",
+   "unit": "case",
+   "price": null,
+   "weekly": 1
+  },
+  {
+   "id": 30,
+   "name": "GREEN DRAGON Thai Fragrant Rice 20kg",
+   "hint": "Stock 51141 • 20kg bag • Hoo Hing 25/08/26",
+   "cat": "staples",
+   "unit": "bag",
+   "price": 38.99,
+   "weekly": 2
+  },
+  {
+   "id": 31,
+   "name": "FIRST LADY Thai Glutinous Rice Premium 10kg",
+   "hint": "Stock 53861 • 10kg bag • Hoo Hing 25/08/26",
+   "cat": "staples",
+   "unit": "case",
+   "price": 16.99,
+   "weekly": 1
+  },
+  {
+   "id": 32,
+   "name": "GOLD PLUM Rice Sticks 5mm Medium",
+   "hint": "Stock 71611 • 30×400g • Hoo Hing 25/08/26",
+   "cat": "staples",
+   "unit": "pack",
+   "price": 38.99,
+   "weekly": 1
+  },
+  {
+   "id": 33,
+   "name": "Rice Stick 10mm",
+   "hint": "",
+   "cat": "staples",
+   "unit": "pack",
+   "price": null,
+   "weekly": 1
+  },
+  {
+   "id": 34,
+   "name": "GOLD PLUM Funsee Vermicelli Mung Bean",
+   "hint": "Stock 10602 • 1kg pkt • Hoo Hing 25/08/26",
+   "cat": "staples",
+   "unit": "pack",
+   "price": 3.89,
+   "weekly": 2
+  },
+  {
+   "id": 35,
+   "name": "Cooking Salt",
+   "hint": "Stock 30711 • 25kg bag • Hoo Hing 25/08/26",
+   "cat": "staples",
+   "unit": "pack",
+   "price": 10.79,
+   "weekly": 1
+  },
+  {
+   "id": 36,
+   "name": "JB Farina Potato Starch",
+   "hint": "Stock 81632 • 3kg pkt • Hoo Hing 25/08/26",
+   "cat": "staples",
+   "unit": "pack",
+   "price": 6.99,
+   "weekly": 1
+  },
+  {
+   "id": 37,
+   "name": "BRITISH SUGAR Granulated Sugar",
+   "hint": "Stock 30781 • 25kg bag • Hoo Hing 25/08/26",
+   "cat": "staples",
+   "unit": "bag",
+   "price": 16.99,
+   "weekly": 1
+  },
+  {
+   "id": 38,
+   "name": "GREEN DRAGON Self Raising Flour",
+   "hint": "Stock 81581 • 10×1.5kg • Hoo Hing 25/08/26",
+   "cat": "staples",
+   "unit": "pack",
+   "price": 14.99,
+   "weekly": 1
+  },
+  {
+   "id": 39,
+   "name": "A10 CHAOKOH Coconut Milk Catering Size",
+   "hint": "Stock 32821 • 6×2900ml • Hoo Hing 25 & 27/08/26",
+   "cat": "sauces",
+   "unit": "case",
+   "price": 45.5,
+   "weekly": 3
+  },
+  {
+   "id": 40,
+   "name": "CHAOKOH Coconut Milk 400ml",
+   "hint": "Stock 32801 • 24×400ml • Hoo Hing 27/08/26",
+   "cat": "sauces",
+   "unit": "pack",
+   "price": 30.99,
+   "weekly": 1
+  },
+  {
+   "id": 41,
+   "name": "MAE PLOY Red Curry Paste",
+   "hint": "Stock 44732 • 1kg tub • Hoo Hing 25/08/26",
+   "cat": "sauces",
+   "unit": "pack",
+   "price": 4.59,
+   "weekly": 2
+  },
+  {
+   "id": 42,
+   "name": "MAE PLOY Green Curry Paste",
+   "hint": "Stock 44722 • 1kg tub • Hoo Hing 25/08/26",
+   "cat": "sauces",
+   "unit": "pack",
+   "price": 4.59,
+   "weekly": 3
+  },
+  {
+   "id": 43,
+   "name": "MAE PLOY Massaman Curry Paste",
+   "hint": "Stock 44782 • 1kg tub • Hoo Hing 25/08/26",
+   "cat": "sauces",
+   "unit": "pack",
+   "price": 4.59,
+   "weekly": 2
+  },
+  {
+   "id": 44,
+   "name": "MAE PLOY Tom Yum Curry Paste",
+   "hint": "Stock 44852 • 1kg tub • Hoo Hing 25/08/26",
+   "cat": "sauces",
+   "unit": "pack",
+   "price": 4.59,
+   "weekly": 1
+  },
+  {
+   "id": 45,
+   "name": "Thin Soy Sauce",
+   "hint": "",
+   "cat": "sauces",
+   "unit": "pack",
+   "price": null,
+   "weekly": 2
+  },
+  {
+   "id": 46,
+   "name": "GOLDEN MOUNTAIN Seasoning Sauce",
+   "hint": "Stock 52201 • 12×600ml • Hoo Hing 25/08/26",
+   "cat": "sauces",
+   "unit": "pack",
+   "price": 25.99,
+   "weekly": 1
+  },
+  {
+   "id": 47,
+   "name": "LKK PANDA Oyster Sauce",
+   "hint": "Stock 37171 • 6×2.27kg • Hoo Hing 25/08/26",
+   "cat": "sauces",
+   "unit": "pack",
+   "price": 32.99,
+   "weekly": 1
+  },
+  {
+   "id": 48,
+   "name": "LKK Premium Dark Soy Sauce",
+   "hint": "Stock 57111 • 12×500ml • Hoo Hing 25/08/26",
+   "cat": "sauces",
+   "unit": "pack",
+   "price": 21.49,
+   "weekly": 1
+  },
+  {
+   "id": 49,
+   "name": "Sweet Chilli Sauce",
+   "hint": "",
+   "cat": "sauces",
+   "unit": "pack",
+   "price": null,
+   "weekly": 1
+  },
+  {
+   "id": 50,
+   "name": "SARSONS Distilled White Vinegar",
+   "hint": "Stock 12981 • 2×5L • Hoo Hing 25/08/26",
+   "cat": "sauces",
+   "unit": "pack",
+   "price": 10.99,
+   "weekly": 1
+  },
+  {
+   "id": 51,
+   "name": "PENTA Pure Palm Sugar Blocks",
+   "hint": "Stock 31122 • 454g pkt • Hoo Hing 25/08/26",
+   "cat": "sauces",
+   "unit": "pack",
+   "price": 1.79,
+   "weekly": 6
+  },
+  {
+   "id": 52,
+   "name": "Chopped Sweet Radish",
+   "hint": "",
+   "cat": "sauces",
+   "unit": "pack",
+   "price": null,
+   "weekly": 3
+  },
+  {
+   "id": 53,
+   "name": "Seedless Tamarind",
+   "hint": "",
+   "cat": "sauces",
+   "unit": "pack",
+   "price": null,
+   "weekly": 6
+  },
+  {
+   "id": 54,
+   "name": "Rapeseed Oil 20L",
+   "hint": "",
+   "cat": "sauces",
+   "unit": "tin",
+   "price": null,
+   "weekly": 2
+  },
+  {
+   "id": 55,
+   "name": "Fish Sauce (Case)",
+   "hint": "",
+   "cat": "sauces",
+   "unit": "case",
+   "price": null,
+   "weekly": 1
+  },
+  {
+   "id": 56,
+   "name": "Fish Sauce (ขวด)",
+   "hint": "",
+   "cat": "sauces",
+   "unit": "bottle",
+   "price": null,
+   "weekly": 6
+  },
+  {
+   "id": 57,
+   "name": "Roasted Chilli Paste",
+   "hint": "",
+   "cat": "sauces",
+   "unit": "pack",
+   "price": null,
+   "weekly": 1
+  },
+  {
+   "id": 58,
+   "name": "Tomato Paste",
+   "hint": "",
+   "cat": "sauces",
+   "unit": "pack",
+   "price": null,
+   "weekly": 1
+  },
+  {
+   "id": 59,
+   "name": "Kikoman Soy Sauce",
+   "hint": "",
+   "cat": "sauces",
+   "unit": "bottle",
+   "price": null,
+   "weekly": 2
+  },
+  {
+   "id": 60,
+   "name": "Raw Cashew Nuts",
+   "hint": "",
+   "cat": "spices",
+   "unit": "pack",
+   "price": null,
+   "weekly": 2
+  },
+  {
+   "id": 61,
+   "name": "Blanched Peanut",
+   "hint": "",
+   "cat": "spices",
+   "unit": "pack",
+   "price": null,
+   "weekly": 3
+  },
+  {
+   "id": 62,
+   "name": "KNORR Chicken Powder +10% Extra",
+   "hint": "Stock 40232 • 900g+90g • Hoo Hing 25/08/26",
+   "cat": "spices",
+   "unit": "pack",
+   "price": 8.59,
+   "weekly": 1
+  },
+  {
+   "id": 63,
+   "name": "MSG 500g (VAT)",
+   "hint": "",
+   "cat": "spices",
+   "unit": "pack",
+   "price": null,
+   "weekly": 2
+  },
+  {
+   "id": 64,
+   "name": "Crushed Chilli 1KG",
+   "hint": "",
+   "cat": "spices",
+   "unit": "pack",
+   "price": null,
+   "weekly": 2
+  },
+  {
+   "id": 65,
+   "name": "White Pepper 1KG",
+   "hint": "",
+   "cat": "spices",
+   "unit": "pack",
+   "price": null,
+   "weekly": 1
+  },
+  {
+   "id": 66,
+   "name": "MOUNT ELEPHANT Cinnamon / Cassia Sticks",
+   "hint": "Stock 57532 • 1kg • Hoo Hing 25/08/26",
+   "cat": "spices",
+   "unit": "pack",
+   "price": 6.19,
+   "weekly": 1
+  },
+  {
+   "id": 67,
+   "name": "RAJAH Haldi Powder (Ground Turmeric)",
+   "hint": "Stock 10792 • 1kg • Hoo Hing 25/08/26",
+   "cat": "spices",
+   "unit": "pack",
+   "price": 7.69,
+   "weekly": 1
+  },
+  {
+   "id": 68,
+   "name": "Coriander Seed 300g",
+   "hint": "",
+   "cat": "spices",
+   "unit": "pack",
+   "price": null,
+   "weekly": 1
+  },
+  {
+   "id": 69,
+   "name": "Star Aniseed 1KG",
+   "hint": "",
+   "cat": "spices",
+   "unit": "pack",
+   "price": null,
+   "weekly": 1
+  },
+  {
+   "id": 70,
+   "name": "Plastic Containers C500 (VAT)",
+   "hint": "",
+   "cat": "nonfood",
+   "unit": "case",
+   "price": null,
+   "weekly": 1
+  },
+  {
+   "id": 71,
+   "name": "Plastic Containers C650 (VAT)",
+   "hint": "",
+   "cat": "nonfood",
+   "unit": "case",
+   "price": null,
+   "weekly": 1
+  },
+  {
+   "id": 72,
+   "name": "Kitchen Gloves Medium (VAT)",
+   "hint": "",
+   "cat": "nonfood",
+   "unit": "pack",
+   "price": null,
+   "weekly": 1
+  },
+  {
+   "id": 73,
+   "name": "Bamboo Chopsticks",
+   "hint": "",
+   "cat": "nonfood",
+   "unit": "case",
+   "price": null,
+   "weekly": 5
+  },
+  {
+   "id": 74,
+   "name": "Bamboo Skewers 6in",
+   "hint": "Stock 20622 • 100pcs • Hoo Hing 25/08/26",
+   "cat": "nonfood",
+   "unit": "pack",
+   "price": 0.39,
+   "weekly": 10
+  },
+  {
+   "id": 75,
+   "name": "Sponge Scourers (VAT)",
+   "hint": "",
+   "cat": "nonfood",
+   "unit": "pack",
+   "price": null,
+   "weekly": 2
+  }
+ ],
+ "booker": [
+  {
+   "id": 1,
+   "name": "RM Curtis Chopped Mixed Nuts",
+   "hint": "Code 193015 · 1kg",
+   "cat": "other",
+   "unit": "1kg pack",
+   "price": 8.99,
+   "weekly": 1
+  },
+  {
+   "id": 2,
+   "name": "CE Chicken Breast Fillet",
+   "hint": "Code 147179 · 2 × 5kg = £5.60/kg · Booker 03/09/26",
+   "cat": "meat",
+   "unit": "5kg pack",
+   "price": 55.99,
+   "weekly": 7
+  },
+  {
+   "id": 3,
+   "name": "H/Land Spring Water Still",
+   "hint": "Code 301648 · 12 × 1.5L",
+   "cat": "other",
+   "unit": "case",
+   "price": 6.75,
+   "weekly": 2
+  },
+  {
+   "id": 4,
+   "name": "Coke Zero",
+   "hint": "Code 063724 · 24 × 330ml · Booker 29/08/26",
+   "cat": "other",
+   "unit": "case",
+   "price": 9.0,
+   "weekly": 2
+  },
+  {
+   "id": 5,
+   "name": "CL Cod Fillet Skinless/Boneless",
+   "hint": "Code 256183 · 1.816kg",
+   "cat": "fish",
+   "unit": "pack",
+   "price": 45.99,
+   "weekly": 1
+  },
+  {
+   "id": 6,
+   "name": "CE Mid & Prime Chicken Wings",
+   "hint": "Code 321688 · 4.5kg",
+   "cat": "meat",
+   "unit": "4.5kg pack",
+   "price": 13.99,
+   "weekly": 2
+  },
+  {
+   "id": 7,
+   "name": "Flat Iron Beef Steak",
+   "hint": "Code 134043 · avg 2kg · Booker 03/09/26 · น้ำหนัก 3.734kg = £13.99/kg",
+   "cat": "meat",
+   "unit": "pack",
+   "price": 52.24,
+   "weekly": 2
+  },
+  {
+   "id": 8,
+   "name": "Chefs Choice Vegetable Oil",
+   "hint": "Code 312427 · 20L · Booker 29/08/26",
+   "cat": "other",
+   "unit": "20L tin",
+   "price": 26.99,
+   "weekly": 2
+  },
+  {
+   "id": 9,
+   "name": "Harpic Prof Power Plus Original",
+   "hint": "Code 250742 · 1L",
+   "cat": "other",
+   "unit": "bottle",
+   "price": 2.29,
+   "weekly": 1
+  },
+  {
+   "id": 10,
+   "name": "Flash Professional Glass Cleaner",
+   "hint": "Code 306094 · 750ml",
+   "cat": "other",
+   "unit": "bottle",
+   "price": 3.99,
+   "weekly": 1
+  },
+  {
+   "id": 11,
+   "name": "Professional Finish All in 1 Lemon",
+   "hint": "Code 948497 · 5L",
+   "cat": "other",
+   "unit": "5L",
+   "price": 8.99,
+   "weekly": 1
+  },
+  {
+   "id": 12,
+   "name": "Large Eggs",
+   "hint": "Code 168775 · 180",
+   "cat": "other",
+   "unit": "case 180",
+   "price": 33.99,
+   "weekly": 1
+  },
+  {
+   "id": 13,
+   "name": "CP Mini Jumbo White T/Rolls",
+   "hint": "Code 247794 · 6pk",
+   "cat": "other",
+   "unit": "pack",
+   "price": 12.99,
+   "weekly": 1
+  },
+  {
+   "id": 14,
+   "name": "CP ZFold White Paper Towels",
+   "hint": "Code 293395 · 15 × 198s",
+   "cat": "other",
+   "unit": "case",
+   "price": 29.99,
+   "weekly": 1
+  },
+  {
+   "id": 15,
+   "name": "H/Land Spring Still 6×1.5L",
+   "hint": "Code 154217 · 6 × 1.5L · Booker 29/08/26",
+   "cat": "other",
+   "unit": "6×1.5L pack",
+   "price": 3.49,
+   "weekly": 6
+  },
+  {
+   "id": 16,
+   "name": "CE Chicken Drumsticks",
+   "hint": "Code 320974 · 4.5kg · Booker 29/08/26",
+   "cat": "meat",
+   "unit": "4.5kg pack",
+   "price": 14.79,
+   "weekly": 1
+  },
+  {
+   "id": 17,
+   "name": "CE Oyster Chicken Thigh",
+   "hint": "Code 320976 · 4.5kg · Booker 29/08/26",
+   "cat": "meat",
+   "unit": "4.5kg pack",
+   "price": 15.69,
+   "weekly": 1
+  },
+  {
+   "id": 18,
+   "name": "Byffes Giant Pineapple",
+   "hint": "Code 275225 · single · Booker 29/08/26",
+   "cat": "produce",
+   "unit": "each",
+   "price": 0.99,
+   "weekly": 4
+  },
+  {
+   "id": 19,
+   "name": "Jacks White Potatoes",
+   "hint": "Code 273108 · 2kg · Booker 29/08/26",
+   "cat": "produce",
+   "unit": "2kg pack",
+   "price": 1.49,
+   "weekly": 2
+  },
+  {
+   "id": 20,
+   "name": "Micro Containers w/Lids 500ml",
+   "hint": "Code 307038 · 250s · Booker 29/08/26",
+   "cat": "other",
+   "unit": "250 pack",
+   "price": 36.99,
+   "weekly": 1
+  },
+  {
+   "id": 21,
+   "name": "Micro Containers w/Lids 650ml",
+   "hint": "Code 307039 · 250s · Booker 29/08/26",
+   "cat": "other",
+   "unit": "250 pack",
+   "price": 37.99,
+   "weekly": 1
+  },
+  {
+   "id": 22,
+   "cat": "other",
+   "name": "Kuhne Pickle Gherkins",
+   "price": 11.29,
+   "unit": "2.45kg jar",
+   "size": 2.45,
+   "sizeUnit": "kg",
+   "hint": "Code 308192 · 2.45kg · Booker 03/09/26"
+  },
+  {
+   "id": 23,
+   "cat": "meat",
+   "name": "CE Chicken Breast Fillet (แพ็คเดี่ยว 5kg)",
+   "price": 29.89,
+   "unit": "5kg pack",
+   "size": 5,
+   "sizeUnit": "kg",
+   "hint": "Code 147180 · 5kg · £5.98/kg — แพงกว่าแบบ 2×5kg (£5.60/kg) · Booker 03/09/26"
+  },
+  {
+   "id": 24,
+   "cat": "other",
+   "name": "CTE 1Ply Napkins White 30cm",
+   "price": 20.49,
+   "unit": "case",
+   "hint": "Code 308016 · 10 × 500s · ราคาสัญญา (CD) · Booker 03/09/26"
+  },
+  {
+   "id": 25,
+   "cat": "other",
+   "name": "CTS 2Ply 8-Fold Napkin White 39×40cm",
+   "price": 44.99,
+   "unit": "case",
+   "hint": "Code 308022 · 20 × 100s · Booker 03/09/26"
+  },
+  {
+   "id": 26,
+   "cat": "other",
+   "name": "CP Premium Heavy Duty Blue Centrefeed",
+   "price": 18.29,
+   "unit": "6pk",
+   "hint": "Code 278992 · 6pk · Booker 03/09/26"
+  }
+ ],
+ "sains": [
+  {
+   "id": 1,
+   "name": "Coca-Cola Original Taste",
+   "hint": "24 × 330ml · receipt 02/07/26",
+   "cat": "other",
+   "unit": "case",
+   "price": 15.25,
+   "weekly": 2
+  },
+  {
+   "id": 2,
+   "name": "Coca-Cola Zero Sugar",
+   "hint": "24 × 330ml · latest receipt 11/07/26",
+   "cat": "other",
+   "unit": "case",
+   "price": 8.0,
+   "weekly": 3
+  },
+  {
+   "id": 3,
+   "name": "Highland Still Spring Water",
+   "hint": "10L · latest receipt 11/07/26",
+   "cat": "other",
+   "unit": "10L",
+   "price": 5.85,
+   "weekly": 6
+  },
+  {
+   "id": 4,
+   "name": "Sainsbury’s British Bottled Spring Water",
+   "hint": "12 × 500ml · receipt 02/07/26",
+   "cat": "other",
+   "unit": "case",
+   "price": 2.5,
+   "weekly": 6
+  },
+  {
+   "id": 5,
+   "name": "Rubicon Lychee Fruit Juice Drink",
+   "hint": "1L · latest receipt 26/08/26",
+   "cat": "other",
+   "unit": "bottle",
+   "price": 2.1,
+   "weekly": 3
+  },
+  {
+   "id": 6,
+   "name": "Rubicon Mango Fruit Juice Drink",
+   "hint": "1L · receipt 11/07/26",
+   "cat": "other",
+   "unit": "bottle",
+   "price": 1.7,
+   "weekly": 3
+  },
+  {
+   "id": 7,
+   "name": "British Fresh Chicken Skin on Drumsticks",
+   "hint": "1kg · 26/08 ordered 3 but unavailable",
+   "cat": "meat",
+   "unit": "1kg pack",
+   "price": 2.15,
+   "weekly": 3
+  },
+  {
+   "id": 8,
+   "name": "British Fresh Chicken Skin on Thighs",
+   "hint": "1kg · receipt 26/08/26",
+   "cat": "meat",
+   "unit": "1kg pack",
+   "price": 2.99,
+   "weekly": 5
+  },
+  {
+   "id": 9,
+   "name": "Extra Lean Pork Mince 5% Fat",
+   "hint": "500g · Sainsbury’s receipt 28/08/26",
+   "cat": "meat",
+   "unit": "500g pack",
+   "price": 2.49,
+   "weekly": 8,
+   "size": 0.5,
+   "sizeUnit": "kg"
+  },
+  {
+   "id": 10,
+   "name": "British Small Whole Chicken",
+   "hint": "variable-weight item · receipt 26/08/26",
+   "cat": "meat",
+   "unit": "whole",
+   "price": 2.72,
+   "weekly": 5
+  },
+  {
+   "id": 11,
+   "name": "Evaporated Milk",
+   "hint": "410g · receipt 26/08/26",
+   "cat": "dairy",
+   "unit": "tin",
+   "price": 0.52,
+   "weekly": 8
+  },
+  {
+   "id": 12,
+   "name": "Wall’s Soft Scoop Vanilla Ice Cream",
+   "hint": "1.8L tub · receipt 26/08/26",
+   "cat": "dairy",
+   "unit": "tub",
+   "price": 2.75,
+   "weekly": 3
+  },
+  {
+   "id": 13,
+   "name": "Baby Potatoes",
+   "hint": "1kg · receipt 26/08/26",
+   "cat": "produce",
+   "unit": "1kg pack",
+   "price": 0.99,
+   "weekly": 2
+  },
+  {
+   "id": 14,
+   "name": "Cherry Tomatoes",
+   "hint": "330g · receipt 26/08/26",
+   "cat": "produce",
+   "unit": "330g pack",
+   "price": 0.89,
+   "weekly": 5
+  },
+  {
+   "id": 15,
+   "name": "Crownless Pineapple",
+   "hint": "each · receipt 26/08/26",
+   "cat": "produce",
+   "unit": "each",
+   "price": 1.0,
+   "weekly": 3
+  },
+  {
+   "id": 16,
+   "name": "Fine Beans",
+   "hint": "120g · Sainsbury’s receipt 28/08/26",
+   "cat": "produce",
+   "unit": "120g pack",
+   "price": 1.1,
+   "weekly": 4,
+   "size": 120,
+   "sizeUnit": "g"
+  },
+  {
+   "id": 17,
+   "name": "Spring Green",
+   "hint": "ASDA receipt 28/08/26",
+   "cat": "produce",
+   "unit": "each",
+   "price": 0.84,
+   "weekly": 4,
+   "size": 1,
+   "sizeUnit": "piece"
+  },
+  {
+   "id": 18,
+   "name": "Nuts",
+   "hint": "ASDA receipt 28/08/26 · receipt label “NUTS”; promotion applied at till",
+   "cat": "other",
+   "unit": "pack",
+   "price": 2.28,
+   "weekly": 5
+  },
+  {
+   "id": 19,
+   "cat": "meat",
+   "name": "Pork Collar (Karkówka)",
+   "price": 6.79,
+   "unit": "1kg",
+   "size": 1,
+   "sizeUnit": "kg",
+   "hint": "£6.79/kg · Delight European Food Store, Tooting · receipt 02/09/26"
+  },
+  {
+   "id": 20,
+   "cat": "fish",
+   "name": "Sea Bass Large (ปลากะพงตัวใหญ่)",
+   "price": 5.0,
+   "unit": "ตัว",
+   "size": 1,
+   "sizeUnit": "piece",
+   "hint": "15 ตัว £75.00 = £5.00/ตัว · Fish Universe SW17 · receipt 02/09/26"
+  },
+  {
+   "id": 21,
+   "cat": "other",
+   "name": "Prazynki Lapsy Potato Snack",
+   "price": 1.79,
+   "unit": "pack",
+   "size": 110,
+   "sizeUnit": "g",
+   "hint": "110g · Delight European Food Store, Tooting · receipt 02/09/26"
+  }
+ ]
 }

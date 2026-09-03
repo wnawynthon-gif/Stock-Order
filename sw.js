@@ -1,5 +1,5 @@
 /* Kaosarn Order — service worker V8.0 */
-const CACHE = 'kaosarn-order-v8-5';
+const CACHE = 'kaosarn-order-v8-7';
 const SHELL = [
   './',
   './index.html',
